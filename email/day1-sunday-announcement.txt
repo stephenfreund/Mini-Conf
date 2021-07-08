@@ -1,0 +1,12 @@
+Welcome to the first day of PLDI!
+
+The day features the start of HOPL IV: History of Programming Languages.
+
+You can attend HOPL and find information on all of PLDI's Events
+at
+
+https://www.pldi21.org/
+
+
+
+

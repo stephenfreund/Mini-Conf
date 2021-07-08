@@ -1,0 +1,137 @@
+- UID: cafe
+  title: Gather Cafe
+  description: >
+    Looking for somewhere to sit while you catch up on email?  
+    Need a quiet spot for a chat?  
+    Want to find others to hang out with?  Check out the Gather Cafe!
+  schedule:
+    - start: 2021-06-20T00:00:00-04:00
+      end: 2021-06-26T23:59:00-04:00
+      gather: Gather Cafe
+      global: False
+
+- UID: opening
+  title: Opening Reception
+  description: >
+    Please join us for the Opening Reception at our Gather virtual conference center’s beach, which we are opening just for this occasion. Head south from the Main Hall for a chance to catch up with friends, grow your network, and enjoy the sunshine!
+  schedule:
+    - start: 2021-06-23T15:00:00-04:00
+      end: 2021-06-23T16:00:00-04:00
+      gather: Gather
+      global: True
+    - start: 2021-06-24T03:00:00-04:00
+      end: 2021-06-24T04:00:00-04:00
+      gather: Gather
+      global: True
+
+
+- UID: pltea
+  title: PLTea
+  description: >
+    We're delighted to bring <a href="https://pltea.github.io/">PLTea</a> to PLDI.  Drop in, meet the PLTea moderators and other attendees, and then chat in randomly assigned breakout rooms that are shuffled every 10 minutes.
+    Join any time, and stay for just a couple minutes or as long as you like.  All welcome!  
+  
+  organizers:
+    - Rachit Nigam
+    - Adharsh Kamath
+  schedule:
+    - start: 2021-06-23T8:30:00-04:00
+      end: 2021-06-23T09:00:00-04:00
+    - start: 2021-06-23T11:30:00-04:00
+      end: 2021-06-23T12:30:00-04:00
+    - start: 2021-06-23T20:30:00-04:00
+      end: 2021-06-23T21:00:00-04:00
+    - start: 2021-06-23T23:30:00-04:00
+      end: 2021-06-24T00:30:00-04:00
+    - start: 2021-06-24T8:30:00-04:00
+      end: 2021-06-24T09:00:00-04:00
+    - start: 2021-06-24T11:30:00-04:00
+      end: 2021-06-24T12:30:00-04:00
+    - start: 2021-06-24T20:30:00-04:00
+      end: 2021-06-24T21:00:00-04:00
+    - start: 2021-06-24T23:30:00-04:00
+      end: 2021-06-25T00:30:00-04:00
+    - start: 2021-06-25T8:30:00-04:00
+      end: 2021-06-25T09:00:00-04:00
+    - start: 2021-06-25T11:30:00-04:00
+      end: 2021-06-25T12:30:00-04:00
+    - start: 2021-06-25T20:30:00-04:00
+      end: 2021-06-25T21:00:00-04:00
+    - start: 2021-06-25T23:30:00-04:00
+      end: 2021-06-26T00:30:00-04:00
+  zoom_link: zoom.pltea
+
+# - UID: meetups
+#   title: Your Meetup Here
+#   description: >
+#     Something missing from our list?  Hoping to organize a meetup?  Get in touch: aaaaaaaaaaaa.
+# Meet members of CARES, a committee of well-known and respected people in the programming languages community who are approachable and willing to listen to and help people who experience or witness discrimination, harassment, or other ethical policy violations.
+
+- UID: cares
+  title: 'CARES: Building Inclusive Research Environments'
+  description: 
+    Please join <a href="https://www.sigplan.org/Cares/">SIGPLAN CARES</a> community members at 
+    the following two time zone inclusive sessions at PLDI 2021 
+    and prepare by filling out this short <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVg-bsjj5q2esdNcD1p2-_e8DkyF91fCPw9Co6s38GtHPCcA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link" target="_blank">survey</a> intended to provoke 
+    reflection on how you experience inclusion at your home institution 
+    and at conferences.
+    <br>
+    At these sessions, <a href="https://www.sigplan.org/Cares/">SIGPLAN CARES</a> committee members will lead an exploration of how you experience 
+    inclusion in your everyday environment and at research conferences, 
+    and ways individuals and institutions can work to make them more inclusive. 
+    The <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVg-bsjj5q2esdNcD1p2-_e8DkyF91fCPw9Co6s38GtHPCcA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"  target="_blank">survey</a> will inform our discussion, so please take it.
+
+  organizers:
+      - Vikram Adve
+      - Shriram Krishnamurthi
+      - Kathryn McKinley
+      - Alexandra Silva
+      - Michelle Strout
+      - David Walker
+      - Stephanie Weirich
+      - Peng Wu
+      - Hongseok Yang
+  schedule:
+    - start: 2021-06-24T12:00:00-04:00
+      end: 2021-06-24T13:00:00-04:00
+    - start: 2021-06-25T00:00:00-04:00
+      end: 2021-06-25T01:00:00-04:00
+  zoom_link: zoom.cares
+
+- UID: mentor
+  title: Informal Mentoring Meetups
+  description: 
+    > 
+    Join our #mentoring Slack channel if you'd like to participate in informal mentoring this week.  Mentors of any seniority: please 
+    post a brief message about yourselves to the channel.  Those looking to make connections: DM any of them to arrange a time to chat.  Don't be shy!  
+  
+  slack_channel: mentoring
+
+
+
+- UID: business
+  title: PLDI Business Meeting
+  description: >
+    Reports from the General Chair, Program Committee Chair, and Artifact Evaluation Co-chairs;
+    presentation of PLDI and SIGPLAN awards;
+    introducing PLDI 2022; and more!
+    <br><br>
+    The post-conference video is available below.
+  organizers:
+    - PLDI 2021 Organizers
+  schedule:
+    - start: 2021-06-24T15:00:00-04:00
+      duration: 1.25
+      trackUID: pldi-A
+    - start: 2021-06-25T03:00:00-04:00
+      duration: 1.25
+      trackUID: pldi-A
+# - UID: ama1
+#   title: 'AMA: Steve'
+#   description: ""
+#   organizers:
+#     - moo
+#   # schedule:
+#     # - start: 2021-06-23T16:30:00-00:00
+#     #   duration: 1.0
+#     #   trackUID: pldi-A

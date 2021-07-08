@@ -4,13 +4,15 @@
 {% block head %}
 
 {{ super() }}
+{{ components.calendar_scripts() }}
+
 <meta name="citation_title" content="{{paper.title}}"/>
 {% for author in paper.authors %}
 <meta name="citation_author" content="{{author}}"/>
 {% endfor %}
 <meta name="citation_publication_date" content="{{config.citation_date}}"/>
 <meta name="citation_conference_title"
-      content="{{config.tagline|striptags|title}}"/>
+content="{{config.tagline|striptags|title}}"/>
 <meta name="citation_inbook_title" content="{{config.proceedings_title}}"/>
 <meta name="citation_abstract" content="{{paper.abstract}}"/>
 {% for keyword in paper.keywords %}
@@ -18,90 +20,116 @@
 {% endfor %}
 <meta name="citation_pdf_url" content="{{paper.pdf_url|default('') }}"/>
 
+<script src='https://slideslive.com/embed_presentation.js'></script>
+
 {% endblock %}
+
 
 {% block content %}
 
 <!-- Title -->
 <div class="pp-card m-3" style="">
-    <div class="card-header">
-        <h2 class="card-title main-title text-center" style="">
-            {{paper.title}}
-        </h2>
-        <h3 class="card-subtitle mb-2 text-muted text-center">
-            {% for author in paper.authors %}
-            <a href="papers.html?filter=authors&search={{author}}"
-               class="text-muted"
-            >{{author}}</a
-            >{{ "," if not loop.last }}
-            {% endfor %}
-        </h3>
-        <p class="card-text text-center">
-            <span class="">Keywords:</span>
-            {% for keyword in paper.keywords %}
-            <a
-                    href="papers.html?filter=keywords&search={{keyword}}"
-                    class="text-secondary text-decoration-none"
-            >{{keyword}}</a
-            >{{ "," if not loop.last }}
-            {% endfor %}
-        </p>
-        <div class="text-center p-3">
-            <a class="card-link" data-toggle="collapse" role="button"
-               href="#details">
-                Abstract
-            </a>
-            <a class="card-link" target="_blank" href="{{paper.link}}">
-                Paper
-            </a>
-            {% if paper.code_link != blank %}
-            <a href="{{paper.code_link}}" target="_blank" class="card-link">
-                Code
-            </a>
-            {% endif %}
-        </div>
-    </div>
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      {{paper.title}}
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      {% for author in paper.authors %}
+      <a href="papers.html?filter=authors&search={{author}}"
+      class="text-muted"
+      >{{author}}</a
+      >{{ "," if not loop.last }}
+      {% endfor %}
+    </h3>
+    <p class="card-text text-center">
+      <span class="">Keywords:</span>
+      {% for keyword in paper.keywords %}
+      <a
+      href="papers.html?filter=keywords&search={{keyword}}"
+      class="text-secondary text-decoration-none"
+      >{{keyword}}</a
+      >{{ "," if not loop.last }}
+      {% endfor %}
+    </p>
+
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      <span class="mr-2">Chat about this paper:</span>  {{ components.slack(config, paper.slack_channel) }}
+    </h3>
+
+    <div class="text-center p-3">
+      <a class="card-link" data-toggle="collapse" role="button"
+      href="#details">
+      Abstract
+    </a>
+    <a class="card-link" target="_blank" href="{{paper.paper_link}}">
+      Paper
+    </a>
+    
+  </div>
+</div> 
 </div>
-<div id="details" class="pp-card m-3 collapse">
-    <div class="card-body">
-        <div class="card-text">
-            <div id="abstractExample">
-                <span class="font-weight-bold">Abstract:</span>
-                {{paper.abstract}}
-            </div>
-        </div>
-        <p></p>
+<div id="details" class="card m-3 collapse">
+  <div class="card-body">
+    <div class="card-text">
+      <div id="abstractExample">
+        <span class="font-weight-bold">Abstract:</span>
+        {{paper.abstract | safe}}
+      </div>
     </div>
-</div>
-
-<h5 style="color: red;">
-    Add content for posters. This could be a video, embedded pdf, chat room ....
-</h5>
-
-<!-- Chat -->
-{{ components.section("Example Chat") }}
-
-<div class="col-md-12 col-xs-12 p-2">
-    <div id="gitter" class="slp">
-        <center>
-            <iframe frameborder="0"
-                    src="https://{{config.chat_server}}/channel/paper_{{paper.UID}}?layout=embedded"
-                    height="700px" width="100%"></iframe>
-        </center>
-    </div>
+    <p></p>
+  </div>
 </div>
 
-<!-- Slides Live-->
+<script>
+  function changeTab(href) {
+    location.hash = "#" + href;
+    location.reload();
+  }
 
-{{ components.section("Example SlidesLive") }}
+  function lightningTab() {
+    changeTab('tab-lightning');
+  }
 
-<div class="col-md-12 col-xs-12 my-auto p-2">
+  function extendedTab() {
+    changeTab('tab-extended');
+  }
+
+  $(document).ready(function () {
+    if (window.location.hash === "") {
+      $(`a[href="#tab-lightning"]`).tab("show");
+    }
+  });
+
+</script>
+
+<div class="col-12 tabs pt-5">              
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link text-muted" data-toggle="tab" href="#tab-lightning" onclick="lightningTab()" role="tab" aria-controls="nav-home" aria-selected="true">
+        Lightning Talk
+      </a>
+    </li>
+    {% if paper.long_presentation_id %}  <!-- don't show if no long talk -->
+    <li class="nav-item">
+      <a class="nav-link text-muted" data-toggle="tab" href="#tab-extended" onclick="extendedTab()" role="tab" aria-controls="nav-home" aria-selected="true">
+        Extended Talk
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
+
+<div class="content p-3 pb-0">
+  {% if paper.short_presentation_id %}
     <div id="presentation-embed" class="slp my-auto"></div>
-    <script src='https://slideslive.com/embed_presentation.js'></script>
     <script>
+      id = (location.hash === "#tab-extended") ? "{{ paper.long_presentation_id }}" : "{{ paper.short_presentation_id }}";
       embed = new SlidesLiveEmbed("presentation-embed", {
+        // [Steve] both should be done now... verify.
+        // TODO(arjun): presentationId must vary for extended and lightning versions
+        // TODO(arjun): not all talks will have extended versions
         presentationId:
-          "{{paper.presentation_id | default(config.default_presentation_id)}}",
+        id,
         autoPlay: false, // change to true to autoplay the embedded presentation
         verticalEnabled: true,
         verticalWhenWidthLte: 500,
@@ -109,27 +137,38 @@
         hideTitle: true,
       });
     </script>
+  {% else %}
+  <div class="text-center text-muted mt-3">
+    <h4>Talk not available.</h4>
+  </div>
+  {% endif %}
 </div>
 
+<!-- Schedule -->
+{% if calendar != [] %}
+{{ components.subsection("Talk and Poster Session Times")}}
+<div class="text-muted pt-0 pb-0 text-center" style="">
+  Click the button to the right of each event to participate at the scheduled time.
+</div>
+<div class="form-group col">
+  <div id='calendar'></div>
+</div>
 
-<!-- Chat -->
-
-{{ components.section("Example Poster") }}
-
-<div role="main" id="pdf_view"></div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.3.200/build/pdf.min.js"></script>
-<script src="static/js/modules/pdfRender.js"></script>
 <script>
-  $(document).ready(() => {
-    // render first page of PDF to div
-    // PDF name can be bound to variable -- e.g. paper.content.poster_link
-    const pdfFile =
-      " {{ paper.poster_pdf | default(config.default_poster_pdf) }}";
-    initPDFViewer(pdfFile, "#pdf_view");
+  document.addEventListener('DOMContentLoaded', function() {
+    const calendar = makeCompactListCalendar('calendar', {
+      initialDate: '{{ config.calendar.start }}',
+      validRange: {
+        start: '{{ config.calendar.start }}',
+        end: '{{ config.calendar.end }}'
+      }
+    },
+    '{{ calendar | tojson }}');
   });
 </script>
 
+{% endif %}
 
-{% endblock %}
+
+  {% endblock %}
+  

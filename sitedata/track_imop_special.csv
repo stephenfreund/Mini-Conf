@@ -1,0 +1,11 @@
+title,start,end,category,trackUID,gather,zoom,info
+Introduction to IMOP,2021-06-21T09:00:00-04:00,2021-06-21T09:10:00-04:00,paper,imop,,,
+Representations and Traversals,2021-06-21T09:10:00-04:00,2021-06-21T09:45:00-04:00,paper,imop,,,
+"Scopes, Symbols, Types, and Environments",2021-06-21T09:45:00-04:00,2021-06-21T10:05:00-04:00,paper,imop,,,
+Code Construction and Transformations,2021-06-21T10:05:00-04:00,2021-06-21T10:15:00-04:00,paper,imop,,,
+Break,2021-06-21T10:15:00-04:00,2021-06-21T10:45:00-04:00,break,imop,,,
+Advanced Transformations,2021-06-21T10:45:00-04:00,2021-06-21T10:55:00-04:00,paper,imop,,,
+Data-flow Analyses,2021-06-21T10:55:00-04:00,2021-06-21T11:10:00-04:00,paper,imop,,,
+Concurrency Representations,2021-06-21T11:10:00-04:00,2021-06-21T11:25:00-04:00,paper,imop,,,
+Self-stabilization and Z3-integration,2021-06-21T11:25:00-04:00,2021-06-21T11:40:00-04:00,paper,imop,,,
+Discussions and Q&A,2021-06-21T11:40:00-04:00,2021-06-21T11:45:00-04:00,paper,imop,,,

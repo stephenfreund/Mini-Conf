@@ -1,0 +1,13 @@
+event,start,end,title,authors,category,trackUID,gather,zoom,info,uid
+38962602,2021-06-23T14:30:00+00:00,2021-06-23T14:50:00+00:00,Kim Hazelwood (Facebook AI Research),,qa,pldi-A,,,,9991
+38962603,2021-06-23T14:50:00+00:00,2021-06-23T15:10:00+00:00,Emery D. Berger (University of Massachusetts Amherst),,qa,pldi-A,,,,9990
+38962604,2021-06-23T15:10:00+00:00,2021-06-23T15:30:00+00:00,Michael Carbin (MIT),,qa,pldi-A,,,,9989
+38962605,2021-06-24T02:30:00+00:00,2021-06-24T03:00:00+00:00,Cristina Cifuentes (Oracle Labs),,qa,pldi-A,,,,9988
+38962606,2021-06-24T03:00:00+00:00,2021-06-24T03:30:00+00:00,"June Andronick (Proofcraft, UNSW and seL4 Foundation)",,qa,pldi-A,,,,9987
+38962607,2021-06-24T04:30:00+00:00,2021-06-24T05:00:00+00:00,James Noble (Victoria University of Wellington),,qa,pldi-A,,,,9986
+38962608,2021-06-24T05:00:00+00:00,2021-06-24T05:30:00+00:00,Sriram Rajamani (MSR India),,qa,pldi-A,,,,9985
+38962609,2021-06-25T16:30:00+00:00,2021-06-25T16:50:00+00:00,Madan Musuvathi (MSR Redmond),,qa,pldi-A,,,,9983
+38962610,2021-06-25T16:50:00+00:00,2021-06-25T17:10:00+00:00,Philippa Gardner (Imperial College London),,qa,pldi-A,,,,9982
+38962611,2021-06-25T17:10:00+00:00,2021-06-25T17:30:00+00:00,K. Rustan M. Leino (Amazon),,qa,pldi-A,,,,9981
+38962612,2021-06-26T04:30:00+00:00,2021-06-26T05:00:00+00:00,Sukyoung Ryu (KAIST),,qa,pldi-A,,,,9980
+38962613,2021-06-26T05:00:00+00:00,2021-06-26T05:30:00+00:00,Joxan Jaffar (National University of Singapore),,qa,pldi-A,,,,9979

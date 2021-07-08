@@ -1,0 +1,73 @@
+website: http://research.fb.com/pldi-2021
+
+description: |
+  At Facebook, we build systems that allow billions of people all over the 
+  world to connect and communicate using whatever devices they have available. 
+  Our researchers and engineers are constant innovators as they design and build 
+  next generation, scalable, fast, reliable, and efficient systems. Moreover, 
+  fast evolving social apps and highly dynamic social workloads present many 
+  unique research opportunities.  Learn more about our papers, workshops/panels, AMA, 
+  and other activities at PLDI: <a href="http://research.fb.com/pldi-2021" target="_blank">http://research.fb.com/pldi-2021</a>
+
+  Below are some examples of how we are working to build community through open-source technology.
+
+  #### Python
+
+  Facebook and Instagram have been big supporters of the Python language. Here are a 
+  couple of highlights of our sponsored development of PyTorch. [PyTorch FX](https://pytorch.org/docs/stable/fx.html)
+  consists of three main components: a symbolic tracer, an intermediate representation, and Python code generation. 
+  FX  is a general framework that can be used for program transformations such as partitioning and 
+  placement, automatic quantization, performance optimization and compilation, and metaprogramming.
+
+  PyTorch Deploy provides a way to run eager PyTorch models in a production context consisting of 
+  a shared-memory multi-threaded C++ service. In order to run eager PyTorch models in this context, 
+  we needed a way to run multiple CPython interpreters without a shared global interpreter lock (GIL). 
+  With a GIL concurrent execution of Python code would not be possible and limit scaling.  We bypass 
+  the GIL at the dynamic linker level by loading many copies of libpython into a single process. 
+  For early results, see: [https://arxiv.org/pdf/2104.00254.pdf](https://arxiv.org/pdf/2104.00254.pdf).
+
+  At Instagram we work to make Python run faster, focusing on topics such as fast interpretation, 
+  type checking, garbage collection, static analysis, machine code generation and register 
+  allocation. We recently open-sourced our internal performance-oriented Python 
+  runtime, <a href="https://github.com/facebookincubator/cinder" target="_blank">Cinder</a>.
+  Check out [our talk](https://www.youtube.com/watch?v=xGY45EmhwrE&list=PL2Uw4_HvXqvYk1Y5P8kryoyd83L_0Uk5K&index=32) at PyCon US 2021.
+
+  #### Erlang
+
+  WhatsApp is working on several cutting-edge projects at scale to increase developer efficiency
+   and help WhatsApp Erlang engineers ship more reliable, secure, and performant code. Starting 
+   in 2020, working closely with the open-source community, we have contributed improvements to the 
+   [Erlang-LS](https://github.com/erlang-ls/erlang_ls/commit/1a6924b97a951a254c7c422556218ecfcc4003ea) (Language Server), including a fully functional step-based debugger integration, as 
+   well as improvements to the build system Rebar3. Some of our most impactful area of work include:
+  
+  * Type Systems for Erlang at scale 
+  *	OTP Debugger integration to Erlang-LS
+  *	Tooling telemetry - usage, performance, reliability
+  *	Performance and reliability improvements to the canarying process
+  
+   
+  We are also building an Erlang-only contract format to aid the developer in exploring, 
+  understanding and validating their code, and finding discrepancies between the Erlang 
+  client, server and contract. Moreover a new compiler to improve the experience of using 
+  Erlang in highly-interactive, IDE-focused use-cases. Check out [WhatsApp GitHub](https://github.com/WhatsApp/erlfmt) to learn more.
+
+
+  #### Move
+
+  The Novi research team is developing Move: a safe and flexible programming language that 
+  was developed for smart contracts on the Diem blockchain, with potential applications 
+  in other blockchain and financial applications. We are continuing to invest in enhancements 
+  to the language, scaling performance, and advancing the state of the art in formal verification. 
+  We also have researchers working on cryptography and blockchain systems. Learn more at 
+  <a href="https://research.fb.com/category/blockchain-and-cryptoeconomics/" target="blank">research.fb.com/category/blockchain-and-cryptoeconomics</a>.
+
+
+# youtube:
+
+# contacts:
+
+# resources:
+
+# zoom_link:
+
+# schedule:

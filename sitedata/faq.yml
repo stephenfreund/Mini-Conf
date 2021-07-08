@@ -1,5 +1,369 @@
-FAQ:
-  - Section: Conference Advice
+Getting:
+  - Section: Getting Started
     QA:
-      - Question: What should I put on the paper pages?
-        Answer: "Depending on your conference, you might want to consider having embeded videos, chat rooms, or rendered posters. For ICLR, we used SlidesLive and Rocket.Chat. In another conference we used PDF.js to render posters."
+      - Question: How do I join Slack?
+        gettingStarted: True
+        Answer: >
+          You will join Slack workspace to join it using the same email address and password as
+          the PLDI website:
+
+          <div class="pl-4 pb-5 mx-auto">
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              1. Click here to start:  <a type="button" class="btn btn-danger bt-margin btn-sm mr-1" style="padding: .12rem .5rem; white-space: nowrap;" href="https://pldi21.slack.com/ssb/signin_redirect" target="_blank">Join Slack</a>
+              </div>
+              <div class="col-md-8 col-12">
+
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              2. Select "Sign in with PLDI 2021".
+              </div>
+              <div class="col-md-8 col-12">
+              <img src="static/images/slack-sign-on.png" style="max-height:200px;">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              3. Log in with the same email address and password as
+                for the PLDI website.  Do **not** log in with Google credentials.
+              </div>
+              <div class="col-md-8 col-12">
+              <img src="static/images/slack-login.png" style="max-height:200px;">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              4. Slack may present new users with their terms of service.  Read and agree to them.
+              </div>
+              <div class="col-md-8 col-12">
+                  <img src="static/images/slack-terms.png" style="max-height:200px;">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              5. If your browser asks you to download or open the Slack application, click Cancel.
+              </div>
+              <div class="col-md-8 col-12">
+              <img src="static/images/slack-open-app.png"  style="max-height:200px;">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              6. Click the URL to open the Slack link in your browser.
+              </div>
+              <div class="col-md-8 col-12">
+              <img src="static/images/slack-open-url.png"  style="max-height:200px;">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-md-4 col-12 my-auto">
+              7. Please update your profile's <b>Display name</b> to be 
+              your full name and affiliation.  To do this, click
+              the profile icon in the top-right corner, select "Edit Profile" from the menu, and then 
+              modify your <b>Display name</b>.
+              </div>
+              <div class="col-md-8 col-12">
+              <img src="static/images/slack-edit-profile.png"  style="max-height:200px;">
+              </div>
+            </div>
+          </div>
+
+          You will now be able to access the PLDI21 Slack workspace inside your web browser. Clicking any Slack link, such as the one in the top-right corner 
+          of the page, will bring you there.  
+          If you switch to a different browser or computer, you may need to repeat these steps.
+
+          
+          If you prefer to use the Slack app instead of the browser, launch the app and join our workspace
+          from inside the app if it is not already present.
+
+      - Question: How do I join Gather?
+        gettingStarted: True
+        Answer: >
+          You will need to authenticate your email address to Gather the first time you sign on.  To do this:
+
+          <div class="pl-4 pb-5 mx-auto">
+          <div class="row py-2">
+            <div class="col-md-4 col-12 my-auto">
+            1. Click here to start:  <a type="button" class="btn btn-danger bt-margin btn-sm mr-1" style="padding: .12rem .5rem; white-space: nowrap;" href="https://gather.town/" target="_blank">Join Gather</a> 
+            </div>
+            <div class="col-md-8 col-12">
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col-md-4 col-12 my-auto">
+            2. Click "Sign In" from the Gather webpage.
+            </div>
+            <div class="col-md-8 col-12">
+            <img src="static/images/gather-signin.png" style="max-height:200px;">
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col-md-4 col-12 my-auto">
+            3. Enter the same email address that you used 
+            for the PLDI website and click "Send magic link".  Do **not** sign in with Google credentials.  While nothing appears to happen when you click, an email will be sent to you by that action.
+            </div>
+            <div class="col-md-8 col-12">
+            <img src="static/images/gather-magic-link.png" style="max-height:200px;">
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col-md-4 col-12 my-auto">
+            4. Find Gather's email in your inbox, and click "Sign in to Gather".
+            </div>
+            <div class="col-md-8 col-12">
+            <img src="static/images/gather-email.png"  style="max-height:200px;">
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col-md-4 col-12 my-auto">
+            5. A new browser tab will open.  Click Finish signing in via "Browser", and then switch back to the original Gather browser tab.
+            </div>
+            <div class="col-md-8 col-12">
+            <img src="static/images/gather-finish.png"  style="max-height:200px;">
+            </div>
+          </div>
+          </div>
+
+          You will now be able to enter our virtual conference center, and clicking any Gather button will bring you to the Gather space, including the
+          one in the top-right corner of the page.  If you switch to a different browser or computer, you may need to repeat these steps.
+
+
+      - Question: How do I navigate the website?
+        gettingStarted: True
+        Answer: | 
+          Use the [Schedule](schedule.html) for an overview of the week, as well as a detailed list of all events that will take place.
+          All [PLDI papers](papers.html) have a pre-recorded five-minute talks, and some have longer talks.  
+          The short talks will be showed during our technical sessions, and the authors will take part in poster sessions following their talk.  
+          Each paper also has a Slack channel for chatting with the authors. 
+
+          You can also find information on [Featured](plenary.html) events, including [keynotes](plenary.html#tab-invited), [AMAs](plenary.html#tab-amas), and
+          the [Student Research Competition](plenary.html#tab-src).  The [Community](socials.html) page lists a number of other opportunities to 
+          engage with other conference attendees.
+
+          All [colocated events, workshops, and tutorials](workshops.html) are included with conference registration.  Each has its own page with a livestream and schedule of events.            Recordings of those events will be available to all attendees in case you are unable to attend during their scheduled times.
+
+          Finally, don't forget to check out our [sponsors](sponsors.html) and chat with them throughout the week.
+
+      - Question: What are the systems requirements for PLDI's services?
+        gettingStarted: True
+        Answer: |
+          We suggest using the most recent version of Chrome, Firefox, or Brave as the browser for all conference-related activities.  We have tested our site and streaming services with them, and they are supported by both [Slack](https://slack.com/help/articles/115002037526-Minimum-requirements-for-using-Slack) and [Gather](https://support.gather.town/help/system-specifications).            Other browsers may work, but we and our service providers may not be able to support them to the same degree. 
+
+          The external tools used on this site, including Slack, Zoom, and Gather can all be run in the browser, so you do not need to download any additional software.  If you do use the desktop or mobile applications for any of these tools, you should also upgrade to the most recent versions.          
+
+          A laptop or desktop computer is recommended for Gather.
+          
+
+      - Question: How do I get help with accessing the website or setting up Slack and Gather?
+        gettingStarted: True
+        Answer: >
+          If you have any technical difficulties, first check see if the issue can be addressed by the FAQ tab above.
+          
+          >
+          If you do not find an answer, please use Slack to contact <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" href="https://pldi21.slack.com/app_redirect?channel=helpdesk" target="_blank">#helpdesk</a> 
+          or [send email](https://pldi21.sigplan.org/contact) if you cannot access Slack.  (Note: use Slack if at all possible.  Email may not be answered as quickly.)
+            
+          >
+          If you encounter or witness inappropriate conduct, please see our Code of Conduct tab on this page for steps to take.
+
+FAQ:
+  - Section: General
+    QA:
+      - Question: What if I have a technical problem or have a question?
+        Answer: |
+          If you have any technical difficulties, first check the sections below to see if there is an existing solution.
+          
+          If you do not find an answer, please use Slack to contact <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" href="https://pldi21.slack.com/app_redirect?channel=helpdesk" target="_blank">#helpdesk</a>, or [send email](https://pldi21.sigplan.org/contact) if you cannot access Slack.   (Note: use Slack if at all possible.  Email may not be answered as quickly.)
+            
+
+      - Question: How do I report innapropriate conduct?
+        Answer: |
+          All participants are bound and expected to uphold the conference’s Code of Conduct. If you encounter or witness inappropriate conduct, please see our Code of Conduct tab on this page for steps to take.
+
+
+          
+  - Section: Slack
+    QA:
+      - Question: How do I join Slack?
+        Answer: |
+          You automatically have access to Slack using the same email address and password as for this website.  See the Getting Started tab at the top of this page for detailed sign-on instructions.
+      - Question: How do I learn to use Slack?
+        Answer: |
+          Please see Slack's online [Tutorials](https://slack.com/help/categories/360000049063) for many tips and suggestions.
+
+      - Question: How do I change my profile information, including my displayed name?
+        Answer: |
+          From inside a Slack window, click on the profile icon in the top-right corner.  Then select "Edit Profile".
+
+      - Question: Which channels should I join?
+        Answer: |
+          All attendees are in [#general](https://pldi21.slack.com/app_redirect?channel=general).
+           Use [#pldi-a](https://pldi21.slack.com/app_redirect?channel=pldi-a) and
+           [#pldi-b](https://pldi21.slack.com/app_redirect?channel=pldi-b) to ask questions to 
+           speakers and discuss the videos of papers presented in each PLDI track.
+ 
+           A lot of community mentors are in [#mentoring](https://pldi21.slack.com/app_redirect?channel=mentoring)
+           and happy to chat. Don't be shy, and send a DM! Do put yourself forward as a mentor 
+           if you're willing.
+
+           Head to [#jobs](https://pldi21.slack.com/app_redirect?channel=jobs) to advertise and 
+           find new opportunities.
+
+           For technical problems, visit the [#helpdesk](https://pldi21.slack.com/app_redirect?channel=helpdesk).
+
+           There are several other channels for papers and workshops, which all linked from the
+           web pages for papers and workshops on this website.
+  - Section: Gather
+    QA:
+      - Question: How do I join Gather?
+        Answer: >
+          You automatically have access to Gather using the same email address as for this website.  See the Getting Started tab at the top of this page for detailed sign-on instructions.
+      - Question: Is there a map of the Gather Virtual Conference Center?
+        Answer: >
+          <img src="static/images/pldi-center.png"  style="max-height:500px;">          
+      - Question: How do I set my browser's settings and permissions to use Gather?
+        Answer: >
+          Please see [Gather's browser's settings and permissions overview](https://support.gather.town/help/movement-and-basics#browser-settings-and-permissions)
+          for the details on setting up your browser.
+          
+      - Question: How do I fix my audio/video issues with Gather?
+        Answer: >
+          Please see [Gather's troubleshooting guide](https://support.gather.town/help/av-troubleshooting), which covers
+          most problems you may encounter.
+
+      - Question: How do I change my displayed name, share my screen, or learn to use other Gather features?
+        Answer: >
+          Please see Gather's online [Help Center](https://support.gather.town/help) for many tips and suggestions.  The following are perhaps the most
+          likely sources of questions:
+            >
+            - How do I [change my displayed name](https://support.gather.town/help/movement-and-basics#setting-or-changing-your-name)?
+            - How do I [send messages](https://support.gather.town/help/movement-and-basics#messaging)?
+            - How do I [share my screen](https://support.gather.town/help/gather-102#screen-sharing)?
+
+            
+  - Section: For Participants
+    QA:
+
+      - Question: "Is PLDI accessible from my location?"
+        Answer: |
+          We have verified the accessibility of our services, including Zoom, Slideslive, Slack, Gather and the website from many parts of the Earth. However,
+          as we are too well aware, the service status in each country may change overnight. If you have having difficulty accessing any of these services, please report it to us at on the [#helpdesk](https://pldi21.slack.com/app_redirect?channel=helpdesk) Slack channel, or [send email](https://pldi21.sigplan.org/contact) if you cannot access Slack.  
+
+
+      - Question: "How does the website know my timezone?"
+        Answer: >
+          We use the time zone given by your browser and automatically set the schedule to this timezone. You can change the timezone on the [homepage](home.html)
+          if it is not correct for your location.  If you set you timezone yourself, we recommend picking a timezone based off a nearby city to
+          fully account for the various [complexities](https://en.wikipedia.org/wiki/Time_zone) surrounding them.
+
+      - Question: What parts of PLDI are live?
+        Answer: |
+          The Q&A with Invited Speakers, the SRC finalist talks, and the Business Meeting, will take place live once, and then be replayed in the mirrored time slots twelve hours later.  All Q&A with AMA Speakers will be live, including those in the mirrored time slots.  These live sessions occur at specific times, so make sure to consult the [Schedule](/schedule.html).
+
+          All colocated conferences, workshops, and tutorials are live.  Please see their specific schedules
+          on how to participate in them. 
+          We will make the video for these events available as soon as possible for those who cannot attended at their schedule times.
+
+          The [Community](/socials.html) page lists other opportunities for live interaction with other attendees.
+
+
+      - Question: How do I talk to the author of a paper?
+        Answer: >
+          All PLDI papers have a poster in Gather, and you can speak with authors using audio and video during the poster sessions featuring their work. 
+          Outside of those times, you can ask questions and discuss with paper authors over Slack using the channel for their paper
+          or by messaging the authors directly. 
+
+      - Question: How can I find other people to chat with during the conference?
+        Answer: "We offer a number of ways to meet and engage with others, including in Slack, in Gather, at [PL Tea](/socials.html#pltea), and through the [#mentoring](https://pldi21.slack.com/app_redirect?channel=mentoring) Slack channel."
+
+      - Question: How do I ask questions of the Invited and AMA Speakers at PLDI?
+        Answer: >
+          All PLDI events with live Q&A will take place on the the [PLDI-A](track_pldi-A.html) video stream.  You can ask questions of
+          the invited and AMA speakers by posting them on the [#pldi-a](https://pldi21.slack.com/app_redirect?channel=pldi-a) Slack channel for that track.
+
+      - Question: How do I use Zoom in the browser instead of the app?
+        Answer: >
+          Zoom is used for some video sessions, which you can watch using the Zoom app or within the browser. Clicking on a Zoom link will ask you to open the video in the Zoom app. If you want to use Zoom in the browser, cancel that request and click the "Join from Your Browser" link.
+
+      - Question: How do I use Slack in the browser instead of the app?
+        Answer: >
+          Slack is used for chat.  Clicking on a Slack link will cause the browser to ask you to open the Slack app. If you want to use Slack in the browser, cancel that request and click the "open this link in your browser" link.
+
+
+  - Section: For PLDI Authors
+    QA:
+      - Question: Where can I find my paper's talk?
+        Answer: "Each paper has a page of its own. You can find your pre-recorded talk on your paper's page. You can search for your paper by its title/author in the [Papers](/papers.html) section to get to your paper's page."
+      - Question: How can attendees ask questions about my paper?
+        Answer: "Attendees can ask you questions about your paper either offline using your paper's Slack channel (which can be found on your paper's page) or by attending one of you poster sessions."
+      - Question: What do I need to know to about my paper's poster sessions?
+        Answer: >
+          At the time of your poster sessions, join our Gather space and position your avatar on the presenter spot (star) in front of your poster.  The posters are 
+          all numbered to help you find them, and your
+          your paper's web page will show your poster number.
+          Attendees will be able to view your poster and chat with you during those sessions.
+
+
+  - Section: Accessibility and Safety
+    QA:
+      - Question: How do you ensure safe online engagement?
+        Answer: "All participants are bound and expected to uphold the conference’s [Code of Conduct](/about.html#tab-code-of-conduct). We have 
+        taken several steps to safeguard against Zoom bombing by changing the permissions and 
+        types of calls we use, and having moderators with the ability to evict participants, 
+        amongst others. For text chat, we ask all authors, attendees, and organizers 
+        to ensure meaningful conversation and take steps if inappropriate conduct occurs.
+        Individual chat entries can be reported directly to the moderators as well."
+
+      - Question: "What rules are the rules around social media?"
+        Answer: >
+          Please be respectful in your use of social media. Do not post messages that appear 
+          as if you are representing the conference. Do not share items attendees would consider private
+          under our Code of Conduct or internal links on social media to 
+          prevent Zoom bombing and other forms of disruption by those not registered for the conference.
+
+      - Question: "What happens to the recorded talks and QA sessions after the conference?"
+        Answer: >
+          Recordings of the talks, and also Q&A sessions for invited and other select speakers,
+          will be made publicly viewable via Slideslive and the PLDI 2021 website.
+
+      - Question:  "How is data protected?"
+        Answer: >
+          This site records a very limited amount of data. Data as text in Slack is accessible only to registered conference attendees and 
+          will be removed within two weeks after the conference. Gather interaction will not be recorded.  Only the Zoom sessions producing the
+          video streams for PLDI and colocated events will be recorded.  Zoom sessions for social events, CARES, etc. will not be recorded.
+          All data from live Q&A and discussions will be destroyed after the conference, except for the Q&A sessions for invited and other select speakers.
+          Videos are hosted by our 
+          video partner SlidesLive.
+
+          >  
+          For more information on privacy practices of the conference software services, we 
+          encourage you to consult the statements from [Zoom](https://zoom.us/privacy), 
+          [SlidesLive](https://slideslive.com/privacy-policy), [Slack](https://slack.com/trust/privacy/privacy-policy), and [Gather](https://gather.town/privacy-policy).
+
+  - Section: Other
+    QA:
+      - Question: How was this website built?
+        Answer: |
+          We built this website using [MiniConf](http://www.mini-conf.org/).  Thanks to Alexander M. Rush and Hendrik Strobelt for
+          developing such a nice system for hosting conferences.
+
+Code Of Conduct: |
+
+  **Privacy:** For privacy reasons, recording, screen capturing, and retransmission of video streams from the conference platform is not allowed. Textual communications on conference-provided channels are also private.
+
+  **Names:** Attendees must use their professional names and affiliations for registration and all conference activities. Special circumstances may be discussed with the general chair.
+
+  **Anti-harassment and Non-discrimination:** The open exchange of ideas and the freedom of thought and expression are central to the aims and goals of SIGPLAN; these require an environment that recognizes the inherent worth of every person and group, that fosters dignity, understanding, and mutual respect, and that embraces diversity. SIGPLAN is dedicated to providing a harassment- and discrimination-free conference. In particular, attendees and organizers must abide by the ACM Policy Against Discrimination and Harassment. We expect all the participants to use welcoming and inclusive language, to be respectful of differing viewpoints and experiences, to gracefully accept constructive criticism, to focus on what is best for the community, and to show empathy towards other community members. There is no tolerance for unwelcome, hostile, or disruptive behavior or speech that intimidates, creates discomfort, or interferes with a person’s participation or opportunity for participation at the conference and all associated events. Conference participants violating these standards may be expelled from this and future conferences.
+
+  **Getting Help:** If you witness or are subject to unacceptable behavior, here are steps you can take:
+
+  * For immediate action (for example, to request removal of offensive posts on text chat channels), send email to [...](mailto:...).
+  * If you are unsure about what to do and want to talk in confidence with a friendly representative of [SIGPLAN’s Committee to Aid REporting (CARES)](https://www.sigplan.org/Cares/) contact one of the following contact persons. Discussions with CARES are strictly off the record and advisory in nature.
+      - Vikram Adve ([...](mailto:...))
+      - Peng Wu ([...](mailto:...))
+      - Shriram Krishnamurthi ([...](mailto:...)) 
+      - Kathryn McKinley ([...](mailto:...))
+      - Stephanie Weirich ([...](mailto:...))
+  * Contact PLDI's General Chair, Stephen Freund ([...](mailto:...)), or the Chair for Diversity and Inclusion, Dan Grossman ([...](mailto:...)), who will take appropriate action and report the incident to ACM if necessary.

@@ -1,0 +1,43 @@
+website: http://pldi21.sigplan.org
+description: |
+    Thank you again for sponsorship, which is vital to the
+    success of our conferences.  In addition to a page
+    listing all of our sponsors, we are creating a separate
+    page for each sponsor and invite you to submit content
+    for that page.  This page illustrates what it will roughly
+    look like.
+
+    We hope you will be able to send us some or all of the
+    following: 1) a blurb about your company and work; 2) a
+    short embedded YouTube or mp4 video; 3) links to
+    external pages and documents; and 4) contact information
+    you'd like to share with attendees.  These pages will be
+    visible to all attendees throughout the conference.
+
+    Depending on your sponsorship level, your page may also
+    include a link to a dedicated Slack channel, a Zoom
+    meeting link, and a schedule of events you plan to hold
+    during the week.  Details for these items are included
+    in our accompanying email.
+
+    Please don't hesitate to ask if you have any questions.
+
+youtube: https://www.youtube.com/embed/hVMCl64Uhe8
+
+contacts:
+  - name: Somebody At Company 
+    email: someone@somewhere.com
+  - name: Internships
+    email: interns@somewhere.com
+
+resources:
+  - label: Projects At the Company
+    website: http://pldi21.sigplan.org
+  - label: A link
+    website: http://pldi21.sigplan.org
+  - label: Apply for full-time jobs
+    website: http://pldi21.sigplan.org
+  - label: Apply for internships
+    website: http://pldi21.sigplan.org
+
+zoom_link: zoom.fake

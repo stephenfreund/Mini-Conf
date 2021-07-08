@@ -1,0 +1,55 @@
+{% set page_title = talk.title %}
+{% extends "base.html" %}
+
+{% block head %}
+
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Title -->
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      {{talk.title}}
+    </h2>
+    {% if talk.authors %}
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      {{talk.authors}}
+    </h3>
+    {% endif %}
+    {% if track %}
+    <h4 class="card-subtitle mb-2 text-muted text-center pt-3">
+      <a href="track_{{talk.track}}.html">Appearing at {{track}}</a>
+    </h4>
+    {% endif %}
+  </div>
+</div> 
+
+<div class="content p-3 pb-0">
+  {% if talk.presentation_id %}
+  <div id="presentation-embed" class="slp my-auto"></div>
+    <script src='https://slideslive.com/embed_presentation.js'></script>
+    <script>
+      embed = new SlidesLiveEmbed("presentation-embed", {
+        presentationId:
+        "{{talk.presentation_id | default(config.default_presentation_id)}}",
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true,
+        verticalWhenWidthLte: 500,
+        allowHiddenControlsWhenPaused: true,
+        hideTitle: true,
+      });
+    </script>
+  </div>
+  {% else %}
+  <div class="text-center">
+    <h4>Talk not available.</h4>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}
+  

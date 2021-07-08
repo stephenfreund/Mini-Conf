@@ -1,0 +1,34 @@
+website: https://www.redhat.com/
+description: |
+  Welcome to the home page of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)!
+
+  PLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.
+
+  PLDI 2021 will be a virtual conference held online. The main PLDI conference will be Wednesday, June 23 through Friday, June 25. PLDI will be co-located with HOPL IV and a host of workshops and tutorials, HOPL will take be Sunday, June 20, through Tuesday, June 22. Workshops and tutorials will be Monday, June 21, through Tuesday, June 22.
+
+youtube: https://www.youtube.com/embed/hVMCl64Uhe8
+
+# video: 
+
+contacts:
+  - name: Somebody At Company 
+    email: someone@somewhere.com
+
+resources:
+  - label: A link
+    website: http://www.nytimes.com
+  - label: Apply for full-time jobs
+    website: http://www.nytimes.com
+  - label: Apply for internships
+    website: http://www.nytimes.com 
+
+zoom_link: zoom.oracle
+
+schedule:
+  - start: 2021-06-20T10:00:00-07:00
+    duration: 0.5
+    label: "Q&A with Company: See what we do."
+    gather: Sponsor Booth
+  - start: 2021-06-20T11:00:00-07:00
+    duration: 0.5
+    label: "Demo of something nifty."

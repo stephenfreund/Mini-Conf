@@ -1,38 +1,71 @@
-{% set active_page = "Home" %}
-{% extends "base.html" %}
+{% set active_page = "Login" %}
+
+{% block head %}
+<title>PLDI 2021 Login</title>
+<link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+
+{% if config.use_auth0 %}
+<script>
+  var auth0_domain = "{{config.auth0_domain}}";
+  var auth0_client_id = "{{config.auth0_client_id}}";
+</script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+ 
+<script>
+window.onload = async () => {
+    const auth0 = await createAuth0Client({
+      domain: auth0_domain,
+      client_id: auth0_client_id,
+    });
+    try {
+      await auth0.getTokenSilently();
+      window.location.pathname = "/home.html";
+    } catch (error) {
+      if (error.error !== "login_required") {
+        throw error;
+      }
+      await auth0.loginWithRedirect({
+        // redirect_uri: window.location.href,
+        redirect_uri: window.location.origin + "/home.html",
+      });
+    }
+};
+</script>  
+
+{% else %}
+<script>
+window.location.pathname = "/home.html";
+</script>
+{% endif %}
+
+{% endblock %}
 
 {% block top %}
-<style>
-  .back {
-    background: url("{{config.background_image}}") no-repeat center;
-    background-size: cover;
-  }
-  .back h2 {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-  }
-</style>
-
-<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
-  <div class="row header p-6 m-5">
-    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
-      <h2>
-        {{config.tagline|safe}}
-      </h2>
-      <h2 class="p-5">
-        {{config.date|safe}}
-      </h2>
-    </div>
-  </div>
-</div>
 {% endblock %}
 
 {% block content %}
 
-{{ readme | markdown }}
+<style>
 
-<!-- Organizers -->
-{{ components.section("Organizers") }}
-{{ components.organizergroup(committee) }}
+img {
+  width: 100%
+}
+
+.centered {
+  width: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+<div class="container centered align-center">
+  <div><img src="./static/images/pldi21-logo-clear.png"></div>
+  <div class="text-center">
+    Logging In...  Click to <a href="/home.html">retry</a>.
+  </div>
+</div>
 
 {% endblock %}

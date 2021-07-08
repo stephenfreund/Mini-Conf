@@ -1,0 +1,262 @@
+{% set page_title = track.title %}
+{% extends "base.html" %}
+{{ super() }}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+<script src='https://slideslive.com/embed_presentation.js'></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="pp-card m-3" style="">
+    <div class="card-header">
+        <h2 class="card-title main-title text-center" style="">
+            {{track.title}}
+        </h2>
+
+        <h3 class="card-subtitle mb-2 text-muted text-center">
+            {{ track.organizers | join(", ") }}
+        </h3>
+
+        <div class="text-center p-3">
+            <a class="card-link px-2" data-toggle="collapse" role="button" href="#details">
+                Description
+            </a>
+
+            <a href="{{track.website}}" target="_blank" class="card-link px-2">
+                External Website
+            </a>
+
+            {% if track.proc %}
+            <a href="{{track.proc}}" target="_blank"  class="card-link px-2">
+              Proceedings
+            </a>      
+            {% endif %}      
+
+            {% if prerecorded|length > 0 %}
+            <span class="card-link px-2 ba" role="button" onclick="scrollVideos()">
+              Recorded Talks
+            </span>
+            <script type="text/javascript">
+              function scrollVideos() {
+                $("#prerecorded")[0].scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+                return false;
+              }
+            </script>
+            {% endif %}
+      
+        </div>
+
+        {% if not track.private %}
+        <h3 class="card-subtitle mb-2 text-muted text-center">
+            <span class="mr-2">Chat with others about this event:</span> {{ components.slack(config, track.slack_channel) }}
+        </h3>
+        {% else %}
+        <h3 class="card-subtitle mb-2 text-muted text-center">
+            <span class="mr-2">Chat with other attendees via the private #plmw Slack channel.</span>
+        </h3>
+        {% endif %}
+
+
+    </div>
+</div>
+
+<div id="details" class="pp-card m-3 collapse hide">
+    <div class="card-body">
+        <div class="card-text">
+            <div id="abstractExample">
+                {{ track.abstract | safe }}
+            </div>
+        </div>
+        <p></p>
+    </div>
+</div>
+
+
+
+
+<!-- Presentation Embed -->
+
+<!-- // streams var is list of { start, end, presentation_id } objects -->
+
+<div class="col-12 bd-content px-3 pt-3 mb-0">
+    <h3>Video Stream</h3>
+    <h5 class="text-center">
+        Each day has its own stream. Please select the one you'd like to view:
+    </h5>
+    <div class="col-12 tabs p-2 pb-3 text-center">
+        <ul class="nav nav-pills justify-content-center text-center">
+            <!-- loop.index is a 1-based iteration count -->
+            {% for stream in streams %}
+            <li class="nav-item px-3 py-1">
+                <a class="nav-link text-center text-muted" 
+                   href="#tab-{{loop.index}}" data-toggle="tab" role="tab"
+                   aria-controls="nav-home" aria-selected="true" onclick="changeTab('tab-{{loop.index}}')">
+                    <b>Day {{ loop.index }}:</b> 
+                    <span class="format-date-span-full">{{stream.start}} - {{stream.end}}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function changeTab(href) {
+        location.hash = "#" + href;
+        location.reload();
+    }
+
+    $(document).ready(function () {
+        hash = window.location.hash
+
+        // if no hash, find the earliest one that hasn't ended in the list. 
+        if (hash === "") {
+
+            // find the index (1-based) of the stream that is the first
+            //  one in order that has not yet ended.  So, the next one to start,
+            //  or the one we are in the middle of streaming live.
+            index = 0;
+            const now = moment(currentTime());
+            {% for stream in streams %}
+                if (index == 0 && moment("{{stream.end}}").isAfter(now)) { index = {{ loop.index }} }
+            {% endfor %}
+
+            if (index == 0) index = 1; // if past them all, just default to the first.
+
+            hash = `#tab-${index}`
+        }
+
+        // pull out the presentation it for the hash -- probably a better way to do this.
+        {% for stream in streams %}
+            if (hash === "#tab-{{loop.index}}") { slidesLiveId = "{{stream.presentation_id}}"; }
+        {% endfor %}
+
+        embed = new SlidesLiveEmbed("presentation", {
+            presentationId: slidesLiveId,
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            verticalWhenWidthLte: 500,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true,
+        });
+
+        $(`a[href="${hash}"]`).tab("show");  // highlight the right pill
+
+        // Is this kosher??? I want to avoid people bookmarking a specific tab or refreshing a specific tab,
+        //   rather than letting the code try to guess the right stream to show...
+        // history.pushState("", document.title, window.location.pathname)
+        window.location.hash = ""
+
+    });
+</script>
+
+
+<div class="pb-3 mx-3 px-3 px-sm-0" id="tab-presentation">
+    <div class="row pt-n4">
+        {% if not track.private %}
+        <div class="col-12">
+          <h6 class="text-muted text-center  float-right">
+            Join via Zoom: {{ components.zoomLink(zoom)}}
+          </h6>
+        </div>
+        {% else %}
+        <div class="col-12">
+            <h6 class="text-muted text-center  float-right">
+            See the PLMW Slack channel for Zoom access.
+          </h6>
+        </div>
+        {% endif %}
+        <div class="col-12">
+            <div id="outer">
+                <div id="presentation" class="slp my-auto"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ components.subsection("Full Schedule") }}
+
+<div class="text-muted pb-2 text-center" style="">
+    {% if prerecorded|length > 0 %}
+    Watch a talk's video by clicking its {{ components.videoHelp() }} button.<br>
+    {% endif %}
+    {% if track.instructions %}
+      {{ track.instructions | safe }}
+    {% else %}
+    Participate in an event occuring in Zoom or Gather by clicking the
+    Zoom/Gather button next to the event below.
+    {% endif %}
+</div>        
+
+
+<div class="form-group col track-schedule">
+    <div id='calendar'></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const calendar = makeCompactListCalendar('calendar', {
+            initialDate: '{{ config.calendar.start }}',
+            validRange: {
+                start: '{{ config.calendar.start }}',
+                end: '{{ config.calendar.end }}'
+            }
+        },
+            '{{ calendar | tojson }}');
+    });
+</script>
+
+
+{% if prerecorded|length > 0 %}
+<div id="prerecorded"></div>
+{{ components.subsection("Talks") }}
+<div class="text-muted pb-2 text-center mt-n4" style="">
+    Click on any talk to watch the prerecorded video.
+</div>        
+<div class="speakers mx-3 my-0 pt-n5">
+    <div class="cards row">
+        {% for talk in prerecorded %}
+        <div class="col-lg-4 col-12" style="box-sizing: border-box;">
+            <a class="pp-card text-muted" style="display: block; width: 100%;" target="_blank" href="prerecorded_{{talk.UID}}.html">
+                <div class="pp-card-header text-center p-3" style="height: auto; max-height:280px; max-width: 100%;">
+                    <h6 class="text-center card-title mt-0"> {{ talk.title }} </h6>
+                    <h6 class="text-center card-subtitle pt-2"> {{ talk.authors }} </h6>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+
+{% if sponsors|length > 0 %}
+{{ components.subsection(track.UID.upper() + " Sponsors") }}
+<div class="speakers mx-3 my-0 pt-n5 mt-n4">
+    <div class="cards row">
+        {% for sponsor in sponsors %}
+        <div class="col-lg-4 col-12 p-3" style="box-sizing: border-box;">
+            <div class="pp-card" style="display: block; overflow: hidden; width: 100%;">
+                <div class="card-header text-center" style="height: 150px; max-width: 100%;">
+                    <div class="row" style="height: 70px;">
+                        <a class="text-muted mx-auto my-auto" href="sponsor_{{sponsor.UID}}.html">
+                            <img style="max-height: 70px; max-width: 80%;"
+                                src="static/sponsor_images/{{sponsor.UID}}.png">
+                        </a>
+                    </div>
+                    <h6 class="m-3 mt-4 text-center card-title">
+                        {{sponsor.level}} Supporter
+                    </h6>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

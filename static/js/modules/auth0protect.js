@@ -1,10 +1,21 @@
+// Original version from mini-conf repo.
+//
+// Note:
+//   - Do not use private browsing tabs.
+//   - Do not use Safari unless you have subdomains set up for Auth0.
+//
+// Both of those cases lead to infinite refresh loops.
+// The big question: Are there others?
+//
+
 window.onload = async () => {
   const auth0 = await createAuth0Client({
     domain: auth0_domain,
     client_id: auth0_client_id,
+    cacheLocation: "localstorage",
   });
   try {
-    await auth0.getTokenSilently();
+    const token = await auth0.getTokenSilently();
   } catch (error) {
     if (error.error !== "login_required") {
       throw error;
@@ -25,6 +36,6 @@ window.onload = async () => {
     await auth0.handleRedirectCallback();
 
     // Use replaceState to redirect the user away and remove the querystring parameters
-    window.history.replaceState({}, document.title, "/");
+    window.history.replaceState({}, document.title, "/home.html");
   }
 };

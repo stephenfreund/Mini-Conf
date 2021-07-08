@@ -1,0 +1,31 @@
+website: http://www.codeplay.com
+
+description: |
+  Codeplay Software is a pioneer in enabling acceleration technologies used in AI, HPC and computer
+  vision applications. Established in 2002 in Edinburgh, Scotland, Codeplay created some of the first
+  software tools enabling complex applications to be accelerated using graphics processors. Today, most
+  AI, HPC and computer vision software programs are developed using graphics processors; and more
+  recently specialized AI and computer vision accelerators, including the RISC-V Vector processor.
+  Codeplay continues working with global technology leaders making the latest complex AI systems
+  programmable using open standards and allowing application developers to quickly bring
+  groundbreaking software to market.
+
+youtube: https://www.youtube.com/embed/RIhKxno8maU
+
+# contacts:
+
+resources:
+  - label: LinkedIn
+    website: https://www.linkedin.com/company/codeplay-software
+  - label: Codeplay on Twitter
+    website: https://twitter.com/codeplaysoft?lang=en
+  - label: Andrew Richards (Founder) on Twitter
+    website: https://twitter.com/codeandrew?lang=en
+  - label: https://sycl.tech/
+    website: https://sycl.tech/
+  - label: https://developer.codeplay.com/products/computecpp/ce/home/
+    website: https://developer.codeplay.com/products/computecpp/ce/home/
+
+# zoom_link:
+
+# schedule:

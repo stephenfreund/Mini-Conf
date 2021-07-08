@@ -1,0 +1,115 @@
+UID,Channel Name,Purpose
+pldi.12,paper-incremental-wholeprogram-analysis-in-datalog-with-lattices,Q&A for the PLDI paper Incremental Whole-Program Analysis in Datalog with Lattices
+pldi.21,paper-revamping-hardware-persistency-models,Q&A for the PLDI paper Revamping Hardware Persistency Models: View-Based and Axiomatic Persistency Models for Intel-x86 and Armv8
+pldi.25,paper-repairing-serializability-bugs-distributed-database,Q&A for the PLDI paper Repairing Serializability Bugs in Distributed Database Programs via Automated Schema Refactoring
+pldi.27,paper-gleipnir,Q&A for the PLDI paper Gleipnir: Toward Practical Error Analysis for Quantum Programs
+pldi.30,paper-alive2,Q&A for the PLDI paper Alive2: Bounded Translation Validation for LLVM
+pldi.34,paper-transfinite-iris,Q&A for the PLDI paper Transfinite Iris: Resolving an Existential Dilemma of Step-Indexed Separation Logic
+pldi.40,paper-perceus,Q&A for the PLDI paper Perceus: Garbage Free Reference Counting with Reuse
+pldi.43,paper-proof-repair-across-type-equivalences,Q&A for the PLDI paper Proof Repair across Type Equivalences
+pldi.44,paper-compilerassisted-object-inlining-with-value-fields,Q&A for the PLDI paper Compiler-Assisted Object Inlining with Value Fields
+pldi.45,paper-unleashing-hidden-power-compiler-optimization,Q&A for the PLDI paper Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study
+pldi.67,paper-refinedc,Q&A for the PLDI paper RefinedC: Automating the Foundational Verification of C Code with Refined Ownership Types
+pldi.72,paper-wire-sorts,Q&A for the PLDI paper Wire Sorts: A Language Abstraction for Safe Hardware Composition
+pldi.76,paper-deepcuts,Q&A for the PLDI paper DeepCuts: A Deep Learning Optimization Framework for Versatile GPU Workloads
+pldi.82,paper-retrofitting-effect-handlers-onto-ocaml,Q&A for the PLDI paper Retrofitting Effect Handlers onto OCaml
+pldi.83,paper-unqomp,Q&A for the PLDI paper Unqomp: Synthesizing Uncomputation in Quantum Circuits
+pldi.92,paper-zooid,Q&A for the PLDI paper Zooid: A DSL for Certified Multiparty Computation: From Mechanised Metatheory to Certified Multiparty Processes
+pldi.99,paper-fluid,Q&A for the PLDI paper Fluid: A Framework for Approximate Concurrency via Controlled Dependency Relaxation
+pldi.106,paper-developer-usertransparent-compiler-optimization-interactive,Q&A for the PLDI paper Developer and User-Transparent Compiler Optimization for Interactive Applications
+pldi.111,paper-demanded-abstract-interpretation,Q&A for the PLDI paper Demanded Abstract Interpretation
+pldi.112,paper-learning-find-naming-issues-big,Q&A for the PLDI paper Learning to Find Naming Issues with Big Code and Small Supervision
+pldi.115,paper-diy-assistant,Q&A for the PLDI paper DIY Assistant: A Multi-modal End-User Programmable Virtual Assistant
+pldi.121,paper-web-question-answering-with-neurosymbolic-program-synthesis,Q&A for the PLDI paper Web Question Answering with Neurosymbolic Program Synthesis
+pldi.124,paper-rbsyn,Q&A for the PLDI paper RbSyn: Type- and Effect-Guided Program Synthesis
+pldi.126,paper-high-performance-correctly-rounded-math,Q&A for the PLDI paper High Performance Correctly Rounded Math Libraries for 32-bit Floating Point Representations
+pldi.127,paper-porcupine,Q&A for the PLDI paper Porcupine: A Synthesizing Compiler for Vectorized Homomorphic Encryption
+pldi.130,paper-concolic-program-repair,Q&A for the PLDI paper Concolic Program Repair
+pldi.144,paper-concise-typesafe-and-efficient-structural-diffing,"Q&A for the PLDI paper Concise, Type-Safe, and Efficient Structural Diffing"
+pldi.145,paper-costar,Q&A for the PLDI paper CoStar: A Verified ALL(*) Parser
+pldi.149,paper-automated-conformance-testing-javascript-engines,Q&A for the PLDI paper Automated Conformance Testing for JavaScript Engines via Deep Compiler Fuzzing
+pldi.155,paper-beyond-elementary-representations-program-invariants,Q&A for the PLDI paper Beyond the Elementary Representations of Program Invariants over Algebraic Data Types
+pldi.156,paper-fast-and-precise-certification-of-transformers,Q&A for the PLDI paper Fast and Precise Certification of Transformers
+pldi.165,paper-tracebased-controlflow-analysis,Q&A for the PLDI paper Trace-Based Control-Flow Analysis
+pldi.166,paper-compiling-stan-generative-probabilistic-languages,Q&A for the PLDI paper Compiling Stan to Generative Probabilistic Languages and Extension to Deep Probabilistic Programming
+pldi.174,paper-filling-typed-holes-with-live-guis,Q&A for the PLDI paper Filling Typed Holes with Live GUIs
+pldi.180,paper-concurrent-deferred-reference-counting-constanttime,Q&A for the PLDI paper Concurrent Deferred Reference Counting with Constant-Time Overhead
+pldi.203,paper-quantum-abstract-interpretation,Q&A for the PLDI paper Quantum Abstract Interpretation
+pldi.227,paper-central-moment-analysis-cost-accumulators,Q&A for the PLDI paper Central Moment Analysis for Cost Accumulators in Probabilistic Programs
+pldi.228,paper-synthesizing-data-structure-refinements-integrity,Q&A for the PLDI paper Synthesizing Data Structure Refinements from Integrity Constraints
+pldi.243,paper-provable-repair-of-deep-neural-networks,Q&A for the PLDI paper Provable Repair of Deep Neural Networks
+pldi.244,paper-integration-verification-across-software-hardware,Q&A for the PLDI paper Integration Verification across Software and Hardware for a Simple Embedded System
+pldi.249,paper-symbolic-boolean-derivatives-efficiently-solving,Q&A for the PLDI paper Symbolic Boolean Derivatives for Efficiently Solving Extended Regular Expression Constraints
+pldi.255,paper-abstraction-for-conflictfree-replicated-data-types,Q&A for the PLDI paper Abstraction for Conflict-Free Replicated Data Types
+pldi.274,paper-boosting-smt-solver-performance-mixedbitwisearithmetic,Q&A for the PLDI paper Boosting SMT Solver Performance on Mixed-Bitwise-Arithmetic Expressions
+pldi.279,paper-distanceintime-versus-distanceinspace,Q&A for the PLDI paper Distance-in-Time versus Distance-in-Space
+pldi.283,paper-efficient-interpreter-datalog-despecializing-relations,Q&A for the PLDI paper An Efficient Interpreter for Datalog by De-specializing Relations
+pldi.297,paper-adaptive-restarts-for-stochastic-synthesis,Q&A for the PLDI paper Adaptive Restarts for Stochastic Synthesis
+pldi.299,paper-scooter-and-sidecar,Q&A for the PLDI paper Scooter & Sidecar: A Domain-Specific Approach to Writing Secure Database Migrations
+pldi.305,paper-when-threads-meet-events,Q&A for the PLDI paper When Threads Meet Events: Efficient and Precise Static Race Detection with Origins
+pldi.311,paper-viaduct,"Q&A for the PLDI paper Viaduct: An Extensible, Optimizing Compiler for Secure Distributed Programs"
+pldi.319,paper-reticle,Q&A for the PLDI paper Reticle: A Virtual Machine for Programming Modern FPGAs
+pldi.325,paper-polynomial-reachability-witnesses-via-stellenstze,Q&A for the PLDI paper Polynomial Reachability Witnesses via Stellensätze
+pldi.332,paper-sound-probabilistic-inference-via-guide-types,Q&A for the PLDI paper Sound Probabilistic Inference via Guide Types
+pldi.337,paper-sppl,Q&A for the PLDI paper SPPL: Probabilistic Programming with Fast Exact Symbolic Inference
+pldi.343,paper-reverse-engineering-reduction-parallelization-via,Q&A for the PLDI paper Reverse Engineering for Reduction Parallelization via Semiring Polynomials
+pldi.355,paper-dreamcoder,Q&A for the PLDI paper DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning
+pldi.363,paper-automatically-enforcing-fresh-consistent-inputs,Q&A for the PLDI paper Automatically Enforcing Fresh and Consistent Inputs in Intermittent Systems
+pldi.369,paper-modular-dataracefreedom-guarantees-in-the-promising-semantics,Q&A for the PLDI paper Modular Data-Race-Freedom Guarantees in the Promising Semantics
+pldi.375,paper-dnnfusion,Q&A for the PLDI paper DNNFusion: Accelerating Deep Neural Networks Execution with Advanced Operator Fusion
+pldi.404,paper-syrust,Q&A for the PLDI paper SyRust: Automatic Testing of Rust Libraries with Semantic-Aware Program Synthesis
+pldi.407,paper-chianina,Q&A for the PLDI paper Chianina: An Evolving Graph System for Flow- and Context-Sensitive Analyses of Million Lines of C Code
+pldi.424,paper-pathsensitive-sparse-analysis-without-path-conditions,Q&A for the PLDI paper Path-Sensitive Sparse Analysis without Path Conditions
+pldi.430,paper-cyclic-program-synthesis,Q&A for the PLDI paper Cyclic Program Synthesis
+pldi.440,paper-hashing-modulo-alphaequivalence,Q&A for the PLDI paper Hashing Modulo Alpha-Equivalence
+pldi.457,paper-phased-synthesis-of-divide-and-conquer-programs,Q&A for the PLDI paper Phased Synthesis of Divide and Conquer Programs
+pldi.465,paper-snapshotfree-transparent-robust-memory-reclamation,"Q&A for the PLDI paper Snapshot-Free, Transparent, and Robust Memory Reclamation for Lock-Free Data Structures"
+pldi.485,paper-logical-bytecode-reduction,Q&A for the PLDI paper Logical Bytecode Reduction
+pldi.517,paper-testcase-reduction-deduplication-almost-free,Q&A for the PLDI paper Test-Case Reduction and Deduplication Almost for Free with Transformation-Based Compiler Testing
+pldi.520,paper-proving-nontermination-by-program-reversal,Q&A for the PLDI paper Proving Non-termination by Program Reversal
+pldi.522,paper-vectorized-secure-evaluation-of-decision-forests,Q&A for the PLDI paper Vectorized Secure Evaluation of Decision Forests
+pldi.530,paper-task-parallel-assembly-language-for-uncompromising-parallelism,Q&A for the PLDI paper Task Parallel Assembly Language for Uncompromising Parallelism
+pldi.577,paper-jportal,Q&A for the PLDI paper JPortal: Precise and Efficient Control-Flow Tracing for JVM Programs with Intel Processor Trace
+pldi.596,paper-compcerto,Q&A for the PLDI paper CompCertO: Compiling Certified Open C Components
+pldi.599,paper-exampleguided-synthesis-of-relational-queries,Q&A for the PLDI paper Example-Guided Synthesis of Relational Queries
+pldi.601,paper-canary,Q&A for the PLDI paper Canary: Practical Static Detection of Inter-thread Value-Flow Bugs
+pldi.605,paper-robustness-certification-with-generative-models,Q&A for the PLDI paper Robustness Certification with Generative Models
+pldi.618,paper-execution-reconstruction,Q&A for the PLDI paper Execution Reconstruction: Harnessing Failure Reoccurrences for Failure Reproduction
+pldi.645,paper-quantitative-analysis-assertion-violations-probabilistic,Q&A for the PLDI paper Quantitative Analysis of Assertion Violations in Probabilistic Programs
+pldi.650,paper-ioopt,Q&A for the PLDI paper IOOpt: Automatic Derivation of I/O Complexity Bounds for Affine Programs
+pldi.717,paper-specification-synthesis-with-constrained-horn-clauses,Q&A for the PLDI paper Specification Synthesis with Constrained Horn Clauses
+pldi.734,paper-mirror,Q&A for the PLDI paper Mirror: Making Lock-Free Data Structures Persistent
+pldi.760,paper-akg,Q&A for the PLDI paper AKG: Automatic Kernel Generation for Neural Processing Units using Polyhedral Transformations
+pldi.763,paper-frequent-background-polling-shared-thread,"Q&A for the PLDI paper Frequent Background Polling on a Shared Thread, using Light-Weight Compiler Interrupts"
+pldi.773,paper-satisfiability-modulo-ordering-consistency-theory,Q&A for the PLDI paper Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification
+pldi.787,paper-bliss,Q&A for the PLDI paper Bliss: Auto-tuning Complex Applications using a Pool of Diverse Lightweight Learning Models
+pldi.826,paper-termination-analysis-without-the-tears,Q&A for the PLDI paper Termination Analysis without the Tears
+pldi.853,paper-probabilistic-termination-functional-programs-continuous,Q&A for the PLDI paper On Probabilistic Termination of Functional Programs with Continuous Distributions
+pldi.885,paper-practical-smart-contract-sharding-ownership,Q&A for the PLDI paper Practical Smart Contract Sharding with Ownership and Commutativity Analysis
+pldi-A,pldi-a,Discussion for PLDI Track A Papers
+pldi-B,pldi-b,Discussion for PLDI Track B Papers
+hopl,hopl,Discussion for HOPL IV
+ismm,ismm,Discussion for ISMM
+lctes,lctes,Discussion for LCTES
+array,array,Discussion for ARRAY
+infer,infer,Discussion for Infer Practitioners
+maps,maps,Discussion for MAPS
+soap,soap,Discussion for SOAP
+planqc,planqc,Discussion for PLanQC
+plmw,plmw,Discussion for PLMW
+contracts,contracts,Discussion for Smart Contracts
+persist,persist,Discussion for PERSIST
+imop,imop,Discussion for IMOP
+amazon,sponsor-amazon
+codeplay,sponsor-codeplay
+dfinity,sponsor-dfinity
+facebook,sponsor-facebook
+google,sponsor-google
+ibm,sponsor-ibm
+intel,sponsor-intel
+jetbrains,sponsor-jetbrains
+microsoft,sponsor-microsoft
+novi,sponsor-novi
+oracle,sponsor-oracle
+redhat,sponsor-redhat
+uber,sponsor-uber

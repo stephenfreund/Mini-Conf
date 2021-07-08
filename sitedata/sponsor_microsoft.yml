@@ -1,0 +1,26 @@
+website: http://www.microsoft.com/research
+
+description: |
+  Microsoft Research is where leading scientists and engineers have the freedom and support to propel discovery and innovation.  Here, they pursue and publish curiosity-driven research in a range of scientific and technical disciplines that can be translated into products. With access to vast computing power, global multi-disciplinary teams tackle complex problems that drive breakthrough technologies and improve lives. 
+
+video: static/sponsor_content/MSR_Sizzle_60_Sec_v4_Final.mp4
+
+# contacts:
+
+resources:
+  - label: "Request information about potential opportunities at Microsoft"
+    website: https://forms.office.com/r/DqLe4n593r
+  - label: "Subscribe link for Research Newsletter"
+    website: https://aka.ms/msrnewsletter
+  - label: "Twitter"
+    website: https://twitter.com/MSFTResearch
+  - label: Instagram 
+    website: https://www.instagram.com/msft_research
+  - label: Youtube
+    website: https://www.youtube.com/channel/UCCb9_Kn8F_Opb3UCGm-lILQ
+  - label: Facebook
+    website: https://www.facebook.com/microsoftresearch/
+ 
+# zoom_link:
+
+# schedule:

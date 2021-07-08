@@ -1,0 +1,11 @@
+event,start,end,title,authors,category,trackUID,gather,zoom,info_link
+infer,2021-06-21T13:00:00+00:00,2021-06-21T13:40:00+00:00,"Journey to null safety for Java at Facebook. An experience report.",Artem Pianykh|Mitya Lyubarskiy,colocated,infer,,,https://pldi21.sigplan.org/details/infer-2021-papers/4/Journey-to-null-safety-for-Java-at-Facebook-An-experience-report-
+infer,2021-06-21T13:40:00+00:00,2021-06-21T13:55:00+00:00,"Q&A 1",,colocated,infer,,Q&A in Zoom,https://pldi21.sigplan.org/details/infer-2021-papers/6/Q-A-1
+infer,2021-06-21T13:55:00+00:00,2021-06-21T14:35:00+00:00," Classifying and Prioritizing Facebook Infer's Warnings",Sofia Reis|João Francisco Roberto Martins|João F. Ferreira|Rui Abreu,colocated,infer,,,https://pldi21.sigplan.org/details/infer-2021-papers/2/-Classifying-and-Prioritizing-Facebook-Infer-s-Warnings
+infer,2021-06-21T14:35:00+00:00,2021-06-21T14:50:00+00:00,"Q&A 2",,colocated,infer,,Q&A in Zoom,https://pldi21.sigplan.org/details/infer-2021-papers/7/Q-A-2
+infer,2021-06-21T14:50:00+00:00,2021-06-21T15:30:00+00:00,"Compositional checking of safety temporal properties",Radu Grigore,colocated,infer,,,https://pldi21.sigplan.org/details/infer-2021-papers/5/Compositional-checking-of-safety-temporal-properties
+infer,2021-06-21T15:30:00+00:00,2021-06-21T15:45:00+00:00,"Q&A 3",,colocated,infer,,Q&A in Zoom,https://pldi21.sigplan.org/details/infer-2021-papers/8/Q-A-3
+infer,2021-06-21T17:30:00+00:00,2021-06-21T18:10:00+00:00,"Interactive Static Performance Analysis with Infer in the IDE",Jürgen Cito,colocated,infer,,,https://pldi21.sigplan.org/details/infer-2021-papers/1/Interactive-Static-Performance-Analysis-with-Infer-in-the-IDE
+infer,2021-06-21T18:10:00+00:00,2021-06-21T18:25:00+00:00,"Q&A 4",,colocated,infer,,Q&A in Zoom,https://pldi21.sigplan.org/details/infer-2021-papers/9/Q-A-4
+infer,2021-06-21T18:25:00+00:00,2021-06-21T19:05:00+00:00,"Differential Cost Analysis with Infer and Possible Extensions for Concrete Cost Analysis",Đorđe Žikelić|Pauline Bolignano|Bor-Yuh Evan Chang,colocated,infer,,,https://pldi21.sigplan.org/details/infer-2021-papers/3/Differential-Cost-Analysis-with-Infer-and-Possible-Extensions-for-Concrete-Cost-Analy
+infer,2021-06-21T19:05:00+00:00,2021-06-21T19:20:00+00:00,"Q&A 5",,colocated,infer,,Q&A in Zoom,https://pldi21.sigplan.org/details/infer-2021-papers/10/Q-A-5

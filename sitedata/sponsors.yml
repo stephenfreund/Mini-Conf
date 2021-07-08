@@ -1,0 +1,172 @@
+# - UID: fake
+#   level: Bronze
+#   name: SponsorName
+
+- UID: redhat
+  level: Platinum
+  name: Red Hat
+
+- UID: amazon
+  level: Gold
+  name: Amazon
+  
+- UID: facebook
+  level: Gold
+  name: Facebook
+  logo: static/sponsor_images/FBco_Interim_family_lockup_Stacked_FB_Blue_Gray_RGB.png
+  
+- UID: google
+  level: Gold
+  name: Google
+  zoom_link: zoom.google
+
+- UID: ibm
+  level: Gold
+  name: IBM
+
+- UID: intel
+  level: Gold
+  name: Intel
+
+- UID: jetbrains
+  level: Gold
+  name: JetBrains
+
+- UID: novi
+  level: Gold
+  name: Novi
+  alt_UID: facebook
+
+- UID: codeplay
+  level: Silver
+  name: codeplay
+
+- UID: dfinity
+  level: Silver
+  name: Dfinity
+
+- UID: microsoft
+  level: Silver
+  name: Microsoft
+
+- UID: oracle
+  level: Silver
+  name: Oracle
+  zoom_link: zoom.oracle
+
+- UID: uber
+  level: Silver
+  name: Uber
+
+- UID: arm
+  level: Bronze
+  name: Arm
+
+  
+
+
+
+
+
+
+# - UID: platinum
+#   level: Platinum
+#   hopl_level: Gold
+#   name: Company A
+#   logo: https://previews.123rf.com/images/mohammadmuhtadi/mohammadmuhtadi1811/mohammadmuhtadi181104505/121119743-initial-letter-dp-template-design.jpg
+#   website: http://www.pldi21.org
+#   description: |
+#     Welcome to the home page of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)!
+
+#     PLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.
+
+#     PLDI 2021 will be a virtual conference held online. The main PLDI conference will be Wednesday, June 23 through Friday, June 25. PLDI will be co-located with HOPL IV and a host of workshops and tutorials, HOPL will take be Sunday, June 20, through Tuesday, June 22. Workshops and tutorials will be Monday, June 21, through Tuesday, June 22.
+
+#   youtube: https://www.youtube.com/embed/hVMCl64Uhe8
+#   contacts:
+#     - name: Somebody At Company 
+#       email: someone@somewhere.com
+#   zoom_link: https://zoom.us/j/97542736114
+#   schedule:
+#     - start: 2021-06-20T10:00:00-07:00
+#       duration: 0.5
+#       label: "Q&A with Company: See what we do."
+#       gather: Sponsor Booth
+#     - start: 2021-06-20T11:00:00-07:00
+#       duration: 0.5
+#       label: "Demo of something nifty."
+#   resources:
+#     - label: A link
+#       website: http://www.nytimes.com
+#     - label: Apply for full-time jobs
+#       website: http://www.nytimes.com
+#     - label: Apply for internships
+#       website: http://www.nytimes.com 
+#   downloads:
+#     - label: Download A Flier
+#       website: Some.pdf
+# - UID: gold
+#   level: Gold
+#   name: Company B
+#   logo: https://previews.123rf.com/images/marsono/marsono1806/marsono180600856/104670563-dp-logo-and-symbols.jpg
+#   website: http://www.pldi21.org
+#   description: |
+#     Welcome to the home page of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)!
+
+#     PLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.
+
+#     PLDI 2021 will be a virtual conference held online. The main PLDI conference will be Wednesday, June 23 through Friday, June 25. PLDI will be co-located with HOPL IV and a host of workshops and tutorials, HOPL will take be Sunday, June 20, through Tuesday, June 22. Workshops and tutorials will be Monday, June 21, through Tuesday, June 22.
+
+#   youtube: https://www.youtube.com/embed/hVMCl64Uhe8
+#   contacts:
+#     - name: Some One
+#       email: email@email.com
+#     - name: Some Two
+#       email: email@email.com
+#   zoom_link: https://zoom.us/j/97542736114
+#   schedule:
+#     - start: 2021-06-21T12:00:00-00:00
+#       end: 2021-06-21T12:40:00-00:00
+#       label: "Tech Talk + Live Q&A: Social Apps"
+#     - start: 2021-06-21T20:00:00-00:00
+#       end: 2021-06-21T20:40:00-00:00
+#       label: "Ask me anything about Hiring"
+#     - start: 2021-06-20T12:00:00-00:00
+#       end: 2021-06-20T12:40:00-00:00
+#       label: "Tech Talk + Live Q&A: Making Sense of Twitter"
+#     - start: 2021-06-20T17:00:00-00:00
+#       end: 2021-06-20T17:40:00-00:00
+#       label: "Ask me anything about Hiring"
+#     - start: 2021-06-20T20:00:00-00:00
+#       end: 2021-06-20T20:40:00-00:00
+#       label: "Tech Talk + Live Q&A: Making Sense of Twitter"
+#     - start: 2021-06-24T12:00:00-00:00
+#       end: 2021-06-24T12:40:00-00:00
+#       label: "Ask me anything about Hiring"
+#     - start: 2021-06-24T20:00:00-00:00
+#       end: 2021-06-24T20:40:00-00:00
+#       label: "Tech Talk + Live Q&A: Social Apps"
+#   downloads:
+#     - label: Download A Flier
+#       website: Some.pdf
+# - UID: bronze
+#   level: Bronze
+#   name: Company B
+#   logo: https://previews.123rf.com/images/marsono/marsono1806/marsono180600856/104670563-dp-logo-and-symbols.jpg
+#   website: http://www.pldi21.org
+#   description: |
+#     Welcome to the home page of the 42nd ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2021)!
+
+#     PLDI is the premier forum in the field of programming languages and programming systems research, covering the areas of design, implementation, theory, applications, and performance.
+
+#     PLDI 2021 will be a virtual conference held online. The main PLDI conference will be Wednesday, June 23 through Friday, June 25. PLDI will be co-located with HOPL IV and a host of workshops and tutorials, HOPL will take be Sunday, June 20, through Tuesday, June 22. Workshops and tutorials will be Monday, June 21, through Tuesday, June 22.
+
+#   youtube: https://www.youtube.com/embed/hVMCl64Uhe8
+#   contacts:
+#     - name: Some One
+#       email: email@email.com
+#     - name: Some Two
+#       email: email@email.com
+#   downloads:
+#     - label: Download A Flier
+#       website: Some.pdf

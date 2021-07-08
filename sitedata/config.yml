@@ -1,39 +1,83 @@
-name: MiniConf
-tagline: MINICONF <br> CONFERENCE <br> MANAGEMENT
-date: May 2020
-citation_date: May 2020
-proceedings_title: Proceedings of the First MiniCon Conference
-analytics: UA-
+name: PLDI2020
+tagline: PLDI
+date: June 20-25, 2021
+citation_date: June 2021
+proceedings_title: Proceedings of PLDI
+analytics: aaaaaaaaaaaa
 logo:
-  image: static/images/MiniConf.png
-  width: 180px
+  image: static/images/pldi21-logo-clear.png
+  width: 100px
   height: auto
 # uncomment the following line to show the site title next to the logo image
 # site_title: MiniConf
 page_title:
-  prefix: 'MiniConf 2020'
+  prefix: 'PLDI 2021'
   separator: ': '
-background_image: static/images/main.jpg
-organization: MiniConf Organization Committee
+background_image: static/images/pldi-sunrise.jpg
+organization: <a href="https://pldi21.sigplan.org/committee/pldi-2021-organizing-committee">PLDI 2021 Organization Committee</a>
 
 # Remove or change to your chat server.
-chat_server: miniconf.sloppy.zone
-default_presentation_id: 38922815
+slack_server: pldi21.slack.com
+slack_signup: 'https://pldi21.slack.com/ssb/signin_redirect'
+
+default_presentation_id: 38930095
 default_poster_pdf: /static/images/GLTR_poster.pdf
 
+# query AWS for zoom link
+# redirect_zoom: True
 
 # Configuration for auth
-#Test user
-#user: miniconf@miniconf.com
-#pass: mIniconf1_
+use_auth0: False
+auth0_client_id : aaaaaaaaaaaa
+auth0_domain : login.pldi21.org
 
-use_auth0:
-auth0_client_id : JIdr6wi0z27LyLgwkJF0fpk700aj7MNH
-auth0_domain : miniconf.auth0.com
+gather_link: https://gather.town/
 
+## Papers
+use_acm_dl: True
+
+# How often the calendars update their current time
+# - Use 30000 for actual cases.  Twice per minute
+calendar_refresh_interval: 30000
+# - Use 1000 when testing
+calendar_refresh_interval: 5000
+
+#
+# comment out to turn off fake time features.
+#
+#debug: true
+#fake_time: "2021-06-25T12:25:00-04:00"
+#fake_time: "2021-06-23T12:55:00+00:00"
+# fake_time: "2021-06-19T13:25:00+00:00"
+#fake_time: "2021-06-23T13:25:00+00:00"
+#fake_time: "2021-06-21T15:25:00+00:00"
+#fake_time: "2021-06-24T13:25:00+00:00"
+#fake_time: "2021-06-23T15:25:00-04:00"
+
+# start/end of conference, and
+# colors for different categories of events.
 calendar:
-  colors: #  Colors for the different event hashtags:
-    ---: '#bed972'
-    qa: '#4FCAEB'
-    talk: '#ccc'
-  sunday_saturday: false  #  Include Sunday and Saturday
+  colors:
+    paper: '#3c8ad5'
+    paper-session: '#3c8ad5'
+    poster: '#3caad5'
+    plenary: '#f37735'
+    gather: '#28A745'
+    break: '#FFFFFF'
+    qa:   '#f37735'
+    social: '#fb5052'
+    sponsor: '#ffc425'
+    colocated: '#cc99ff'
+    colocated: '#88C785'
+    colocated-session: '#88C785'
+    other: '#666666'
+
+  start: '2021-06-20'
+  end: '2021-06-27'
+
+gather:
+  Gather Cafe:  spawnx=25&spawny=12&map=pldi-lounge-west
+  Gather Sponsor Hall: spawnx=30&spawny=30&map=sponsors
+  Gather Posters: spawnx=46&spawny=22&map=conference-deluxe-main
+  Gather SRC Posters: spawnx=7&spawny=32&map=src-pldi
+  Gather Beach: spawnx=33&spawny=24&map=conference-deluxe-beach

@@ -1,0 +1,13 @@
+event,start,end,title,authors,category,trackUID,gather,zoom,info_link
+plmw,2021-06-21T13:00:00+00:00,2021-06-21T14:15:00+00:00,"Small-group Mentoring Meetings 1",,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/9/Small-group-Mentoring-Meetings-1
+plmw,2021-06-21T14:45:00+00:00,2021-06-21T15:45:00+00:00,"Grad School: A Survival Guide",Matthew Might,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/1/Grad-School-A-Survival-Guide
+plmw,2021-06-21T17:30:00+00:00,2021-06-21T18:45:00+00:00,"Panel on Grad School",Zachary Tatlock|Sarah E. Chasins|Andreea Costea|Marco Patrignani,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/5/Panel-on-Grad-School
+plmw,2021-06-21T19:15:00+00:00,2021-06-21T20:15:00+00:00,"Reasoning Under Uncertainty in SMT Solving, Research, and Life",Lindsey Kuper,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/2/Making-Progress-under-Uncertainty
+plmw,2021-06-21T22:00:00+00:00,2021-06-21T23:15:00+00:00,"An Overview of the Stoke Project",Alex Aiken,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/8/An-Overview-of-the-Stoke-Project
+plmw,2021-06-21T23:45:00+00:00,2021-06-22T01:00:00+00:00,"Social Hangout 1",,gather,,Gather,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/11/Social-Hangout-1
+plmw,2021-06-22T13:00:00+00:00,2021-06-22T14:15:00+00:00,"Social Hangout 2",,gather,,Gather,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/12/Social-Hangout-2
+plmw,2021-06-22T14:45:00+00:00,2021-06-22T15:45:00+00:00,"How to give talks that people can follow",Derek Dreyer,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/3/How-to-give-talks-that-people-can-follow
+plmw,2021-06-22T17:30:00+00:00,2021-06-22T18:45:00+00:00,"Panel on Advising and Research",Ranjit Jhala|Isil Dillig|Matthias Felleisen|Frank Piessens|Stephanie Weirich,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/7/Panel-on-Advising-and-Research
+plmw,2021-06-22T19:15:00+00:00,2021-06-22T20:15:00+00:00,"Tips on Writing a Research Paper",Thomas Reps,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/4/Tips-on-Writing-a-Research-Paper
+plmw,2021-06-22T22:00:00+00:00,2021-06-22T23:15:00+00:00,"Panel on Career Paths",Jean Yang|Kathleen Fisher|Hannah Gommerstadt|Peter W. O'Hearn|Jennifer Paykin,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/6/Panel-on-Career-Paths
+plmw,2021-06-22T23:45:00+00:00,2021-06-23T01:00:00+00:00,"Small-group Mentoring Meetings 2",,colocated,plmw,,,https://pldi21.sigplan.org/details/PLMW-PLDI-2021/10/Small-group-Mentoring-Meetings-2

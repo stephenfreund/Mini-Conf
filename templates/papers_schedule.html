@@ -1,0 +1,91 @@
+{% set active_page = "Papers" %}
+{% set page_title = "Papers" %}
+
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+
+<script src="static/js/modules/icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+  {{ components.section("Papers") }}
+
+<!-- Session -->
+<div class="row d-none session_notice">
+  <div
+    class="alert alert-warning alert-dismissible fade show col-12"
+    role="alert"
+  >
+    Showing papers for
+    <span id="session_name" style="font-weight: bold;"></span>.
+    <button
+      type="button"
+      class="close remove_session"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<div class="container mb-3 mt-0">
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active text-muted" href="papers_schedule.html">
+        Talk Schedule
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-muted " href="papers.html">
+        Browse
+      </a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link text-muted " href="papers_vis.html">
+        Visualize
+      </a>
+    </li> -->
+  </ul>
+</div>
+
+
+<!-- Schedule -->
+
+<div class="text-muted pb-3 text-center">
+  Click any paper for details.  Click the live stream button for a paper to view its
+  to talk at the scheduled time.
+  (eg: <span class="badge pldi-pill badge-info text-white mr-0 fake-pill-button">PLDI-A</span>). <br>
+  Each talk session will be followed by a poster session in Gather featuring the authors of that session's papers. <br>
+  Talks mirrored 12 hours after their first occurrence appear in the <mark class="text-muted" style="background-color: #f0f0f8; border: 1px solid #dddddd;">shaded time bands</mark>.
+
+
+
+</div>        
+
+<div class="form-group col">
+  <div id='calendar' class="paper-schedule"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const calendar = makeTwoColumListCalendar('calendar', {
+      initialDate: '{{ config.calendar.start }}',
+      validRange: {
+        start: '{{ config.calendar.start }}',
+        end: '{{ config.calendar.end }}'
+      },
+    },
+    '{{ calendar | tojson }}');
+  });
+</script>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

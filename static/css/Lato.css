@@ -14,3 +14,10 @@
   src: local("Lato Black"), local("Lato-Black"),
     url(S6u9w4BMUTPHh50XSwiPHA.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(Lato-Bold.ttf) format("truetype");
+}

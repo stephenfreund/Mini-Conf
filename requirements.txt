@@ -1,5 +1,10 @@
-flask
+flask==1.1.2
 frozen-flask
 Flask-Markdown
 tqdm
 PyYAML
+pytz
+pandas
+requests
+unidecode
+beautifulsoup4

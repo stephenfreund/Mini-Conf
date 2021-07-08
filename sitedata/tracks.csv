@@ -1,0 +1,15 @@
+UID,title,calendar,conf_abbrev,stream_times,presentation_ids,zoom_link
+pldi-A,PLDI-A,pldi,PLDI-A,2021-06-23T09:00:00-04:00 - 2021-06-23T15:00:00-04:00|2021-06-24T09:00:00-04:00 - 2021-06-24T16:15:00-04:00|2021-06-25T09:00:00-04:00 - 2021-06-25T16:00:00-04:00|2021-06-23T21:00:00-04:00 - 2021-06-24T03:00:00-04:00|2021-06-24T21:00:00-04:00 - 2021-06-25T06:15:00-04:00|2021-06-25T21:00:00-04:00 - 2021-06-26T04:00:00-04:00,38958331|38958335|38958339|38958333|38958337|38958341,http://www.nytimes.com
+pldi-B,PLDI-B,pldi,PLDI-B,2021-06-23T09:00:00-04:00 - 2021-06-23T15:00:00-04:00|2021-06-24T09:00:00-04:00 - 2021-06-24T16:15:00-04:00|2021-06-25T09:00:00-04:00 - 2021-06-25T16:00:00-04:00|2021-06-23T21:00:00-04:00 - 2021-06-24T03:00:00-04:00|2021-06-24T21:00:00-04:00 - 2021-06-25T06:15:00-04:00|2021-06-25T21:00:00-04:00 - 2021-06-26T04:00:00-04:00,38958332|38958336|38958340|38958334|38958338|38958342,http://www.nytimes.com
+hopl,HOPL IV,hopl,HOPL IV,,,
+ismm,ISMM,ismm,ISMM,2021-06-21,38962598,http://www.nytimes.com
+lctes,LCTES,lctes,LCTES,6/22/21,38962599,http://www.nytimes.com
+array,ARRAY,array,ARRAY,6/21/21,38962596,http://www.nytimes.com
+infer,Infer Practitioners,infer,Infer,6/21/21,38962594,http://www.nytimes.com
+maps,MAPS,maps,MAPS,6/21/21,38962597,http://www.nytimes.com
+soap,SOAP,soap,SOAP,6/22/21,38962601,http://www.nytimes.com
+planqc,PLanQC,planqc,PLanQC,6/22/21,38962600,http://www.nytimes.com
+plmw,PLMW,plmw,PLMW,2021-06-21T09:00:00-04:00 - 2021-06-21T21:00:00-04:00 | 2021-06-22T09:00:00-04:00 - 2021-06-22T21:00:00-04:00,38962595|38962642,http://www.nytimes.com
+contracts,Smart Contracts,contracts,Contracts,6/22/21,38958300,http://www.nytimes.com
+persist,Memory Persistency,persist,Persist,6/22/21,38958297,http://www.nytimes.com
+imop,IMOP,imop,IMOP,6/21/21,38958290,http://www.nytimes.com

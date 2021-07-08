@@ -1,0 +1,91 @@
+- UID: plenary_1
+  kind: invited
+  image: https://pldi20.sigplan.org/getProfileImage/alexaiken/c8fedd12-f881-4540-81d9-bca8e23fe2f9/small.jpg?1589601227000
+  title: "Programming Tomorrow's Machines"
+  institution: Stanford University
+  speaker: Alex Aiken
+  summary: TBD
+  abstract: |
+    A slow-motion hardware revolution has been going on for a decade and will continue for the foreseeable future: Computers, particularly at the high-performance end of the spectrum, are becoming more parallel, heterogeneous, and hierarchical. In the past, major changes in the underlying hardware have given rise to the development of new programming abstractions, programming languages and compiler technology, and the difficulty of programming these machines suggests that such progress is sorely needed. This talk will outline several of the significant programming language research challenges posed by these machines as well as proposed solutions.
+  bio: |
+    Alex Aiken is the Alcatel-Lucent Professor of Computer Science at Stanford. Alex received his Bachelors degree in Computer Science and Music from Bowling Green State University in 1983 and his Ph.D. from Cornell University in 1988. Alex was a Research Staff Member at the IBM Almaden Research Center (1988-1993) and a Professor in the EECS department at UC Berkeley (1993-2003) before joining the Stanford faculty in 2003. His research interest is in areas related to programming languages. He is an ACM Fellow, a recipient of ACM SIGPLAN’s Programming Languages Achievement Award and Phi Beta Kappa’s Teaching Award, and a former chair of the Stanford Computer Science Department.
+  sessions: pldi_invite2|pldi_invite2_mirror
+  presentation_id: 38956338
+
+- UID: plenary_2
+  kind: invited
+  image: https://pldi21.sigplan.org/getProfileImage/michellestrout/e9045adf-94f1-41ef-8ad3-2f487258f9a2/small.jpg?1620630867000
+  title: "Concerns We Are Not Separating: It's Time for New Programming Stacks"
+  institution: HPE and University of Arizona
+  speaker: Michelle Strout
+  summary: TBD
+  abstract: |
+    The goal of separating concerns is a noble one that is often discussed but is rarely achieved with cross-cutting concerns like performance.  Optimizing performance usually requires selecting data and computation organizations to suit a particular architecture.  In the context of scientists and engineers who are writing simulation and data analysis codes, the performance concern impacts how quickly they can make scientific progress.  They have to leverage ever-changing and complex computer architectures to handle the sheer volume of data they produce and consume.  Thus, they find themselves rewriting portions of their code at a low level to obtain needed performance on new machines.
+
+    To empower programmers to make decisions about implementation details at a higher level, we need programming systems that cleanly separate *what* the code is trying to do, from *how* it should accomplish it in terms of data and computation organization.  In this talk, I present a vision for interacting *what* and *how* programming stacks.  The *how* programming stack needs a complete tool chain including programming constructs that enable the explicit, orthogonal, and high-level specification of implementation details for programs written in the *what* stack.  I show how existing systems such as the Chapel parallel programming language embody some of these principles and could be the foundation for programming systems where performance implementation concerns are first-class constructs.
+
+  bio: |
+    Michelle Strout is the Chapel team manager as of January 2021 and a professor in the Department of Computer Science at the University of Arizona since 2015.  She earned her Ph.D. at the University of San Diego in 2003, did an Enrico Fermi postdoc at Argonne National Laborator, and was an assistant and associate professor at Colorado State University from 2005 through 2015.  Dr. Strout’s main research area is programming languages and compilers for high performance computing and her research interests include sparse matrix computations and the polyhedral model.  Michelle received an NSF CAREER Award for her research in parallelization techniques for irregular applications, such as molecular dynamics simulations. She received a DOE Early Career award to fund her research in separating the specification of scientific computing applications from the specification of implementation details such as how to parallelize such computations. Some of Prof. Strout’s research contributions include the Universal Occupancy Vector (UOV) for determining storage mappings for any legal schedule in a stencil computation, the Sparse Polyhedral Framework (SPF) for specifying inspector-executor loop transformations, dataflow analysis for MPI programs, parameterized and full versus partial tiling within the polyhedral model, and loop chaining for scheduling across loops.
+
+  sessions: pldi_invite3|pldi_invite3_mirror
+  presentation_id: 38956339
+
+
+- UID: plenary_milner
+  kind: invited
+  image: https://conf.researchr.org/getProfileImage/eminatorlak/b48dd8a1-4bf6-4d29-b6e3-fb0e9ea9ce8e/small.jpg?1479411017000
+  title: "Robin Milner Young Researcher Award: Solver-Aided Programming for All"
+  institution: University of Washington
+  speaker: Emina Torlak
+  summary: TBD
+  abstract: |
+    The Robin Milner Young Researcher Award is given by ACM SIGPLAN to recognize outstanding contributions by young investigators in the area of programming languages. 
+    Join us for the presentation of the 2021 award and a talk by the recipient.
+    <br>
+    Solver-aided tools have automated the verification and synthesis of practical programs in many domains, from high-performance computing to executable biology. These tools work by reducing verification and synthesis tasks to satisfiability queries, which involves compiling programs to logical constraints. Developing an effective symbolic compiler is challenging, however, and until recently, it took years of expert work to create a solver-aided tool for a new domain.
+
+    This talk presents Rosette, a programming language for rapid creation of solver-aided tools. To build a new tool, you write an interpreter for the tool's input language, and Rosette lifts this interpreter into a symbolic compiler. The lifting is made possible by Rosette's symbolic virtual machine, which can translate both a language implementation and programs in that language to efficient constraints. Since its first public release in 2014, Rosette has enabled a wide range of programmers, from professional developers to high school students, to create over 30 new verification and synthesis tools. Example applications include verifying radiation therapy software in current clinical use, synthesizing GPU kernels, and verifying and synthesizing just-in-time compilers that are part of the Linux operating system. This talk will provide a brief introduction to Rosette and describe recent applications.
+
+  bio: | 
+    Emina Torlak is an Associate Professor in the Paul G. Allen School of Computer Science & Engineering at the University of Washington, working on new languages and tools for computer-aided design, verification, and synthesis of software. She received her Bachelors (2003), Masters (2004), and Ph.D. (2009) degrees from MIT, and subsequently worked at IBM Research, LogicBlox, and as a research scientist at U.C. Berkeley. Emina is the creator of the Kodkod solver, which has been used in over 70 academic and industrial tools for software engineering. Her work on the Rosette system integrates solvers into programming languages, enabling programmers to create their own solver-aided tools for all kinds of systems, from radiotherapy machines to automated algebra tutors. Emina is a recipient of the NSF CAREER Award (2017), Sloan Research Fellowship (2016), and the AITO Dahl-Nygaard Junior Prize (2016).
+
+  sessions: pldi_invite_milner|pldi_invite_milner_mirror
+  presentation_id: 38956906
+
+
+
+
+- UID: plenary_amas
+  kind: amas
+  image: static/images/ama.png
+  title: Ask Me Anything!
+  summary: Come watch the students!
+  abstract: |
+    
+    One of the best things about going to a conference is that you get to talk to people, including those 
+    who have inspired us, influenced our work and careers, or just do really interesting things.
+    Our AMA guests are among them.  They have kindly agreed to participate in live "Ask Me Anything!" sessions, 
+    where they will answer you questions about their research, their careers, and about Programming Languages in general.
+    Feel free to ask our guests anything about their professional career and their views on our field.
+    
+    <b>All AMA sessions will be live.  Watch them in the video stream, and ask your questions on Slack channel #pldi-a.</b>
+    
+    <b>Recordings of all AMA sessions are now available below.</b>
+  #sessions: pldi_ama_1|pldi_ama_1_mirror|pldi_ama_1b_mirror|pldi_ama_2|pldi_ama_2_mirror
+
+- UID: plenary_src
+  kind: src
+  image: https://www.acm.org/binaries/content/gallery/acm/ctas/acm-sym-branded.jpg/acm-sym-branded.jpg/acm%3Adesktopcta
+  title: Student Research Competition 
+  summary: Come watch the students!
+  abstract: |
+    The ACM Student Research Competition (SRC) offers a unique forum for undergraduate and graduate students to 
+    present their original research on programming language design, implementation, theory, applications, and 
+    performance at PLDI 2021. The goal is to give students a place to discuss their research with experts in their 
+    field and to help them sharpen their research and communication skills.
+
+    Drop by the SRC Poster Session to see all the student entries, and then watch short talks from the finalists during the
+    conference.
+
+
+  sessions: pldi_src_posters|pldi_src_talks|pldi_src_talks_mirror

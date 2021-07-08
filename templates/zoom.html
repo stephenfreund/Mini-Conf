@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+<title>Connecting to Zoom</title>
+
+{% if config.use_auth0 %}
+<script>
+  var auth0_domain = "{{config.auth0_domain}}";
+  var auth0_client_id = "{{config.auth0_client_id}}";
+</script>
+{% endif %}
+
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+
+<script>
+window.onload = async () => {
+  {% if config.use_auth0 %}
+    const auth0 = await createAuth0Client({
+      domain: auth0_domain,
+      client_id: auth0_client_id,
+      audience: "www.pldi21.org/api/"
+    });
+    
+    const token = await auth0.getTokenSilently().catch((err) => { 
+      // if we can't get the token, force a login...
+      // this is slightly disruptive, but hey, how did they get to this
+      // page without a login to start with?
+      window.location.href = "index.html";
+      return;
+    });
+
+    const queryString = window.location.search
+    const params = new URLSearchParams(queryString);
+    const key = params.get("key");
+
+    const response = await fetch(`https://2j31go5xq4.execute-api.us-east-1.amazonaws.com/auth-redirect?key=${key}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+  {% else %}
+
+    const response = await fetch(`https://2j31go5xq4.execute-api.us-east-1.amazonaws.com/redirect?key=${key}`);
+
+  {% endif %}
+
+  const loc = await response.text()
+  document.getElementById("spinner").style.display = "none";
+  if (!loc.startsWith("https")) {
+    document.getElementById('error').innerHTML = "Error getting Zoom link.  Please try again.<br>If the problem persists, please report it to the organizers.  <br><small>Include the following diagnostics:" + key + " / " + loc + "</small>"
+  } else {
+    location.replace(loc);
+  }
+}
+
+</script>
+</head>
+  
+<body>
+
+
+<style>
+
+img {
+    width: 15 0px;
+    margin: auto;    
+    display: block;
+}
+  
+</style>
+    
+<div class="container">
+  <div class="row mt-5">
+    <div class="col mx-auto">
+      <img src="./static/images/pldi21-logo-clear.png" style="max-width:20%;">
+    </div>
+  </div>
+  <div></div>
+  <div class="text-center">
+    <h3>Redirecting to Zoom...  Click to <a href="#" onclick="location.reload()">retry</a>.</h3>
+    <br><br><br><br>
+    <div class="spinner-border" id="spinner" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <h3 id="error"></h3>
+    <br><br><br><br>
+    If you encounter problems, please report them to the Slack <a href="https://pldi21.slack.com/app_redirect?channel=helpdesk">#helpdesk</a> channel or to <a href="mailto:...">...</a>.
+    <br><br><br><br>
+  </div>
+</div>
+    
+
+</body>
+</html>

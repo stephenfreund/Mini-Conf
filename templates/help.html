@@ -3,20 +3,54 @@
 {% extends "base.html" %}
 
 {% block tabs %}
-{{ components.tabs([("faq", "FAQ", "active")]) }}
+{{ components.section("Help") }}
+{{ components.tabs(
+  [("getting", "Getting Started", "active"),
+  ("faq", "FAQ", ""),
+  ("conduct", "Code Of Conduct", "")
+   ]) }}
 {% endblock %}
 
 {% block content %}
 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-  <!-- FAQ -->
+  <!-- Gettikng Started -->
   <div
     class="tab-pane active"
+    id="tab-getting"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+  >
+    {{ components.faqgroup(getting) }}
+  </div>
+
+  <!-- FAQ -->
+  <div
+    class="tab-pane"
     id="tab-faq"
     role="tabpanel"
     aria-labelledby="nav-profile-tab"
   >
-    {{ components.section("Frequently Asked Questions") }}
     {{ components.faqgroup(FAQ) }}
   </div>
+
+  <!-- CODE OF CONDUCT -->
+  <div
+    class="tab-pane"
+    id="tab-conduct"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+  >
+  
+  {{ components.subsection("Code Of Conduct") }}
+  <div class="card-text px-3">       
+      {{ conduct | markdown }}
+    </div>
+  </div>
+
 </div>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+
 {% endblock %}

@@ -1,0 +1,35 @@
+website: http://www.intel.com
+
+description: |
+  Intel is an industry leader, creating world-changing technology that enables global progress and enriches lives. 
+  Inspired by Moore’s Law, we continuously work to advance the design and manufacturing of semiconductors to help 
+  address our customers’ greatest challenges. By embedding intelligence in the cloud, network, 
+  edge and every kind of computing device, we unleash the potential of data to transform business and 
+  society for the better. To learn more about Intel’s innovations, go to [newsroom.intel.com](https://newsroom.intel.com/) and [intel.com](https://www.intel.com/).
+
+  Intel Labs is a global research organization committed to discovering and developing new technologies and 
+  compute forms to unleash the exponential power of data. As data becomes more deeply embedded in our lives 
+  with every technology leap — from artificial intelligence (AI) to 5G to the intelligent edge -– Intel Labs’ 
+  role is to find new ways to unleash its full potential. The global team of researchers bring their fearless 
+  creativity and interdisciplinary expertise to the data challenges of the future, inventing breakthroughs that 
+  scale for broad societal impact. To learn more, go to [intel.com/intellabs](https://www.intel.com/content/www/us/en/research/overview.html) and check out posts on [LinkedIn](http://www.linkedin.com/company/intel-labs/).
+
+# youtube:
+
+video: https://www.intel.com/content/dam/www/public/us/en/videos/research/we-are-intel-labs-video.mp4
+
+# contacts:
+
+resources:
+  - label: newsroom.intel.com
+    website: https://newsroom.intel.com/
+  - label: intel.com
+    website: https://www.intel.com/
+  - label: intel.com/intellabs
+    website: https://www.intel.com/content/www/us/en/research/overview.html
+  - label: LinkedIn
+    website: http://www.linkedin.com/company/intel-labs/
+
+# zoom_link:
+
+# schedule:

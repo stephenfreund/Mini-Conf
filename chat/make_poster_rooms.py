@@ -28,6 +28,12 @@ def read_papers(fname):
     return res
 
 
+def make_channel_name(title):
+    return "paper-" + "".join(
+        [x.lower() for x in title.replace(" ", "-") if x.isalnum() or x == "-"]
+    )
+
+
 if __name__ == "__main__":
     args = parse_arguments()
 
@@ -43,16 +49,20 @@ if __name__ == "__main__":
         )
 
         for paper in papers:
-            channel_name = "paper_" + paper["UID"]
+            #            channel_name = "paper_" + paper["UID"]
+            channel_name = make_channel_name(paper["title"])
             if not args.test:
                 created = rocket.channels_create(channel_name).json()
                 print(channel_name, created)
-            channel_id = rocket.channels_info(channel=channel_name).json()["channel"][
-                "_id"
-            ]
+                channel_id = rocket.channels_info(channel=channel_name).json()[
+                    "channel"
+                ]["_id"]
 
             # Change to topic of papers.
-            topic = "%s - %s" % (paper["title"], paper["authors"],)
+            topic = "%s - %s" % (
+                paper["title"],
+                paper["authors"],
+            )
             if not args.test:
                 rocket.channels_set_topic(channel_id, topic).json()
 

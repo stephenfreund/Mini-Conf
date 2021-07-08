@@ -1,0 +1,325 @@
+ID,Name,Email,Title,Status,Presentation lD
+9975,Guy Steele,,Hopl opening,incoming,
+9976,,,PLMW@PLDI: Programming Language Mentoring Workshop Day 2,to_check,38962642
+9977,Stephen Freund,,Live business meeting,to_check,38962620
+9978,Guy Steele,,Opening HOPL,to_check,38962614
+9979,"Joxan Jaffar, Andreea Costea",,"AMA Joxan Jaffar (NUS), Andreea Costea",to_check,38962613
+9980,"Sukyoyng Ryu, Hongseok Yang",,"AMA Sukyoyng Ryu (KAIST), Hongseok Yang",to_check,38962612
+9981,"Rustan Leino, Ranjit Jhala",,"AMA Rustan Leino, Ranjit Jhala",to_check,38962611
+9982,"Phillippa Gardner, Ranjit Jhala",,"AMA Phillippa Gardner, Ranjit Jhala",to_check,38962610
+9983,"Madan Musuvathi, John Wickerson",,"AMA Madan Musuvathi, John Wickerson",to_check,38962609
+9985,"Sriram Rajamani, Aditya Kanade",,"AMA Sriram Rajamani (MSR India), Aditya Kanade",to_check,38962608
+9986,"James Noble, Alex Potanin",,"AMA James Noble (VUW), Alex Potanin",to_check,38962607
+9987,"June Andronick, Gerwin Klein",,"AMA June Andronick (Data61), Gerwin Klein",to_check,38962606
+9988,"Cristina Cifuentes, Steve Blackburn",,"AMA Cristina Cifuentes (Oracle), Steve Blackburn",to_check,38962605
+9989,"Michael Carbin, Roopsha Sharma",,"AMA Michael Carbin, Roopsha Sharma",to_check,38962604
+9990,"Emery Berger, Sam Guyer",,"AMA Emery Berger, Sam Guyer",to_check,38962603
+9991,"Kim Hazelwood, Kathleen Fisher",,"AMA Kim Hazelwood, Kathleen Fisher",to_check,38962602
+9992,,,SOAP: State of the Art in Program Analysis,editing,38962601
+9993,,,PLanQC: Programming Languages for Quantum Computing,to_check,38962600
+9994,,,"LCTES: Languages, Compilers, Tools and Theory of Embedded Systems",to_check,38962599
+9995,,,ISMM: International Symposium on Memory Management,to_check,38962598
+9996,,,MAPS: Symposium on Machine Programming,to_check,38962597
+9997,,,ARRAY 2021,to_check,38962596
+9998,,,PLMW@PLDI: Programming Language Mentoring Workshop Day 1,editing,38962595
+9999,,,Infer Practitioners Workshop,to_check,38962594
+array.0,Keynote Speaker,,Keynote talk,finished,38956837
+array.1,"Jizhe Chenxin, Hidehiko Masuhara",,Nested Object Support in a Structure-of-Arrays Dynamic Objector Allocator (Extended Abstract),finished,38956838
+array.2,"Benjamin Chetioui, Ole Abusdal, Magne Haveraaen, Jaakko JÃ¤rvi, Lenore Mullin",,Padding in the Mathematics of Arrays,finished,38956839
+array.3,"Artjoms Sinkarovs, Hans-Nikolai Vießmann, Sven-Bodo Scholz",,Array Languages Make Neural Networks Fast,finished,38956840
+array.4,"Stephen Thomas, Lenore Mullin, Kasia Swirydowicz",,Improving the Performance of DGEMM with MoA and Cache-Blocking (Extended Abstract),finished,38956841
+array.5,"Troels Henriksen, Martin Elsman",,Towards size-dependent types for array programming,finished,38956842
+array.6,"Wojciech Michal Pawlak, Marek Hlava, Martin Metaksov, Cosmin Eugen Oancea",,Acceleration of Lattice Models for Pricing Portfolios of Fixed-Income Derivatives,finished,38956843
+array.7,"Doru Thom Popovici, Andrew Canning, Zhengji Zhao, Lin-Wang Wang, John Shalf",,Data Layouts are Important (Extended Abstract),finished,38956844
+gc.1,Stephen Freund,,TBD,finished,38956340
+gc.2,Stephen Freund,,TBD,finished,38956341
+gc.3,Stephen Freund,,TBD,finished,38956342
+gc.4,Stephen Freund,,TBD,finished,38956343
+gc.5,Stephen Freund,,TBD,finished,38956344
+gc.6,Stephen Freund,,TBD,finished,38956345
+gc.7,Stephen Freund,,TBD,finished,38959764
+gc.8,Stephen Freund,,TBD,incoming,38959765
+gc.9,Stephen Freund,,TBD,incoming,38959766
+ismm.1,"Zixian Cai, Stephen M. Blackburn, Michael D. Bond",,Understanding and Utilizing Hardware Transactional Memory Capacity,finished,38958467
+ismm.2,"Sam Ainsworth, Timothy Jones",,Compendia: Reducing Virtual-Memory Costs via Selective Densification,finished,38958468
+ismm.3,"Hiro Onozawa, Tomoharu Ugawa, Hideya Iwasaki",,Fusuma: Double-ended Threaded Compaction,finished,38958469
+ismm.4,"Guillaume Chatelet, Chris Kennelly, Sam Xi, Ondrej Sykora, ClÅ½ment Courbet, David Li, Bruno De Backer",,automemcpy A framework for automatic generation of fundamental memory operations,finished,38958470
+ismm.5,"Martin Maas, Chris Kennelly, Khanh Nguyen, Darryl Gove, Kathryn S McKinley, Paul Turner",,Adaptive Huge-Page Subrelease for Non-Moving Memory Allocators in Warehouse-Scale Computers,finished,38958471
+ismm.6,Shoaib Akram,,Exploiting Intel Optane Persistent Memory for Full Text Search,finished,38958472
+ismm.7,"Sandeep Kumar, Aravinda Prasad, Smruti R. Sarangi, Sreenivas Subramoney",,Radiant: Efficient Page Table Management for Tiered Memory Systems,finished,38958473
+ismm.8,"Dong Chen, Chen Ding, Fangzhou Liu, Benjamin Reber, Wesley Smith",,Uniform Lease vs LRU Cache: Analysis and Evaluation,finished,38958474
+lctes.1,"Jayaraj Poroor, Akash Lal, Sandesh Ghanta",,Robust I/O-compute concurrency for machine learning pipelines in constrained cyber-physical devices,finished,38956822
+lctes.10,"Oskar Pusz, Christian Dietrich, Daniel Lohmann",,Data-Flowâ€“Sensitive Fault-Space Pruning for the Injection of Transient Hardware Faults,finished,38956831
+lctes.11,"Rodrigo Rocha, Pavlos Petoumenos, Zheng Wang, Murray Cole, Hugh Leather, Kim Hazelwood",,HyFM: Function Merging for Free,finished,38956832
+lctes.12,"Gabriel Marin, Alexey Alexandrov, Tipp Moseley",,"Universal AutoFDO: Low Overhead, Architecture Neutral Software Branch Tracing",finished,38956833
+lctes.13,"Pavan Kumar Paluri, Guangli Dai, Albert M. K. Cheng",,ARINC 653-Compliant Regularity-based Resource Partitioning on Xen,finished,38956834
+lctes.14,"Bharti Chimdyalwar, Shrawan Kumar",,WIP:Selective path-sensitive interval analysis,finished,38956835
+lctes.15,"May Young, Alan J. Hu, Guy Lemieux",,Cache Abstraction for Data Race Detection in Heterogeneous Systems with Non-Coherent Accelerators,finished,38956836
+lctes.16,Frank Mueller,,Keynote,finished,38956905
+lctes.2,"Hongwei Qin, Dan Feng, Wei Tong, Yutong Zhao, Sheng Qiu, Fei Liu, Shu Li",,Better Atomic Writes By Exposing The Flash Out-Of-Band Area To File Systems,finished,38956823
+lctes.3,"Deok-Jae Oh, Yaebin Moon, Eojin Lee, Tae Jun Ham, Yongjun Park, Jae W. Lee, Jung Ho Ahn",,MaPHeA: A Lightweight Memory Hierarchy-aware Profile-guided Heap Allocation Framework,finished,38956824
+lctes.4,"XiaoLei Zhao, Mei Wen, Zhaoyun Chen, Yang Shi, Chunyuan Zhang",,WIP: Automatic Mapping and Code Optimization for OpenCL Kernels on FT-Matrix Architecture,finished,38956825
+lctes.5,"Weiwei Chen, Ying Wang, Gangliang Lin, Chengsi Gao, Cheng Liu. Lei Zhang",,CHaNAS: Coordinated Search for Network Architecture and Scheduling Policy,finished,38956826
+lctes.6,"Simon Schuster, Peter Wägemann, Peter Ulbrich, Wolfgang Schröder-Preikschat",,Annotate Once - Analyze Anywhere: Context-Aware WCET Analysis by User-Defined Abstractions,finished,38956827
+lctes.7,"Xuyi Cai, Ying Wang, Lei Zhang",,Optimus: Towards Optimal Layer-Fusion on DeepLearning Processors,finished,38956828
+lctes.8,"Elliott Wen, Gerald Weber",,WIP: WasmAndroid: A Cross-platform Runtime for Native Programming Languages on Android,finished,38956829
+lctes.9,"David Monniaux, Cyril Six",,"Simple, light, yet formally verified, global common subexpression elimination and loop-invariant code motion",finished,38956830
+maps.1,"D. Drain, C. Wu, A. Svyatkovskiy, N. Sundaresan",,Generating Bug-Fixes Using Pretrained Transformers,finished,38956850
+maps.2,"R. Mammadli, M. Selakovic, F. Wolf, M. Pradel",,Learning to Make Compiler Optimizations More Effective,finished,38956851
+maps.3,"G. Smith, A. Liu, S. Lyubomirsky, S. Davidson, J. McMahan, M. Taylor, L. Ceze, Z. Tatlock",,"Pure, Low-Level Tensor Program Rewriting via Access Patterns (Representation Pearl)",finished,38956852
+maps.4,"N. Hasabnis, J. Gottschlich",,ControlFlag: A Self-supervised Idiosyncratic PatternDetection System for Software Control Structures,finished,38956853
+maps.5,"T. Patabandi, A. Venkat, A. Kulkarni, P. Ratnalikar, M. Hall, J. Gottschlich",,Predictive Data Locality Optimization for Higher-Order Tensor Computations,finished,38956854
+maps.6,Mukund Raghothaman,,TBD,not_recording,38956855
+maps.7,Mangpo Phothilimthana,,TBD,finished,38956856
+maps.8,Koushik Sen,,TBD,not_recording,38956857
+persist.1,"Azalea Raad, Viktor Vafeiadis",,Low-Level Persistency Models (Tentative),finished,38956848
+persist.2,"Azalea Raad, Viktor Vafeiadis",,High-Level Persistency Models and Persistent Verification (Tentative),finished,38956849
+planqc.1,"Aniruddha Bapat, Andrew M. Childs, Alexey V. Gorshkov, Sam King, Eddie Schoute, Hrishee Shastri",,Quantum routing with fast reversals,finished,38956858
+planqc.2,"Kesha Hietala, Liyi Li, Akshaj Gaur, Aaron Green, Robert Rand, Xiaodi Wu, Michael Hicks",,Applying and Expanding the VOQC Toolkit,finished,38956859
+planqc.3,"Finn Voichick, Michael Hicks",,Toward A Quantum Programming Language for Higher-Level Formal Verification,finished,38956860
+planqc.4,"Giulia De Santis, Roberto Giacobazzi, Margherita Zorzi",,qKleene: Verification of Quantum RAM Made Easy,finished,38956861
+planqc.5,Matt Amy,,PLanQC TBD,incoming,38956862
+planqc.6,Matt Amy,,PLanQC TBD,incoming,38956863
+planqc.7,Matt Amy,,PLanQC TBD,incoming,38956864
+planqc.8,Matt Amy,,PLanQC TBD,incoming,38956865
+pldi.106.long,"Paschalis Mpeis, Pavlos Petoumenos, Kim Hazelwood, Hugh Leather",,Developer and User-Transparent Compiler Optimization for Interactive Applications,finished,38956268
+pldi.106.short,"Paschalis Mpeis, Pavlos Petoumenos, Kim Hazelwood, Hugh Leather",,Developer and User-Transparent Compiler Optimization for Interactive Applications,finished,38956181
+pldi.111.long,"Benno Stein, Bor-Yuh Evan Chang, Manu Sridharan",,Demanded Abstract Interpretation,finished,38956269
+pldi.111.short,"Benno Stein, Bor-Yuh Evan Chang, Manu Sridharan",,Demanded Abstract Interpretation,finished,38956182
+pldi.112.long,"Jingxuan He, Cheng-Chun Lee, Veselin Raychev, Martin Vechev",,Learning to Find Naming Issues with Big Code and Small Supervision,incoming,38956270
+pldi.112.short,"Jingxuan He, Cheng-Chun Lee, Veselin Raychev, Martin Vechev",,Learning to Find Naming Issues with Big Code and Small Supervision,finished,38956183
+pldi.115.long,"Michael Fischer, Giovanni Campagna, Euirim Choi, Monica S. Lam",,DIY Assistant: A Multi-modal End-User Programmable Virtual Assistant,incoming,38956271
+pldi.115.short,"Michael Fischer, Giovanni Campagna, Euirim Choi, Monica S. Lam",,DIY Assistant: A Multi-modal End-User Programmable Virtual Assistant,finished,38956184
+pldi.12.long,"Tamás Szabó, Sebastian Erdweg, Gábor Bergmann",,Incremental Whole-Program Analysis in Datalog with Lattices,finished,38956251
+pldi.12.short,"Tamás Szabó, Sebastian Erdweg, Gábor Bergmann",,Incremental Whole-Program Analysis in Datalog with Lattices,finished,38956164
+pldi.121.long,"Qiaochu Chen, Aaron Lamoreaux, Xinyu Wang, Greg Durrett, Osbert Bastani, Isil Dillig",,Web Question Answering with Neurosymbolic Program Synthesis,finished,38956272
+pldi.121.short,"Qiaochu Chen, Aaron Lamoreaux, Xinyu Wang, Greg Durrett, Osbert Bastani, Isil Dillig",,Web Question Answering with Neurosymbolic Program Synthesis,finished,38956185
+pldi.124.long,"Sankha Narayan Guria, Jeffrey S. Foster, David Van Horn",,RbSyn: Type- and Effect-Guided Program Synthesis,finished,38956273
+pldi.124.short,"Sankha Narayan Guria, Jeffrey S. Foster, David Van Horn",,RbSyn: Type- and Effect-Guided Program Synthesis,finished,38956186
+pldi.126.long,"Jay P. Lim, Santosh Nagarakatte",,High Performance Correctly Rounded Math Libraries for 32-bit Floating Point Representations,finished,38956274
+pldi.126.short,"Jay P. Lim, Santosh Nagarakatte",,High Performance Correctly Rounded Math Libraries for 32-bit Floating Point Representations,finished,38956187
+pldi.127.long,"Meghan Cowan, Deeksha Dangwal, Armin Alaghi, Caroline Trippel, Vincent T. Lee, Brandon Reagen",,Porcupine: A Synthesizing Compiler for Vectorized Homomorphic Encryption,incoming,38956275
+pldi.127.short,"Meghan Cowan, Deeksha Dangwal, Armin Alaghi, Caroline Trippel, Vincent T. Lee, Brandon Reagen",,Porcupine: A Synthesizing Compiler for Vectorized Homomorphic Encryption,finished,38956188
+pldi.130.long,"Ridwan Shariffdeen, Yannic Noller, Lars Grunske, Abhik Roychoudhury",,Concolic Program Repair,finished,38956276
+pldi.130.short,"Ridwan Shariffdeen, Yannic Noller, Lars Grunske, Abhik Roychoudhury",,Concolic Program Repair,finished,38956189
+pldi.144.long,"Sebastian Erdweg, Tamás Szabó, André Pacak",,"Concise, Type-Safe, and Efficient Structural Diffing",incoming,38956277
+pldi.144.short,"Sebastian Erdweg, Tamás Szabó, André Pacak",,"Concise, Type-Safe, and Efficient Structural Diffing",finished,38956190
+pldi.145.long,"Sam Lasser, Chris Casinghino, Kathleen Fisher, Cody Roux",,CoStar: A Verified ALL(*) Parser,incoming,38956278
+pldi.145.short,"Sam Lasser, Chris Casinghino, Kathleen Fisher, Cody Roux",,CoStar: A Verified ALL(*) Parser,finished,38956191
+pldi.149.long,"Guixin Ye, Zhanyong Tang, Shin Hwei Tan, Songfang Huang, Dingyi Fang, Xiaoyang Sun, Lizhong Bian, Haibo Wang, Zheng Wang",,Automated Conformance Testing for JavaScript Engines via Deep Compiler Fuzzing,incoming,38956279
+pldi.149.short,"Guixin Ye, Zhanyong Tang, Shin Hwei Tan, Songfang Huang, Dingyi Fang, Xiaoyang Sun, Lizhong Bian, Haibo Wang, Zheng Wang",,Automated Conformance Testing for JavaScript Engines via Deep Compiler Fuzzing,finished,38956192
+pldi.155.long,"Yurii Kostyukov, Dmitry Mordvinov, Grigory Fedyukovich",,Beyond the Elementary Representations of Program Invariants over Algebraic Data Types,finished,38956280
+pldi.155.short,"Yurii Kostyukov, Dmitry Mordvinov, Grigory Fedyukovich",,Beyond the Elementary Representations of Program Invariants over Algebraic Data Types,finished,38956193
+pldi.156.long,"Gregory Bonaert, Dimitar I. Dimitrov, Maximilian Baader, Martin Vechev",,Fast and Precise Certification of Transformers,finished,38956281
+pldi.156.short,"Gregory Bonaert, Dimitar I. Dimitrov, Maximilian Baader, Martin Vechev",,Fast and Precise Certification of Transformers,finished,38956194
+pldi.165.long,"Benoît Montagu, Thomas Jensen",,Trace-Based Control-Flow Analysis,incoming,38956282
+pldi.165.short,"Benoît Montagu, Thomas Jensen",,Trace-Based Control-Flow Analysis,finished,38956195
+pldi.166.long,"Guillaume Baudart, Javier Burroni, Martin Hirzel, Louis Mandel, Avraham Shinnar",,Compiling Stan to Generative Probabilistic Languages and Extension to Deep Probabilistic Programming,incoming,38956283
+pldi.166.short,"Guillaume Baudart, Javier Burroni, Martin Hirzel, Louis Mandel, Avraham Shinnar",,Compiling Stan to Generative Probabilistic Languages and Extension to Deep Probabilistic Programming,finished,38956196
+pldi.174.long,"Cyrus Omar, David Moon, Andrew Blinn, Ian Voysey, Nick Collins, Ravi Chugh",,Filling Typed Holes with Live GUIs,incoming,38956284
+pldi.174.short,"Cyrus Omar, David Moon, Andrew Blinn, Ian Voysey, Nick Collins, Ravi Chugh",,Filling Typed Holes with Live GUIs,finished,38956197
+pldi.180.long,"Daniel Anderson, Guy E. Blelloch, Yuanhao Wei",,Concurrent Deferred Reference Counting with Constant-Time Overhead,finished,38956285
+pldi.180.short,"Daniel Anderson, Guy E. Blelloch, Yuanhao Wei",,Concurrent Deferred Reference Counting with Constant-Time Overhead,finished,38956198
+pldi.203.long,"Nengkun Yu, Jens Palsberg",,Quantum Abstract Interpretation,finished,38956286
+pldi.203.short,"Nengkun Yu, Jens Palsberg",,Quantum Abstract Interpretation,finished,38956199
+pldi.21.long,"Kyeongmin Cho, Sung-Hwan Lee, Azalea Raad, Jeehoon Kang",,Revamping Hardware Persistency Models: View-Based and Axiomatic Persistency Models for Intel-x86 and Armv8,finished,38956252
+pldi.21.short,"Kyeongmin Cho, Sung-Hwan Lee, Azalea Raad, Jeehoon Kang",,Revamping Hardware Persistency Models: View-Based and Axiomatic Persistency Models for Intel-x86 and Armv8,finished,38956165
+pldi.227.long,"Di Wang, Jan Hoffmann, Thomas Reps",,Central Moment Analysis for Cost Accumulators in Probabilistic Programs,incoming,38956287
+pldi.227.short,"Di Wang, Jan Hoffmann, Thomas Reps",,Central Moment Analysis for Cost Accumulators in Probabilistic Programs,finished,38956200
+pldi.228.long,"Shankara Pailoor, Yuepeng Wang, Xinyu Wang, Isil Dillig",,Synthesizing Data Structure Refinements from Integrity Constraints,incoming,38956288
+pldi.228.short,"Shankara Pailoor, Yuepeng Wang, Xinyu Wang, Isil Dillig",,Synthesizing Data Structure Refinements from Integrity Constraints,finished,38956201
+pldi.243.long,"Matthew Sotoudeh, Aditya V. Thakur",,Provable Repair of Deep Neural Networks,finished,38956289
+pldi.243.short,"Matthew Sotoudeh, Aditya V. Thakur",,Provable Repair of Deep Neural Networks,finished,38956202
+pldi.244.long,"Andres Erbsen, Samuel Gruetter, Joonwon Choi, Clark Wood, Adam Chlipala",,Integration Verification across Software and Hardware for a Simple Embedded System,finished,38956290
+pldi.244.short,"Andres Erbsen, Samuel Gruetter, Joonwon Choi, Clark Wood, Adam Chlipala",,Integration Verification across Software and Hardware for a Simple Embedded System,finished,38956203
+pldi.249.long,"Caleb Stanford, Margus Veanes, Nikolaj BjÃ¸rner",,Symbolic Boolean Derivatives for Efficiently Solving Extended Regular Expression Constraints,finished,38956291
+pldi.249.short,"Caleb Stanford, Margus Veanes, Nikolaj BjÃ¸rner",,Symbolic Boolean Derivatives for Efficiently Solving Extended Regular Expression Constraints,finished,38956204
+pldi.25.long,"Kia Rahmani, Kartik Nagar, Benjamin Delaware, Suresh Jagannathan",,Repairing Serializability Bugs in Distributed Database Programs via Automated Schema Refactoring,finished,38956253
+pldi.25.short,"Kia Rahmani, Kartik Nagar, Benjamin Delaware, Suresh Jagannathan",,Repairing Serializability Bugs in Distributed Database Programs via Automated Schema Refactoring,finished,38956166
+pldi.255.long,"Hongjin Liang, Xinyu Feng",,Abstraction for Conflict-Free Replicated Data Types,finished,38956292
+pldi.255.short,"Hongjin Liang, Xinyu Feng",,Abstraction for Conflict-Free Replicated Data Types,finished,38956205
+pldi.27.long,"Runzhou Tao, Yunong Shi, Jianan Yao, John Hui, Frederic T. Chong, Ronghui Gu",,Gleipnir: Toward Practical Error Analysis for Quantum Programs,finished,38956254
+pldi.27.short,"Runzhou Tao, Yunong Shi, Jianan Yao, John Hui, Frederic T. Chong, Ronghui Gu",,Gleipnir: Toward Practical Error Analysis for Quantum Programs,finished,38956167
+pldi.274.long,"Dongpeng Xu, Binbin Liu, Weijie Feng, Jiang Ming, Qilong Zheng, Jing Li, Qiaoyan Yu",,Boosting SMT Solver Performance on Mixed-Bitwise-Arithmetic Expressions,incoming,38956293
+pldi.274.short,"Dongpeng Xu, Binbin Liu, Weijie Feng, Jiang Ming, Qilong Zheng, Jing Li, Qiaoyan Yu",,Boosting SMT Solver Performance on Mixed-Bitwise-Arithmetic Expressions,finished,38956206
+pldi.279.long,"Mahmut Taylan Kandemir, Xulong Tang, Hui Zhao, Jihyun Ryoo, Mustafa Karakoy",,Distance-in-Time versus Distance-in-Space,incoming,38956294
+pldi.279.short,"Mahmut Taylan Kandemir, Xulong Tang, Hui Zhao, Jihyun Ryoo, Mustafa Karakoy",,Distance-in-Time versus Distance-in-Space,finished,38956207
+pldi.283.long,"Xiaowen Hu, David Zhao, Herbert Jordan, Bernhard Scholz",,An Efficient Interpreter for Datalog by De-specializing Relations,finished,38956295
+pldi.283.short,"Xiaowen Hu, David Zhao, Herbert Jordan, Bernhard Scholz",,An Efficient Interpreter for Datalog by De-specializing Relations,finished,38956208
+pldi.297.long,"Jason R. Koenig, Oded Padon, Alex Aiken",,Adaptive Restarts for Stochastic Synthesis,finished,38956296
+pldi.297.short,"Jason R. Koenig, Oded Padon, Alex Aiken",,Adaptive Restarts for Stochastic Synthesis,finished,38956209
+pldi.299.long,"John Renner, Alex Sanchez-Stern, Fraser Brown, Sorin Lerner, Deian Stefan",,Scooter &#38,incoming,38956297
+pldi.299.short,"John Renner, Alex Sanchez-Stern, Fraser Brown, Sorin Lerner, Deian Stefan",,Scooter &#38,finished,38956210
+pldi.30.long,"Nuno P. Lopes, Juneyoung Lee, Chung-Kil Hur, Zhengyang Liu, John Regehr",,Alive2: Bounded Translation Validation for LLVM,incoming,38956255
+pldi.30.short,"Nuno P. Lopes, Juneyoung Lee, Chung-Kil Hur, Zhengyang Liu, John Regehr",,Alive2: Bounded Translation Validation for LLVM,finished,38956168
+pldi.305.long,"Bozhen Liu, Peiming Liu, Yanze Li, Chia-Che Tsai, Dilma Da Silva, Jeff Huang",,When Threads Meet Events: Efficient and Precise Static Race Detection with Origins,finished,38956298
+pldi.305.short,"Bozhen Liu, Peiming Liu, Yanze Li, Chia-Che Tsai, Dilma Da Silva, Jeff Huang",,When Threads Meet Events: Efficient and Precise Static Race Detection with Origins,finished,38956211
+pldi.311.long,"CoÅŸku Acay, Rolph Recto, Joshua Gancher, Andrew C. Myers, Elaine Shi",,"Viaduct: An Extensible, Optimizing Compiler for Secure Distributed Programs",finished,38956299
+pldi.311.short,"CoÅŸku Acay, Rolph Recto, Joshua Gancher, Andrew C. Myers, Elaine Shi",,"Viaduct: An Extensible, Optimizing Compiler for Secure Distributed Programs",finished,38956212
+pldi.319.long,"Luis Vega, Joseph McMahan, Adrian Sampson, Dan Grossman, Luis Ceze",,Reticle: A Virtual Machine for Programming Modern FPGAs,not_recording,38956300
+pldi.319.short,"Luis Vega, Joseph McMahan, Adrian Sampson, Dan Grossman, Luis Ceze",,Reticle: A Virtual Machine for Programming Modern FPGAs,finished,38956213
+pldi.325.long,"Ali Asadi, Krishnendu Chatterjee, Hongfei Fu, Amir Kafshdar Goharshady, Mohammad Mahdavi",,Polynomial Reachability Witnesses via StellensÃ¤tze,incoming,38956301
+pldi.325.short,"Ali Asadi, Krishnendu Chatterjee, Hongfei Fu, Amir Kafshdar Goharshady, Mohammad Mahdavi",,Polynomial Reachability Witnesses via StellensÃ¤tze,finished,38956214
+pldi.332.long,"Di Wang, Jan Hoffmann, Thomas Reps",,Sound Probabilistic Inference via Guide Types,incoming,38956302
+pldi.332.short,"Di Wang, Jan Hoffmann, Thomas Reps",,Sound Probabilistic Inference via Guide Types,finished,38956215
+pldi.337.long,"Feras A. Saad, Martin C. Rinard, Vikash K. Mansinghka",,SPPL: Probabilistic Programming with Fast Exact Symbolic Inference,finished,38956303
+pldi.337.short,"Feras A. Saad, Martin C. Rinard, Vikash K. Mansinghka",,SPPL: Probabilistic Programming with Fast Exact Symbolic Inference,finished,38956216
+pldi.34.long,"Simon Spies, Lennard Gäher, Daniel Gratzer",,Transfinite Iris: Resolving an Existential Dilemma of Step-Indexed Separation Logic,finished,38956256
+pldi.34.short,"Simon Spies, Lennard Gäher, Daniel Gratzer",,Transfinite Iris: Resolving an Existential Dilemma of Step-Indexed Separation Logic,finished,38956169
+pldi.343.long,"Akimasa Morihata, Shigeyuki Sato",,Reverse Engineering for Reduction Parallelization via Semiring Polynomials,incoming,38956304
+pldi.343.short,"Akimasa Morihata, Shigeyuki Sato",,Reverse Engineering for Reduction Parallelization via Semiring Polynomials,finished,38956217
+pldi.355.long,"Kevin Ellis, Catherine Wong, Maxwell Nye, Mathias SablÃ©-Meyer, Lucas Morales, Luke Hewitt, Luc Cary, Armando Solar-Lezama, Joshua B. Tenenbaum",,DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning,finished,38956305
+pldi.355.short,"Kevin Ellis, Catherine Wong, Maxwell Nye, Mathias SablÃ©-Meyer, Lucas Morales, Luke Hewitt, Luc Cary, Armando Solar-Lezama, Joshua B. Tenenbaum",,DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning,finished,38956218
+pldi.363.long,"Milijana Surbatovich, Limin Jia, Brandon Lucia",,Automatically Enforcing Fresh and Consistent Inputs in Intermittent Systems,incoming,38956306
+pldi.363.short,"Milijana Surbatovich, Limin Jia, Brandon Lucia",,Automatically Enforcing Fresh and Consistent Inputs in Intermittent Systems,finished,38956219
+pldi.369.long,"Minki Cho, Sung-Hwan Lee, Chung-Kil Hur, Ori Lahav",,Modular Data-Race-Freedom Guarantees in the Promising Semantics,finished,38956307
+pldi.369.short,"Minki Cho, Sung-Hwan Lee, Chung-Kil Hur, Ori Lahav",,Modular Data-Race-Freedom Guarantees in the Promising Semantics,finished,38956220
+pldi.375.long,"Wei Niu, Jiexiong Guan, Yanzhi Wang, Gagan Agrawal, Bin Ren",,DNNFusion: Accelerating Deep Neural Networks Execution with Advanced Operator Fusion,finished,38956308
+pldi.375.short,"Wei Niu, Jiexiong Guan, Yanzhi Wang, Gagan Agrawal, Bin Ren",,DNNFusion: Accelerating Deep Neural Networks Execution with Advanced Operator Fusion,finished,38956221
+pldi.40.long,"Alex Reinking, Ningning Xie, Leonardo De Moura, Daan Leijen",,Perceus: Garbage Free Reference Counting with Reuse,finished,38956257
+pldi.40.short,"Alex Reinking, Ningning Xie, Leonardo De Moura, Daan Leijen",,Perceus: Garbage Free Reference Counting with Reuse,finished,38956170
+pldi.404.long,"Yoshiki Takashima, Ruben Martins, Limin Jia, Corina S. PÄƒsÄƒreanu",,SyRust: Automatic Testing of Rust Libraries with Semantic-Aware Program Synthesis,incoming,38956309
+pldi.404.short,"Yoshiki Takashima, Ruben Martins, Limin Jia, Corina S. PÄƒsÄƒreanu",,SyRust: Automatic Testing of Rust Libraries with Semantic-Aware Program Synthesis,finished,38956222
+pldi.407.long,"Zhiqiang Zuo, Yiyu Zhang, Qiuhong Pan, Shenming Lu, Yue Li, Linzhang Wang, Xuandong Li, Guoqing Harry Xu",,Chianina: An Evolving Graph System for Flow- and Context-Sensitive Analyses of Million Lines of C Code,incoming,38956310
+pldi.407.short,"Zhiqiang Zuo, Yiyu Zhang, Qiuhong Pan, Shenming Lu, Yue Li, Linzhang Wang, Xuandong Li, Guoqing Harry Xu",,Chianina: An Evolving Graph System for Flow- and Context-Sensitive Analyses of Million Lines of C Code,finished,38956223
+pldi.424.long,"Qingkai Shi, Peisen Yao, Rongxin Wu, Charles Zhang",,Path-Sensitive Sparse Analysis without Path Conditions,incoming,38956311
+pldi.424.short,"Qingkai Shi, Peisen Yao, Rongxin Wu, Charles Zhang",,Path-Sensitive Sparse Analysis without Path Conditions,finished,38956224
+pldi.43.long,"Talia Ringer, RanDair Porter, Nathaniel Yazdani, John Leo, Dan Grossman",,Proof Repair across Type Equivalences,incoming,38956258
+pldi.43.short,"Talia Ringer, RanDair Porter, Nathaniel Yazdani, John Leo, Dan Grossman",,Proof Repair across Type Equivalences,finished,38956171
+pldi.430.long,"Shachar Itzhaky, Hila Peleg, Nadia Polikarpova, Reuben N. S. Rowe, Ilya Sergey",,Cyclic Program Synthesis,incoming,38956312
+pldi.430.short,"Shachar Itzhaky, Hila Peleg, Nadia Polikarpova, Reuben N. S. Rowe, Ilya Sergey",,Cyclic Program Synthesis,finished,38956225
+pldi.44.long,"Rodrigo Bruno, Vojin Jovanovic, Christian Wimmer, Gustavo Alonso",,Compiler-Assisted Object Inlining with Value Fields,incoming,38956259
+pldi.44.short,"Rodrigo Bruno, Vojin Jovanovic, Christian Wimmer, Gustavo Alonso",,Compiler-Assisted Object Inlining with Value Fields,finished,38956172
+pldi.440.long,"Krzysztof Maziarz, Tom Ellis, Alan Lawrence, Andrew Fitzgibbon, Simon Peyton Jones",,Hashing Modulo Alpha-Equivalence,finished,38956313
+pldi.440.short,"Krzysztof Maziarz, Tom Ellis, Alan Lawrence, Andrew Fitzgibbon, Simon Peyton Jones",,Hashing Modulo Alpha-Equivalence,finished,38956226
+pldi.45.long,"Xiaolei Ren, Michael Ho, Jiang Ming, Jeff Yu Lei, Li Li",,Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study,incoming,38956260
+pldi.45.short,"Xiaolei Ren, Michael Ho, Jiang Ming, Jeff Yu Lei, Li Li",,Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study,finished,38956173
+pldi.457.long,"Azadeh Farzan, Victor Nicolet",,Phased Synthesis of Divide and Conquer Programs,not_recording,38956314
+pldi.457.short,"Azadeh Farzan, Victor Nicolet",,Phased Synthesis of Divide and Conquer Programs,finished,38956227
+pldi.465.long,"Ruslan Nikolaev, Binoy Ravindran",,"Snapshot-Free, Transparent, and Robust Memory Reclamation for Lock-Free Data Structures",finished,38956315
+pldi.465.short,"Ruslan Nikolaev, Binoy Ravindran",,"Snapshot-Free, Transparent, and Robust Memory Reclamation for Lock-Free Data Structures",finished,38956228
+pldi.485.long,"Christian Gram Kalhauge, Jens Palsberg",,Logical Bytecode Reduction,finished,38956316
+pldi.485.short,"Christian Gram Kalhauge, Jens Palsberg",,Logical Bytecode Reduction,finished,38956229
+pldi.517.long,"Alastair F. Donaldson, Paul Thomson, Vasyl Teliman, Stefano Milizia, AndrÃ© Perez Maselco, Antoni KarpiÅ„ski",,Test-Case Reduction and Deduplication Almost for Free with Transformation-Based Compiler Testing,finished,38956317
+pldi.517.short,"Alastair F. Donaldson, Paul Thomson, Vasyl Teliman, Stefano Milizia, AndrÃ© Perez Maselco, Antoni KarpiÅ„ski",,Test-Case Reduction and Deduplication Almost for Free with Transformation-Based Compiler Testing,finished,38956230
+pldi.520.long,"Krishnendu Chatterjee, Ehsan Kafshdar Goharshady, Petr NovotnÃ½, ÄorÄ‘e Å½ikeliÄ‡",,Proving Non-termination by Program Reversal,finished,38956318
+pldi.520.short,"Krishnendu Chatterjee, Ehsan Kafshdar Goharshady, Petr NovotnÃ½, ÄorÄ‘e Å½ikeliÄ‡",,Proving Non-termination by Program Reversal,finished,38956231
+pldi.522.long,"Raghav Malik, Vidush Singhal, Benjamin Gottfried, Milind Kulkarni",,Vectorized Secure Evaluation of Decision Forests,finished,38956319
+pldi.522.short,"Raghav Malik, Vidush Singhal, Benjamin Gottfried, Milind Kulkarni",,Vectorized Secure Evaluation of Decision Forests,finished,38956232
+pldi.530.long,"Mike Rainey, Ryan R. Newton, Kyle Hale, Nikos Hardavellas, Simone Campanoni, Peter Dinda, Umut A. Acar",,Task Parallel Assembly Language for Uncompromising Parallelism,finished,38956320
+pldi.530.short,"Mike Rainey, Ryan R. Newton, Kyle Hale, Nikos Hardavellas, Simone Campanoni, Peter Dinda, Umut A. Acar",,Task Parallel Assembly Language for Uncompromising Parallelism,finished,38956233
+pldi.577.long,"Zhiqiang Zuo, Kai Ji, Yifei Wang, Wei Tao, Linzhang Wang, Xuandong Li, Guoqing Harry Xu",,JPortal: Precise and Efficient Control-Flow Tracing for JVM Programs with Intel Processor Trace,incoming,38956321
+pldi.577.short,"Zhiqiang Zuo, Kai Ji, Yifei Wang, Wei Tao, Linzhang Wang, Xuandong Li, Guoqing Harry Xu",,JPortal: Precise and Efficient Control-Flow Tracing for JVM Programs with Intel Processor Trace,finished,38956234
+pldi.596.long,"Jérémie Koenig, Zhong Shao",,CompCertO: Compiling Certified Open C Components,finished,38956322
+pldi.596.short,"Jérémie Koenig, Zhong Shao",,CompCertO: Compiling Certified Open C Components,finished,38956235
+pldi.599.long,"Aalok Thakkar, Aaditya Naik, Nathaniel Sands, Rajeev Alur, Mayur Naik, Mukund Raghothaman",,Example-Guided Synthesis of Relational Queries,incoming,38956323
+pldi.599.short,"Aalok Thakkar, Aaditya Naik, Nathaniel Sands, Rajeev Alur, Mayur Naik, Mukund Raghothaman",,Example-Guided Synthesis of Relational Queries,finished,38956236
+pldi.601.long,"Yuandao Cai, Peisen Yao, Charles Zhang",,Canary: Practical Static Detection of Inter-thread Value-Flow Bugs,incoming,38956324
+pldi.601.short,"Yuandao Cai, Peisen Yao, Charles Zhang",,Canary: Practical Static Detection of Inter-thread Value-Flow Bugs,finished,38956237
+pldi.605.long,"Matthew Mirman, Alexander HÃ¤gele, Timon Gehr, Pavol Bielik, Martin Vechev",,Robustness Certification with Generative Models,incoming,38956325
+pldi.605.short,"Matthew Mirman, Alexander HÃ¤gele, Timon Gehr, Pavol Bielik, Martin Vechev",,Robustness Certification with Generative Models,finished,38956238
+pldi.618.long,"Gefei Zuo, Jiacheng Ma, Andrew Quinn, Pramod Bhatotia, Pedro Fonseca, Baris Kasikci",,Execution Reconstruction: Harnessing Failure Reoccurrences for Failure Reproduction,finished,38956326
+pldi.618.short,"Gefei Zuo, Jiacheng Ma, Andrew Quinn, Pramod Bhatotia, Pedro Fonseca, Baris Kasikci",,Execution Reconstruction: Harnessing Failure Reoccurrences for Failure Reproduction,finished,38956239
+pldi.645.long,"Jinyi Wang, Yican Sun, Hongfei Fu, Krishnendu Chatterjee, Amir Kafshdar Goharshady",,Quantitative Analysis of Assertion Violations in Probabilistic Programs,incoming,38956327
+pldi.645.short,"Jinyi Wang, Yican Sun, Hongfei Fu, Krishnendu Chatterjee, Amir Kafshdar Goharshady",,Quantitative Analysis of Assertion Violations in Probabilistic Programs,finished,38956240
+pldi.650.long,"Auguste Olivry, Guillaume Iooss, Nicolas Tollenaere, Atanas Rountev, Saday Sadayappan, Fabrice Rastello",,IOOpt: Automatic Derivation of I/O Complexity Bounds for Affine Programs,incoming,38956328
+pldi.650.short,"Auguste Olivry, Guillaume Iooss, Nicolas Tollenaere, Atanas Rountev, Saday Sadayappan, Fabrice Rastello",,IOOpt: Automatic Derivation of I/O Complexity Bounds for Affine Programs,finished,38956241
+pldi.67.long,"Michael Sammler, Rodolphe Lepigre, Robbert Krebbers, Kayvan Memarian, Derek Dreyer, Deepak Garg",,RefinedC: Automating the Foundational Verification of C Code with Refined Ownership Types,finished,38956261
+pldi.67.short,"Michael Sammler, Rodolphe Lepigre, Robbert Krebbers, Kayvan Memarian, Derek Dreyer, Deepak Garg",,RefinedC: Automating the Foundational Verification of C Code with Refined Ownership Types,finished,38956174
+pldi.717.long,"Sumanth Prabhu, Grigory Fedyukovich, Kumar Madhukar, Deepak D'Souza",,Specification Synthesis with Constrained Horn Clauses,finished,38956329
+pldi.717.short,"Sumanth Prabhu, Grigory Fedyukovich, Kumar Madhukar, Deepak D'Souza",,Specification Synthesis with Constrained Horn Clauses,finished,38956242
+pldi.72.long,"Michael Christensen, Timothy Sherwood, Jonathan Balkind, Ben Hardekopf",,Wire Sorts: A Language Abstraction for Safe Hardware Composition,incoming,38956262
+pldi.72.short,"Michael Christensen, Timothy Sherwood, Jonathan Balkind, Ben Hardekopf",,Wire Sorts: A Language Abstraction for Safe Hardware Composition,finished,38956175
+pldi.734.long,"Michal Friedman, Erez Petrank, Pedro Ramalhete",,Mirror: Making Lock-Free Data Structures Persistent,finished,38956330
+pldi.734.short,"Michal Friedman, Erez Petrank, Pedro Ramalhete",,Mirror: Making Lock-Free Data Structures Persistent,finished,38956243
+pldi.76.long,"Wookeun Jung, Thanh Tuan Dao, Jaejin Lee",,DeepCuts: A Deep Learning Optimization Framework for Versatile GPU Workloads,finished,38956263
+pldi.76.short,"Wookeun Jung, Thanh Tuan Dao, Jaejin Lee",,DeepCuts: A Deep Learning Optimization Framework for Versatile GPU Workloads,finished,38956176
+pldi.760.long,"Jie Zhao, Bojie Li, Wang Nie, Zhen Geng, Renwei Zhang, Xiong Gao, Bin Cheng, Chen Wu, Yun Cheng, Zheng Li, Peng Di, Kun Zhang, Xuefeng Jin",,AKG: Automatic Kernel Generation for Neural Processing Units using Polyhedral Transformations,finished,38956331
+pldi.760.short,"Jie Zhao, Bojie Li, Wang Nie, Zhen Geng, Renwei Zhang, Xiong Gao, Bin Cheng, Chen Wu, Yun Cheng, Zheng Li, Peng Di, Kun Zhang, Xuefeng Jin",,AKG: Automatic Kernel Generation for Neural Processing Units using Polyhedral Transformations,finished,38956244
+pldi.763.long,"Nilanjana Basu, Claudio Montanari, Jakob Eriksson",,"Frequent Background Polling on a Shared Thread, using Light-Weight Compiler Interrupts",finished,38956332
+pldi.763.short,"Nilanjana Basu, Claudio Montanari, Jakob Eriksson",,"Frequent Background Polling on a Shared Thread, using Light-Weight Compiler Interrupts",finished,38956245
+pldi.773.long,"Fei He, Zhihang Sun, Hongyu Fan",,Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification,finished,38956333
+pldi.773.short,"Fei He, Zhihang Sun, Hongyu Fan",,Satisfiability Modulo Ordering Consistency Theory for Multi-threaded Program Verification,finished,38956246
+pldi.787.long,"Rohan Basu Roy, Tirthak Patel, Vijay Gadepally, Devesh Tiwari",,Bliss: Auto-tuning Complex Applications using a Pool of Diverse Lightweight Learning Models,incoming,38956334
+pldi.787.short,"Rohan Basu Roy, Tirthak Patel, Vijay Gadepally, Devesh Tiwari",,Bliss: Auto-tuning Complex Applications using a Pool of Diverse Lightweight Learning Models,finished,38956247
+pldi.82.long,"Kc Sivaramakrishnan, Stephen Dolan, Leo White, Tom Kelly, Sadiq Jaffer, Anil Madhavapeddy",,Retrofitting Effect Handlers onto OCaml,incoming,38956264
+pldi.82.short,"Kc Sivaramakrishnan, Stephen Dolan, Leo White, Tom Kelly, Sadiq Jaffer, Anil Madhavapeddy",,Retrofitting Effect Handlers onto OCaml,finished,38956177
+pldi.826.long,"Shaowei Zhu, Zachary Kincaid",,Termination Analysis without the Tears,finished,38956335
+pldi.826.short,"Shaowei Zhu, Zachary Kincaid",,Termination Analysis without the Tears,finished,38956248
+pldi.83.long,"Anouk Paradis, Benjamin Bichsel, Samuel Steffen, Martin Vechev",,Unqomp: Synthesizing Uncomputation in Quantum Circuits,incoming,38956265
+pldi.83.short,"Anouk Paradis, Benjamin Bichsel, Samuel Steffen, Martin Vechev",,Unqomp: Synthesizing Uncomputation in Quantum Circuits,finished,38956178
+pldi.853.long,"Raven Beutner, Luke Ong",,On Probabilistic Termination of Functional Programs with Continuous Distributions,finished,38956336
+pldi.853.short,"Raven Beutner, Luke Ong",,On Probabilistic Termination of Functional Programs with Continuous Distributions,finished,38956249
+pldi.885.long,"George Pîrlea, Amrit Kumar, Ilya Sergey",,Practical Smart Contract Sharding with Ownership and Commutativity Analysis,incoming,38956337
+pldi.885.short,"George Pîrlea, Amrit Kumar, Ilya Sergey",,Practical Smart Contract Sharding with Ownership and Commutativity Analysis,finished,38956250
+pldi.92.long,"David Castro-Perez, Francisco Ferreira, Lorenzo Gheri, Nobuko Yoshida",,Zooid: A DSL for Certified Multiparty Computation: From Mechanised Metatheory to Certified Multiparty Processes,finished,38956266
+pldi.92.short,"David Castro-Perez, Francisco Ferreira, Lorenzo Gheri, Nobuko Yoshida",,Zooid: A DSL for Certified Multiparty Computation: From Mechanised Metatheory to Certified Multiparty Processes,finished,38956179
+pldi.99.long,"Huaipan Jiang, Haibo Zhang, Xulong Tang, Vineetha Govindaraj, Jack Sampson, Mahmut Taylan Kandemir, Danfeng Zhang",,Fluid: A Framework for Approximate Concurrency via Controlled Dependency Relaxation,incoming,38956267
+pldi.99.short,"Huaipan Jiang, Haibo Zhang, Xulong Tang, Vineetha Govindaraj, Jack Sampson, Mahmut Taylan Kandemir, Danfeng Zhang",,Fluid: A Framework for Approximate Concurrency via Controlled Dependency Relaxation,finished,38956180
+pldi.keynote.1,Michelle Mills Strout,,TBD,finished,38956338
+pldi.keynote.2,Alex Aiken,,TBD,finished,38956339
+pldi.keynote.3,Emina Torlak,,TBD,finished,38956906
+plmw.1,Lindsey Kuper,,Making Progress under Uncertainty,finished,38956845
+plmw.2,Thomas Reps,,PLMW - TBD,finished,38956846
+plmw.3,Alex Aiken,,PLMW - TBD,finished,38956847
+soap.invited.1,Cristina Cifuentes,,Towards Intelligent Application Security,finished,38956815
+soap.invited.2,Sébastien Bardin,,TBD (invited speaker SÃ©bastien Bardin),incoming,38956819
+soap.invited.3,Patrick Cousot,,Dynamic abstract interpretation,finished,38956820
+soap.paper.10,Vincenzo Arceri,,Static Analysis for Dummies: Experiencing LiSA,finished,38956817
+soap.paper.12,Spandan Garg,,PerfLens: A Data-Driven Performance Bug Detection and Fix Platform,finished,38956818
+soap.paper.3,Kostyantyn Vorobyov,,Scalable String Analysis: An Experience Report,finished,38956816
+soap.paper.9,"Gil Teixeira, João Bispo, Filipe Figueiredo Correia",,Multi-Language Static Code Analysis on the LARA Framework,finished,38956821
+workshop-test.1,,,Demo of Recorder,incoming,
+workshop-test.10,,,Demo of Recorder,incoming,
+workshop-test.11,,,Demo of Recorder,incoming,
+workshop-test.12,,,Demo of Recorder,incoming,
+workshop-test.13,,,Demo of Recorder,uploading,
+workshop-test.14,,,Demo of Recorder,incoming,
+workshop-test.15,,,Demo of Recorder,incoming,
+workshop-test.16,,,Demo of Recorder,incoming,
+workshop-test.17,,,Demo of Recorder,incoming,
+workshop-test.18,,,Demo of Recorder,incoming,
+workshop-test.19,,,Demo of Recorder,incoming,
+workshop-test.2,,,Demo of Recorder,incoming,
+workshop-test.20,,,Demo of Recorder,incoming,
+workshop-test.21,,,Demo of Recorder,incoming,
+workshop-test.22,,,Demo of Recorder,incoming,
+workshop-test.23,,,Demo of Recorder,incoming,
+workshop-test.24,,,Demo of Recorder,uploading,
+workshop-test.25,,,Demo of Recorder,incoming,
+workshop-test.26,,,Demo of Recorder,uploading,
+workshop-test.27,,,Demo of Recorder,incoming,
+workshop-test.28,,,Demo of Recorder,incoming,
+workshop-test.29,,,Demo of Recorder,incoming,
+workshop-test.3,,,Demo of Recorder,incoming,
+workshop-test.30,,,Demo of Recorder,incoming,
+workshop-test.31,,,Demo of Recorder,incoming,
+workshop-test.32,,,Demo of Recorder,incoming,
+workshop-test.33,,,Demo of Recorder,incoming,
+workshop-test.4,,,Demo of Recorder,incoming,
+workshop-test.5,,,Demo of Recorder,incoming,
+workshop-test.6,,,Demo of Recorder,incoming,
+workshop-test.7,,,Demo of Recorder,incoming,
+workshop-test.8,,,Demo of Recorder,incoming,
+workshop-test.9,,,Demo of Recorder,incoming,
+hopl.10,Paul King,,A history of the Groovy programming language,finished,38956873
+hopl.11,Rich Hickey,,A History of Clojure,finished,38956874
+hopl.12,Allen Wirfs-Brock,,JavaScript: The First 20 Years,finished,38956875
+hopl.13,"William Clinger, Mitchell Wand",,Hygienic Macro Technology,finished,38956876
+hopl.14,"Peter Van Roy, Gert Smolka, Christian Schulte, Seif Haridi",,A history of the Oz multiparadigm language,finished,38956877
+hopl.16,"Stefan Monnier, Michael Sperber",,Evolution of Emacs Lisp,finished,38956878
+hopl.17,Daniel Ingalls,,The Evolution of Smalltalk from Smalltalk-72 through Squeak,finished,38956879
+hopl.19,Don Syme,,The Early History of F#,to_check,38956880
+hopl.2,"Roger Hui, Roger K.W. Hui, Morten J. Kromberg",,APL Since 1978,finished,38956866
+hopl.21,"John Reppy, David MacQueen, Robert Harper",,The History of Standard ML,finished,38956881
+hopl.23,"Andrei Alexandrescu, Walter Bright, Andrei Alexandrescu, Michael Parker",,Origins of the D Programming Language,finished,38956882
+hopl.25,Hansen Hsu,,The Origins of Objective-C at PPI/Stepstone and its Evolution at NeXT,to_check,38956883
+hopl.26,"John Reid, Jon Steidel",,History of Coarrays and SPMD Parallelism in Fortran,finished,38956884
+hopl.3,Jeffrey Kodosky,,LabVIEW,finished,38956867
+hopl.4,Cleve Moler,,A History of MATLAB,finished,38956868
+hopl.5,Bjarne Stroustrup,,Thriving in a crowded and changing world: C++ 2006-2020,finished,38956869
+hopl.6,John Chambers,,"S, R and Data Science.",finished,38956870
+hopl.7,"Steve Golson, Phil Moorby, Peter Flake",,Verilog HDL and its ancestors and descendants,finished,38956871
+hopl.9,"Henry Lieberman, Cynthia Solomon, Brian Harvey, Mark Miller",,History of Logo,finished,38956872
+hopl.K1,Mary Shaw,,Sunday Keynote,finished,38956885
+hopl.K2,"James Noble, Robert Biddle",,Monday Keynote,to_check,38956886

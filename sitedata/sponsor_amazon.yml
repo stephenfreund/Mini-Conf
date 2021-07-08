@@ -1,0 +1,36 @@
+website: http://www.amazon.com
+
+description: |
+  Developers harness the power of the cloud to build innovative applications,
+  websites, and businesses.  Using proof-generating automated reasoning
+  techniques, AWS enables customers to answer questions about security,
+  availability, durability, and functional correctness.  We call this provable
+  security, absolute assurance in security of both cloud technology and of
+  technology that uses the cloud.
+  <a href="https://aws.amazon.com/security/provable-security/">https://aws.amazon.com/security/provable-security/</a>
+
+  We do proof at multiple levels of abstraction, ranging from high-level
+  abstractions of highly distributed and concurrent protocols, covering manual
+  and automated abstractions; software implementations in high-level
+  implementation languages including Java and Rust; refining down to low-level
+  implementations of x86/ARM hypervisor technology. We are looking for genuine PL-enthusiasts who appreciate the power of
+  automated reasoning about program behavior to bring scale into software
+  development and deliver profound impact with best-of-class tooling for the
+  analysis of software that covers an exceptionally broad range of
+  applications that are really fun!
+
+
+
+# youtube:
+
+# contacts:
+
+resources:
+  - label: https://www.amazon.jobs/en/jobs/1503777/sr-applied-scientist
+    website: https://www.amazon.jobs/en/jobs/1503777/sr-applied-scientist
+  - label: https://www.amazon.jobs/en/jobs/1388202/sr-applied-scientist
+    website: https://www.amazon.jobs/en/jobs/1388202/sr-applied-scientist
+
+# zoom_link:
+
+# schedule:

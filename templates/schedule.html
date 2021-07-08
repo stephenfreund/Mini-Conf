@@ -1,89 +1,137 @@
+{% extends "base.html" %}
 {% set active_page = "Schedule" %}
 {% set page_title = "Schedule" %}
-{% extends "base.html" %}
 {% block head %}
 {{ super() }}
-{% include 'schedule_head.html' %}
+{{ components.calendar_scripts() }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"></script>
+
 {% endblock %}
+
+{% block heading %}
+
+{{ components.section("Schedule") }}
+
+{% endblock %}
+
 
 {% block tabs %}
-{{ components.tabs([("calendar", "Calendar", "active"),
-        ("day", "Example Day", "")]) }}
+{{ components.tabs([("calendar", "Week At A Glance", "active"),
+        ("days", "Detailed Program", "")]) }}
+        
 {% endblock %}
 
+
 {% block content %}
+
+<div class="text-muted text-center pt-2">
+  Click any event to see more details.  
+  PLDI events labeled <span class="badge badge-light rounded-0">Q&A</span> feature live Q&A.
+  <br/>
+  PLDI Sessions mirrored 12 hours after their first occurrence appear in the <mark class="text-muted" style="background-color: #f0f0f8; border: 1px solid #dddddd;">shaded time bands</mark>.
+</div>
+
+
 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-  <!-- Calender tab -->
+
+<!-- Calender tab -->
   <div
     class="tab-pane active"
     id="tab-calendar"
     role="tabpanel"
     aria-labelledby="nav-profile-tab"
   >
-    <div class="form-group col">
-      <label for="tzOptions">Timezone:</label>
-      <select id="tzOptions" class="selectpicker" data-live-search="true">
-      </select>
+
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-12">
+        <div id='calendar'></div>
+      </div>
     </div>
 
-    <!-- full cal for browser-->
-    <div id="calendar" class="d-none d-sm-block"></div>
-
-    <!-- small cal for smart phones-->
-    <div id="calendar_small" class="d-sm-none"></div>
-
-<!--    <script type="text/javascript">-->
-<!--      // console.log(make_cal(),"-&#45;&#45; make_cal()");-->
-<!--      make_cal().then((d) => console.log(d, "-&#45;&#45; d"));-->
-<!--    </script>-->
+    <script>  
+      document.addEventListener('DOMContentLoaded', function() {
+        makeFullGridCalendar('calendar', {
+          initialDate: '{{ config.calendar.start }}',
+          validRange: {
+            start: '{{ config.calendar.start }}',
+            end: '{{ config.calendar.end }}'
+          },
+          height: "700px"
+        },
+        '{{ calendar | tojson }}').then(calendar => {
+          // refreshing when this grid is hidden causes it to not
+          //   be drawn properly -- so force a render on all tab changes.
+          $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            calendar.refetchEvents();
+          })
+        });
+      });
+    
+    </script>
+  </div>
   </div>
 
-  <!-- Day Tab -->
-
   <div
-    class="tab-pane fade"
-    id="tab-day"
+    class="tab-pane fade px-3"
+    id="tab-days"
     role="tabpanel"
     aria-labelledby="nav-profile-tab"
   >
-    <div id="day">
-      <!-- Speakers -->
-      {{ components.section("Speakers") }}
-      <div class="speakers">
-        {{ components.speakergroup(day.speakers) }}
-      </div>
-      {{ components.section("Highlighted Papers") }}
-      <div class="papers">
-        {{ components.highlightgroup(day.highlighted, 1) }}
+    <div class="row py-3 align-items-end">
+      <div class="col-12 mt-n5 pt-n5 text-right">
+          <span>Last refresh: <span id="lastUpdate"></span>
+            &nbsp;&nbsp;<a href="javascript:void(0);" onclick="removePast()">Refresh Now</a>
       </div>
     </div>
+      <div class="form-group col p-0" style="min-height: 700px;">
+      <div id='calendar-days' class="fc-hide-summary"></div>
+    </div>
+    
+    <script>
+      var calendarDay;
+      document.addEventListener('DOMContentLoaded', async function() {
+      makeFullDetailedSchedule('calendar-days', 'lastUpdate', {
+          initialDate: '{{ config.calendar.start }}',
+          validRange: {
+            start: '{{ config.calendar.start }}',
+            end: '{{ config.calendar.end }}'
+          }
+        },
+        '{{ calendar_complete | tojson }}').then(c => {
+          // refreshing when this grid is hidden causes it to not
+          //   be drawn properly -- so force a render on all tab changes.
+          $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            $('[data-toggle="tooltip"]').tooltip('dispose');   
+            c.refetchEvents();
+            $('[data-toggle="tooltip"]').tooltip({'delay': { show: 1000, hide: 100 }});   
+          })
 
+          calendarDay = c;
+          });
+      })
 
+      function removePast() {
+        $('[data-toggle="tooltip"]').tooltip('dispose');   
+        calendarDay.updateToCurrentTime();
+        $('[data-toggle="tooltip"]').tooltip({'delay': { show: 1000, hide: 100 }});   
+      }
+
+    </script>
+  
   </div>
 
-  <script type="text/javascript">
-    window.onload = () => {
-      const tabPanes = $(".tab-pane");
-      // Create calendars:
-      make_cal(false).then(({ render }) => {
-        // render cal with all tabs visible
-        tabPanes.css("display", "block");
-        render();
-        tabPanes.css("display", "");
 
-        // re-render cal on resize
-        $(window).on(
-          "resize",
-          _.debounce(() => {
-            tabPanes.css("display", "block");
-            render();
-            tabPanes.css("display", "");
-          }, 500)
-        );
-      });
-      // ----
-      lazyLoader();
-    };
-  </script>
+
 </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+
 {% endblock %}

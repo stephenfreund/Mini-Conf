@@ -1,0 +1,227 @@
+{% set active_page = "Main Stage" %}
+{% set page_title = track.title %}
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+<script src='https://slideslive.com/embed_presentation.js'></script>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="pp-card m-3" style="">
+
+  <div class="card-header">
+
+    <h2 class="container mb-3 mt-3 pldi-track">
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-info {{ 'active' if track.UID == 'pldi-A' else '' }}" href="track_pldi-A.html">
+            PLDI-A
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info {{ 'active' if track.UID == 'pldi-B' else '' }}" href="track_pldi-B.html">
+            PLDI-B
+          </a>
+        </li>
+      </ul>
+    </h2>
+    <h3 class="card-subtitle mb-2 text-muted">
+      You are currently watching Track {{ track.title }}.  Switch tracks with the buttons above.
+    </h3>
+
+    <h5 class="text-center p-3">
+      <a class="card-link card-subtitle" data-toggle="collapse" role="button" href="#details">
+        PLDI Program Overview
+      </a>
+    </h5>
+
+    <h3 class="card-subtitle mb-2 text-muted">
+      <span class="mr-2">Chat with others watching {{ track.title }}:</span>  {{ components.slack(config, track.slack_channel) }}
+    </h3>
+  </div>
+</div>
+
+<div id="details" class="pp-card m-3 collapse hide">
+  <div class="card-body">
+    <div class="card-text">
+      <div id="abstractExample">
+        <b>PLDI Tracks.</b> PLDI has two tracks, PLDI-A and PLDI-B.  Switch between them by clicking on the PLDI-A and PLDI-B buttons above, or  wherever they appear
+        next to the events in the schedule. 
+        <!-- (eg: <span class="badge pldi-pill badge-info text-white mr-0 fake-pill-button"> PLDI-A </span> or <span class="badge pldi-pill badge-info text-white mr-0 fake-pill-button"> PLDI-B</span>).   -->
+        <br>
+        <br>
+        <b>Featured Events.</b> Invited Talks, Ask Me Anythings, and other plenary sessions will be shown on the PLDI-A video stream.
+        When sessions feature live Q&A, please ask your questions on the #pldi-a Slack channel.
+        <br>
+        <br>
+        <b>Technical Sessions.</b> Technical sessions consist of:
+          <ul class="pt-2">
+            <li>parallel showings of pre-recorded five-minute talks on the PLDI-A and PLDI-B video streams, followed by 
+            <li>a poster session in Gather for Q&A and in-depth discussion with the authors.
+            </li>
+          </ul>
+          Join the Poster Sessions by clicking any Gather button.  Head north from the Main Hall to find the poster rooms.
+          <br>
+          <br>
+  
+          <b>Mirroring.</b> The video streams for PLDI will be mirrored twelve hours later.  The mirrored streams will include both pre-recorded content, but 
+        also several additional live events.  Poster Sessions will be held a second time during the mirrored part of the day.
+        <br>
+      </div>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+<div class="col-12 bd-content p-3 mb-n3">
+  <h3>Video Stream</h3>
+  <div class="mt-3 mb-5 h5">
+    The full video streams are not available for replay, but you can find recordings of all events here:
+    <br><br>
+    <ul>
+      <li><a href="papers.html">PLDI Technical Papers</a></li>
+      <li><a href="plenary.html#tab-invited">Invited Talks</a></li>
+      <li><a href="plenary.html#tab-amas">Ask Me Anythings</a></li>
+      <li><a href="socials.html#business">Business Meeting</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--
+<div class="col-12 bd-content p-3 mb-n3">
+  <h3>Video Stream</h3>
+  <h5 class="text-center">
+    Each day and <mark class="" style="background-color: #f0f0f8; border: 1px solid #dddddd;">mirrored day</mark> has its own video stream.  
+    Switch between them with the buttons below:
+  </h5>
+</div>
+<div class="col-12 tabs p-2 pb-3 text-center">              
+  <ul class="nav nav-pills justify-content-center">
+    <div class="col-4 h5 ">Day 1</div>
+    <div class="col-4 h5 ">Day 2</div>
+    <div class="col-4 h5 ">Day 3</div>
+    {% for stream in streams %}
+      <li class="nav-item py-0 px-1 col-4">
+        <div class="rounded my-0 py-2 px-1 {{ 'pill-mirror-bg' if loop.index > 3 else '' }} " style="display: inline-block;">
+        <a class="nav-link text-muted  " href="#tab-{{loop.index}}" data-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true" onclick="changeTab('tab-{{loop.index}}')">
+          <span class="format-date-span-with-days">{{stream.start}} - {{stream.end}}</span>
+        </a>
+      </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script type="text/javascript">
+function changeTab(href) {
+  location.hash = "#" + href;
+  location.reload();
+}
+
+$(document).ready(function () {
+  hash = window.location.hash
+
+  // if no hash, find the earliest one that hasn't ended in the list. 
+  if (hash === "") {
+
+      // find the index (1-based) of the stream that is the first
+      //  one in order that has not yet ended.  So, the next one to start,
+      //  or the one we are in the middle of streaming live.
+      index = 0;
+      const now = moment(currentTime());
+
+      // This order is harded and insane because to get the buttons in the right place,
+      // I had to put W/T/F 9am and then W/T/F 1:30, but the time order a W 9am -> W 1:30 -> T 9am -> ...
+      if (index == 0 && moment("{{streams[0].end}}").isAfter(now)) { index = 1; }
+      if (index == 0 && moment("{{streams[3].end}}").isAfter(now)) { index = 4; }
+      if (index == 0 && moment("{{streams[1].end}}").isAfter(now)) { index = 2; }
+      if (index == 0 && moment("{{streams[4].end}}").isAfter(now)) { index = 5; }
+      if (index == 0 && moment("{{streams[2].end}}").isAfter(now)) { index = 3; }
+      if (index == 0 && moment("{{streams[5].end}}").isAfter(now)) { index = 6; }
+
+      if (index == 0) index = 1; // if past them all, just default to the first.
+
+      hash = `#tab-${index}`
+  }
+
+  // pull out the presentation it for the hash -- probably a better way to do this.
+  {% for stream in streams %}
+      if (hash === "#tab-{{loop.index}}") { slidesLiveId = "{{stream.presentation_id}}"; }
+  {% endfor %}
+
+  embed = new SlidesLiveEmbed("presentation", {
+      presentationId: slidesLiveId,
+      autoPlay: false, // change to true to autoplay the embedded presentation
+      verticalEnabled: true,
+      verticalWhenWidthLte: 500,
+      allowHiddenControlsWhenPaused: true,
+      hideTitle: true,
+  });
+
+  $(`a[href="${hash}"]`).tab("show");
+
+  // Is this kosher??? I want to avoid people bookmarking a specific tab or refreshing a specific tab,
+  //   rather than letting the code try to guess the right stream to show...
+  // history.pushState("", document.title, window.location.pathname)
+  window.location.hash = "";
+
+});
+</script>
+
+          
+<div class="pb-3 mx-3 px-3 px-sm-0" id="tab-presentation">
+  <div class="row pt-n4">
+      <div class="col-12">
+          <div id="outer">
+              <div id="presentation" class="slp my-auto"></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+-->
+  
+  
+<div class="row pl-3 pr-3 pt-3 align-items-end">
+  <div class="col-12"><span class="h3">Happening at <span id="lastUpdate"></span></span>
+        &nbsp;&nbsp;<a href="javascript:void(0);" onclick="removePast()">Refresh</a>
+  </div>
+</div>
+<div class="text-muted pt-2 pb-1 text-center" style="">
+  This calendar contains all PLDI-A and PLDI-B events.  
+  Sessions labeled <span class="badge badge-light rounded-0">Q&A</span> feature live Q&A on Slack channel #pldi-a.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+  Use the buttons
+  to right of the events in the schedule to switch tracks or enter Gather.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>        
+
+
+<div class="pt px-3">
+  <div id='calendar' class="fc-hide-details"></div>
+</div>
+
+<script>
+  var calendar;
+
+  document.addEventListener('DOMContentLoaded', async function() {
+  
+    calendar = await makePLDIListCalendar('calendar', 'lastUpdate', {
+      initialDate: '{{ config.calendar.start }}',
+      validRange: {
+        start: '{{ config.calendar.start }}',
+        end: '{{ config.calendar.end }}'
+      },
+
+    },
+    '{{ calendar | tojson }}');
+});
+
+function removePast() {
+    calendar.updateToCurrentTime();
+  }
+
+</script>
+
+{% endblock %}

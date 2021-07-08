@@ -1,0 +1,229 @@
+{% set active_page = "Home" %}
+{% set page_title = "Home" %}
+
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"></script>
+
+{{ components.calendar_scripts() }}
+
+
+{% endblock %}
+
+{% block top %}
+<style>
+  .back {
+    background: url("{{config.background_image}}") no-repeat center;
+    background-size: cover;
+  }
+  
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        {{config.tagline|safe}}
+      </h2>
+      <h2 class="pt-5">
+        {{config.date|safe}}
+      </h2>
+    </div>
+  </div>
+  <h5 class="text-white mx-auto text-center text-white">Colocated Events: HOPL-IV, ISMM, LCTES, ARRAY, Infer Practioners, MAPS, PLanQC, PLMW, SOAP, and Tutorials</h5>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<script>
+  
+  let dummy = [];
+
+  for (var i = 0; i < 120; i++) {
+      let ev = 
+      {
+        "UID": "pldi_talks1A",
+        "category": "paper-session",
+        "conf_abbrev": "PLDI",
+        "end": moment().add(Math.round(i/4) + (i%4+1), 'minutes').format(),
+        "info_link": "/track_pldi-A.html",
+        "start": moment().add(Math.round(i/4), 'minutes').format(),
+        "title": `Event ${i}`,
+        "tooltip": "",
+        "track": {
+            "link": "track_pldi-A.html",
+            "location": "PLDI-A"
+        },
+        "trackUID": "pldi-A"
+      };
+      dummy.push(ev)
+    }
+
+  var calendar;
+  
+  document.addEventListener('DOMContentLoaded', async function () {
+    calendar = await makeFrontPageCalendar('calendar', 'lastUpdate', {
+      height: "350px",
+      initialDate: moment().format('YYYY-MM-DD'),
+      validRange: {
+        start: moment().format('YYYY-MM-DD'),
+        end: moment().format('YYYY-MM-DD')
+      },
+    },
+    JSON.stringify(dummy)
+    );
+  });
+  
+</script>
+
+<!--
+<a type="button" class="btn btn-light m-2 btn-sm " target="_blank" href="https://williams.zoom.us/j/93163972599?pwd=aDhIbmllb0p5VnU3a0hIUGl4ZjkrUT09">Zoom normally</a>
+<a type="button" class="btn btn-light m-2 btn-sm " href="zoom.html?key=pldi-B" target="_blank">Zoom w/ Redirect page</a>
+-->
+
+<div class="container">
+  <div class="row pb-4">
+    <div class="col-lg-6 col-12 pt-2">
+      <h3>Happening at <span id="lastUpdate"></span></h3>
+      <!-- <div class="pp-card-header-auto-height pl-4 px-2"> -->
+        <div class="text-muted pb-2">
+          Click on any event for details and to attend.
+        </div>        
+        <div class="row px-0 pt-0">
+          <div class="col-12">
+            <div id='calendar' class="fc-upcoming card"></div>
+          </div>
+        </div>
+        <div class="row pl-3 pb-0">
+          <div class="col-12 text-right">
+            <small><a href="javascript:void(0);" onclick="calendar.updateToCurrentTime()">Refresh</a></small>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-12 pt-2">
+      <div class = "getting-started">
+        <h3 class="text-center getting-started-big-title">Getting Started</h3>
+        {% if config.fake_time %}
+        <small class="text-danger">Note: The time is fixed at  <span id="gmtTime" class="text-danger"></span>.</small>
+        <script>
+          document.getElementById('gmtTime').textContent = currentTimeMomentGMT().format("llll") + " (GMT+0)";
+        </script>    
+        {% endif %}
+        
+        <ol class="pl-4">
+          <li>We recommend using Chrome for browsing, and be sure to have Javascript enabled.</li>
+          <li>Set your local timezone: 
+            <select id="time-zone-selector" class="selectpicker" data-live-search="true">
+              <option value="UTC">UTC</option>
+            </select>
+          </li>
+          <li>Set up Slack and Gather using our <a href="help.html#tab-getting">Step-by-Step Instructions</a>.  Or TL;DR:
+            <ul class="pl-4">
+          <li>
+            <!-- Join the Slack PLDI 2021 Workspce via the invite link in the welcome email from ... in your inbox.
+            <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" 
+            href="https://pldi21-test.slack.com/app_redirect?channel=general" target="_blank">#Slack</a> 
+            buttons will bring you to channels in the workspace.
+            <p></p> -->
+            Join our Slack workspace by clicking any 
+            <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" 
+            href="https://{{config.slack_server}}/app_redirect?channel=general" target="_blank">#Slack</a> 
+            button.
+            Select "Sign in with PLDI 2021" and use the same email address and password as
+            for the PLDI website.  (If you use the Slack desktop app, join the PLDI21 workspace
+            from inside the app.)  Update your profile with your full name.
+          </li>  
+          <li>Enter our Gather space by clicking any 
+            <a type="button" class="btn btn-success bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" 
+            href="{{ config.gather_link }}" target="_blank"><i class="fas fa-users"></i>&nbsp;Gather</a>
+            button.  Follow Gather's instructions for generating a magic sign-on link using the same email address as
+            for the PLDI website. Wander around. Chat with others!
+          </li>
+        </ul></li>
+          <li>Watch our videos below on how to participate in and enjoy PLDI.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row pl-3 pr-3 pt-3 align-items-end">
+    <div class="col-12"><span class="h3">Happening at <span id="lastUpdate2"></span></span>
+          &nbsp;&nbsp;<a href="javascript:void(0);" onclick="removePast()">Refresh Now</a>
+    </div>
+  </div>
+  <div class="text-muted pt-2 pb-1 text-center" style="">
+    Use the buttons
+    to right of the events in the schedule to switch tracks or enter Gather.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>        
+  
+  
+  <div class="pt px-3">
+    <div id='calendar2' class="fc-hide-details"></div>
+  </div>
+  
+  <script>
+    var calendar;
+  
+    document.addEventListener('DOMContentLoaded', async function() {
+    
+      calendar = await makePLDIListCalendar('calendar2', 'lastUpdate2', {
+        initialDate: moment().format('YYYY-MM-DD'),
+        validRange: {
+            start: moment().format('YYYY-MM-DD'),
+            end: moment().format('YYYY-MM-DD')
+        }
+        },
+        JSON.stringify(dummy))
+        
+    })
+  
+  function removePast() { 
+      console.log(moment().format())
+      calendar.updateToCurrentTime();
+    }
+  
+  </script>
+
+
+
+
+<script>
+  const timeZoneSelectorEl = document.getElementById('time-zone-selector');
+  
+  moment.tz.names().forEach(function(timeZone) {
+    var optionEl;
+    
+    if (timeZone !== 'UTC' && timeZone != "Local" && !timeZone.startsWith("Etc/")) { // UTC is already in the list, skip confusing GMT ones, Local is bad too
+      optionEl = document.createElement('option');
+      optionEl.value = timeZone;
+      optionEl.innerText = timeZone;
+      timeZoneSelectorEl.appendChild(optionEl);
+    }
+  });
+  
+  const tz = getCurrentTimeZone()
+  timeZoneSelectorEl.value = tz;
+  
+  // when the timezone selector changes, dynamically change the calendar option
+  timeZoneSelectorEl.addEventListener('change', function() {
+    setCurrentTimeZone(this.value)
+    location.reload()
+  });
+</script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{% endblock %}

@@ -1,0 +1,249 @@
+/*
+ Customization of FullCalendar.io calendars.
+*/
+
+.fc .fc-view {
+  background-color: white !important;
+}
+
+:root {
+  --fc-list-event-hover-bg-color: transparent;
+}
+
+.fc-toolbar .btn-primary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.fc-toolbar .btn-primary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+.fc-toolbar .btn-primary:focus,
+.fc-toolbar .btn-primary.focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+.fc-toolbar .btn-primary.disabled,
+.fc-toolbar .btn-primary:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.fc-toolbar .btn-primary:not(:disabled):not(.disabled):active,
+.fc-toolbar .btn-primary:not(:disabled):not(.disabled).active,
+.show > .fc-toolbar .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+.fc-toolbar .btn-primary:not(:disabled):not(.disabled):active:focus,
+.fc-toolbar .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .fc-toolbar .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+/*
+
+.fc .fc-button-primary:hover {
+  color: #fff;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.fc .fc-button-primary {
+  color: var(--secondary);
+  background-color: white;
+  border-color: var(--secondary);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
+  color: white;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: white;
+}
+*/
+
+.fc {
+  font-family: "Lato", sans-serif;
+}
+
+.fc .fc-list-event-title.fc-event-forced-url:hover a {
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.fc .fc-list-event-title {
+  color: #4c555d;
+}
+
+.fc .fc-list-event-title a:hover {
+  color: black;
+}
+
+.fc-show-now .fc-now {
+  background-color: #fff0f0 !important;
+}
+
+.fc-show-now .fc-now .fc-event-title-text:before {
+  content: "Now: " !important;
+  font-weight: bold !important;
+  color: var(--danger) !important;
+}
+
+.fc-show-now .fc-soon {
+  background-color: #fffff0 !important;
+}
+
+.fc-show-now .fc-soon .fc-event-title-text:before {
+  content: "Soon: " !important;
+  font-weight: bold !important;
+  color: var(--warn) !important;
+}
+
+.fc-hide-past .fc-past {
+  display: none;
+}
+
+.fc-timegrid .fc-mirrored {
+  background-color: rgba(225, 225, 250, 0.4);
+}
+
+.fc-list .fc-mirrored {
+  background-color: #f8f8ff;
+}
+
+.fc-v-event.calendar-event {
+  border-color: transparent;
+}
+
+.fc .fc-timegrid-slot {
+  height: 2.5em !important;
+}
+
+/**** PLDI Track Schedule ****/
+
+.fc-hide-details .category-paper {
+  display: none;
+}
+
+.fc-hide-summary .category-paper-session {
+  display: none;
+}
+
+.fc-hide-summary .category-colocated-session {
+  display: none;
+}
+
+/**** Paper List Schedule ****/
+
+.paper-schedule .category-paper-session {
+  /* background-color: #c0c0c0 !important; */
+  background-color: #f8f8f8 !important;
+}
+
+.paper-schedule .category-paper-session td {
+  padding: 2px 14px !important;
+  text-align: center;
+}
+
+.paper-schedule .category-paper-session .fc-list-event-dot {
+  display: none;
+}
+
+.paper-schedule .category-paper-session .fc-event-title-text {
+  font-weight: bold !important;
+  color: black !important;
+}
+
+/**** Colocated Tracks Schedules ****/
+
+.track-schedule .category-colocated-session {
+  background-color: #f8f8f8 !important;
+}
+
+.track-schedule .category-colocated-session td {
+  padding: 2px 14px !important;
+  /* text-align: center; */
+}
+
+.track-schedule .category-colocated-session .fc-list-event-dot {
+  display: none;
+}
+
+.track-schedule .category-colocated-session .fc-list-event-time {
+  color: #f8f8f8;
+}
+.track-schedule .category-colocated-session .fc-event-title-text {
+  font-weight: bold !important;
+  color: #4e555b !important;
+}
+
+.category-break .fc-event-title-text {
+  /* color:gray; */
+}
+
+.category-break td .fc-event-title-text {
+  font-style: italic;
+  /* padding-top: 0 !important; */
+  /* padding-bottom: 0 !important; */
+  /* color: gray; */
+  /* font-size: 0px; */
+}
+
+/**** Home Page Calender ****/
+
+.fc-upcoming {
+  font-size: 14px;
+  /* font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif; */
+}
+
+.fc-upcoming title {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #292f33;
+}
+
+.fc-upcoming .fc-list-table td,
+.fc-upcoming .fc-list-day-cushion {
+  padding: 1px 12px;
+  border-style: 1px solid #eeeeee !important;
+}
+
+.fc-upcoming .fc-list-event.fc-event-forced-url:hover a {
+  text-decoration: none !important;
+}
+
+.fc-upcoming .fc-list-event {
+  border-style: none !important;
+}
+
+.fc-upcoming .fc-list-event-graphic {
+  padding: 0 !important;
+}
+
+/* Fix for FireFox bug with titles going over day entry at top of list view... */
+.fc-liquid-hack .fc-list-table td {
+  position: inherit !important;
+}
+
+/* Fix text overflow bug in grid view -- thanks Arjun */
+/* https://github.com/fullcalendar/fullcalendar/issues/5815 */
+.fc-v-event .fc-event-main {
+  overflow: hidden;
+}
+
+.rotated-grid .fc-event-main {
+  /* Abs positioning makes it not take up vert space */
+  line-height: 0.9em;
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+}

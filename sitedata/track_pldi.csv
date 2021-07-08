@@ -1,0 +1,59 @@
+UID,title,start,end,trackUID,gather,zoom,info_link,category
+# Tues,,,,,,,,
+pldi_src_posters,SRC Poster Session,2021-06-22T10:00:00-04:00,2021-06-22T12:00:00-04:00,,Gather,,/socials.html#src,poster
+# Wed,,,,,,,,
+pldi_talks1A,Talks 1A: Concurrent and Distributed Programming,2021-06-23T13:00:00+00:00,2021-06-23T13:35:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+1A,paper-session
+pldi_talks1B,Talks 1B: Verification,2021-06-23T13:00:00+00:00,2021-06-23T13:35:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+1B,paper-session
+pldi_posters1,Poster Session 1,2021-06-23T13:35:00+00:00,2021-06-23T14:30:00+00:00,,Gather,,/papers.html?session=Posters+1,poster
+pldi_ama_1,"AMA: Kim Hazelwood (Facebook AI Research), Emery Berger (University of Massachusetts Amherst), Michael Carbin (MIT) -- live Q&A",2021-06-23T14:30:00+00:00,2021-06-23T15:30:00+00:00,pldi-A,,,/plenary.html#tab-amas,plenary
+pldi_ind_rec,Industrial Reception,2021-06-23T16:30:00+00:00,2021-06-23T17:30:00+00:00,,Gather Sponsor Hall,,/sponsors.html,sponsor
+pldi_talks2A,Talks 2A: Machine Learning,2021-06-23T17:30:00+00:00,2021-06-23T18:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+2A,paper-session
+pldi_talks2B,Talks 2B: Language Design and Programming Models,2021-06-23T17:30:00+00:00,2021-06-23T18:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+2B,paper-session
+pldi_posters2,Poster Session 2,2021-06-23T18:05:00+00:00,2021-06-23T19:00:00+00:00,,Gather,,/papers.html?session=Posters+2,poster
+# Wed Mirror,,,,,,,,
+pldi_talks1A_mirror,Talks 1A: Concurrent and Distributed Programming,2021-06-24T01:00:00+00:00,2021-06-24T01:35:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+1A,paper-session
+pldi_talks1B_mirror,Talks 1B: Verification,2021-06-24T01:00:00+00:00,2021-06-24T01:35:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+1B,paper-session
+pldi_posters1_mirror,Poster Session 1,2021-06-24T01:35:00+00:00,2021-06-24T02:30:00+00:00,,Gather,,/papers.html?session=Posters+1,poster
+pldi_ama_1_mirror,"AMA: Cristina Cifuentes (Oracle Labs), June Andronick (Proofcraft, UNSW and seL4 Foundation)  -- live Q&A",2021-06-24T02:30:00+00:00,2021-06-24T03:30:00+00:00,pldi-A,,,/plenary.html#tab-amas,plenary
+pldi_ama_1b_mirror,"AMA: James Noble (Victoria University of Wellington), Sriram Rajamani (MSR India)  -- live Q&A",2021-06-24T04:30:00+00:00,2021-06-24T05:30:00+00:00,pldi-A,,,/plenary.html#tab-amas,plenary
+pldi_talks2A_mirror,Talks 2A: Machine Learning,2021-06-24T05:30:00+00:00,2021-06-24T06:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+2A,paper-session
+pldi_talks2B_mirror,Talks 2B: Language Design and Programming Models,2021-06-24T05:30:00+00:00,2021-06-24T06:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+2B,paper-session
+pldi_posters2_mirror,Poster Session 2,2021-06-24T06:05:00+00:00,2021-06-24T07:00:00+00:00,,Gather,,/papers.html?session=Posters+2,poster
+# Thurs,,,,,,,,
+pldi_talks3A,Talks 3A: Program Analysis and Synthesis,2021-06-24T13:00:00+00:00,2021-06-24T13:40:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+3A,paper-session
+pldi_talks3B,Talks 3B: Architectures and Systems,2021-06-24T13:00:00+00:00,2021-06-24T13:40:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+3B,paper-session
+pldi_posters3,Poster Session 3,2021-06-24T13:40:00+00:00,2021-06-24T14:30:00+00:00,,Gather,,/papers.html?session=Posters+3,poster
+pldi_invite2,Invited Talk: Alex Aiken (Stanford)  -- live Q&A,2021-06-24T14:30:00+00:00,2021-06-24T15:30:00+00:00,pldi-A,,,/plenary.html#plenary_2,plenary
+pldi_src_talks,SRC Finalist Technical Talks  -- live Q&A,2021-06-24T16:15:00+00:00,2021-06-24T17:30:00+00:00,pldi-A,,,/socials.html#src,paper-session
+pldi_talks4A,Talks 4A: Program Analysis and Synthesis,2021-06-24T17:30:00+00:00,2021-06-24T18:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+4A,paper-session
+pldi_talks4B,"Talks 4B: Concurrency, Compilation, and Debugging",2021-06-24T17:30:00+00:00,2021-06-24T18:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+4B,paper-session
+pldi_posters4,Poster Session 4,2021-06-24T18:05:00+00:00,2021-06-24T19:00:00+00:00,,Gather,,/papers.html?session=Posters+4,poster
+# Thurs mirror,,,,,,,,
+pldi_talks3A_mirror,Talks 3A: Program Analysis and Synthesis,2021-06-25T01:00:00+00:00,2021-06-25T01:40:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+3A,paper-session
+pldi_talks3B_mirror,Talks 3B: Architectures and Systems,2021-06-25T01:00:00+00:00,2021-06-25T01:40:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+3B,paper-session
+pldi_posters3_mirror,Poster Session 3,2021-06-25T01:40:00+00:00,2021-06-25T02:30:00+00:00,,Gather,,/papers.html?session=Posters+3,poster
+pldi_invite2_mirror,Invited Talk: Alex Aiken (Stanford),2021-06-25T02:30:00+00:00,2021-06-25T03:30:00+00:00,pldi-A,,,/plenary.html#plenary_2,plenary
+pldi_src_talks_mirror,SRC Finalist Technical Talks,2021-06-25T04:15:00+00:00,2021-06-25T05:30:00+00:00,pldi-A,,,/socials.html#src,paper-session
+pldi_talks4A_mirror,Talks 4A: Program Analysis and Synthesis,2021-06-25T05:30:00+00:00,2021-06-25T06:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+4A,paper-session
+pldi_talks4B_mirror,"Talks 4B: Concurrency, Compilation, and Debugging",2021-06-25T05:30:00+00:00,2021-06-25T06:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+4B,paper-session
+pldi_posters4_mirror,Poster Session 4,2021-06-25T06:05:00+00:00,2021-06-25T07:00:00+00:00,,Gather,,/papers.html?session=Posters+4,poster
+# Friday,,,,,,,,
+pldi_talks5A,Talks 5A: Machine Learning and Probabilistic Programming,2021-06-25T13:00:00+00:00,2021-06-25T13:40:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+5A,paper-session
+pldi_talks5B,Talks 5B: Defect Detection and Repair,2021-06-25T13:00:00+00:00,2021-06-25T13:40:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+5B,paper-session
+pldi_posters5,Poster Session 5,2021-06-25T13:40:00+00:00,2021-06-25T14:30:00+00:00,,Gather,,/papers.html?session=Posters+5,poster
+pldi_invite3,Invited Talk: Michelle Strout (HPE and University of Arizona) -- live Q&A,2021-06-25T14:30:00+00:00,2021-06-25T15:30:00+00:00,pldi-A,,,/plenary.html#plenary_3,plenary
+pldi_ama_2,"AMA: Madan Musuvathi (MSR), Philippa Gardner (Imperial College London), Rustan Leino (Amazon) -- live Q&A",2021-06-25T16:30:00+00:00,2021-06-25T17:30:00+00:00,pldi-A,,,/plenary.html#tab-amas,plenary
+pldi_talks6A,Talks 6A: Language Implementation,2021-06-25T17:30:00+00:00,2021-06-25T18:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+6A,paper-session
+pldi_talks6B,Talks 6B: Applied Logics and Semantics,2021-06-25T17:30:00+00:00,2021-06-25T18:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+6B,paper-session
+pldi_posters6,Poster Session 6,2021-06-25T18:05:00+00:00,2021-06-25T19:00:00+00:00,,Gather,,/papers.html?session=Posters+6,poster
+pldi_invite_milner,Invited Talk: Robin Milner Young Researcher Award -- live Q&A,2021-06-25T15:00:00-04:00,2021-06-25T16:00:00-04:00,pldi-A,,,/plenary.html#plenary_milner,plenary
+# Friday mirror,,,,,,,,
+pldi_talks5A_mirror,Talks 5A: Machine Learning and Probabilistic Programming,2021-06-26T01:00:00+00:00,2021-06-26T01:40:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+5A,paper-session
+pldi_talks5B_mirror,Talks 5B: Defect Detection and Repair,2021-06-26T01:00:00+00:00,2021-06-26T01:40:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+5B,paper-session
+pldi_posters5_mirror,Poster Session 5,2021-06-26T01:40:00+00:00,2021-06-26T02:30:00+00:00,,Gather,,/papers.html?session=Posters+5,poster
+pldi_invite3_mirror,Invited Talk: Michelle Strout (HPE and University of Arizona),2021-06-26T02:30:00+00:00,2021-06-26T03:30:00+00:00,pldi-A,,,/plenary.html#plenary_3,plenary
+pldi_ama_2_mirror,"AMA: Sukyoung Ryu (KAIST), Joxan Jaffar (National University of Singapore) -- live Q&A",2021-06-26T04:30:00+00:00,2021-06-26T05:30:00+00:00,pldi-A,,,plenary.html#tab-amas,plenary
+pldi_talks6A_mirror,Talks 6A: Language Implementation,2021-06-26T05:30:00+00:00,2021-06-26T06:05:00+00:00,pldi-A,,,/papers.html?session=Technical+Talks+6A,paper-session
+pldi_talks6B_mirror,Talks 6B: Applied Logics and Semantics,2021-06-26T05:30:00+00:00,2021-06-26T06:05:00+00:00,pldi-B,,,/papers.html?session=Technical+Talks+6B,paper-session
+pldi_posters6_mirror,Poster Session 6,2021-06-26T06:05:00+00:00,2021-06-26T07:00:00+00:00,,Gather,,/papers.html?session=Posters+6,poster
+pldi_invite_milner_mirror,Invited Talk: Robin Milner Young Researcher Award,2021-06-26T07:00:00+00:00,2021-06-26T08:00:00+00:00,pldi-A,,,/plenary.html#plenary_milner,plenary

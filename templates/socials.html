@@ -1,0 +1,182 @@
+{% set active_page = "Community" %}
+{% set page_title = "Community" %}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+  <div id="day">
+    <!-- Workshops -->
+    {{ components.section("Community") }}
+
+    <div class="text-muted text-center pt-2">
+      Click the buttons below to join our community events at their scheduled times.  <br>
+      Events occuring during the mirrored PLDI days are <mark class="text-muted" style="background-color: #f0f0f8; border: 1px solid #dddddd;">shaded</mark>.
+    </div>
+    
+    <!-- <div class="text-muted pb-2 text-center">
+      Click the buttons to join these events via live stream 
+      (eg: <span class="badge pldi-pill badge-info text-white mr-0 py-1">PLDI-A</span>), 
+      Slack
+      (eg: <span class="badge pldi-pill badge-warning text-white mr-0 py-1">#mentoring</span>), 
+      Zoom (eg: <span class="badge pldi-pill badge-primary text-white mr-0 py-1">Zoom</span>), or
+      Gather (eg: <span class="badge pldi-pill badge-success text-white mr-0 py-1">Gather Cafe</span>).
+    </div>         -->
+
+
+    <div class="speakers">
+      {{ components.socialgroup(config, socials) }}
+    </div>
+  </div>
+</div>
+
+<script src="static/js/modules/pldiEvents.js"></script>
+<script>
+
+// Example output: "Tue 09:00-10:00 (GMT-3)  [buttons...]"
+function event(ev) {
+  const tz = getCurrentTimeZone();
+  const start = moment(ev["start"]).tz(tz)
+  const end = moment(ev["end"]).tz(tz)
+  const suffix = gmtSuffixForMoment(start)
+  const prefix = dayAbbrev(start.format('ddd'))
+  const endPrefix = dayAbbrev(end.format('ddd'))
+  const startStr = start.format('HH:mm'); 
+  const endStr = end.format('HH:mm'); 
+  if (prefix == endPrefix) {
+    return `${prefix} &nbsp; ${startStr}-${endStr} ${suffix} &nbsp; ${eventButtons(ev)}`;
+  } else {
+    return `${prefix}-${endPrefix} &nbsp; ${startStr}-${endStr} ${suffix} &nbsp; ${eventButtons(ev)}`;
+  }
+}
+
+function eventNB(ev) {
+  const tz = getCurrentTimeZone();
+  const start = moment(ev["start"]).tz(tz)
+  const end = moment(ev["end"]).tz(tz)
+  const suffix = gmtSuffixForMoment(start)
+  const prefix = dayAbbrev(start.format('ddd'))
+  const endPrefix = dayAbbrev(end.format('ddd'))
+  const startStr = start.format('HH:mm'); 
+  const endStr = end.format('HH:mm'); 
+  if (prefix == endPrefix) {
+    return `${prefix} &nbsp; ${startStr}-${endStr} ${suffix}`;
+  } else {
+    return `${prefix}-${endPrefix} &nbsp; ${startStr}-${endStr} ${suffix}`;
+  }
+}
+
+function eventPLTea(ev) {
+  const tz = getCurrentTimeZone();
+  const start = moment(ev["start"]).tz(tz)
+  const end = moment(ev["end"]).tz(tz)
+  const suffix = gmtSuffixForMoment(start)
+  const prefix = dayAbbrev(start.format('ddd'))
+  const endPrefix = dayAbbrev(end.format('ddd'))
+  const startStr = start.format('HH:mm'); 
+  const endStr = end.format('HH:mm'); 
+  return `${prefix}-${endPrefix} &nbsp; ${startStr}-${endStr} ${gmtSuffixForMoment(start)}`;
+}
+
+function GMT(ev) {
+  const tz = getCurrentTimeZone();
+  const start = moment(ev["start"]).tz(tz)
+  const suffix = gmtSuffixForMoment(start)
+  return suffix;
+}
+
+function eventPair(ev0, ev1) {
+  const tz = getCurrentTimeZone();
+  const start0 = moment(ev0["start"]).tz(tz)
+  const end0 = moment(ev0["end"]).tz(tz)
+  const suffix = gmtSuffixForMomentForMoment(start0)
+  const prefix0 = dayAbbrev(start0.format('ddd'))
+  const startStr0 = start0.format('HH:mm'); 
+  const endStr0 = end0.format('HH:mm'); 
+  const start1 = moment(ev1["start"]).tz(tz)
+  const end1 = moment(ev1["end"]).tz(tz)
+  const prefix1 = dayAbbrev(start1.format('ddd'))
+  const startStr1 = start1.format('HH:mm'); 
+  const endStr1 = end1.format('HH:mm'); 
+  return `${prefix0} ${startStr0}-${endStr1} & ${prefix1} ${startStr1}-${endStr1} ${suffix} &nbsp; ${eventButtons(ev0)}`;
+}
+
+
+function pltea(orig) {
+  events = [
+     {start: "2021-06-23T08:30:00-04:00",
+      end: "2021-06-25T09:00:00-04:00" },
+     {start: "2021-06-23T11:30:00-04:00",
+      end: "2021-06-25T12:30:00-04:00"},
+     {start: "2021-06-23T20:30:00-04:00",
+      end: "2021-06-25T21:00:00-04:00"},
+     {start: "2021-06-23T23:30:00-04:00",
+      end: "2021-06-26T00:30:00-04:00" } 
+  ]
+
+  return `
+      ${eventPLTea(events[0])}</br>
+      ${eventPLTea(events[1])}
+      <div class="row mx-auto pb-2"> 
+        <div class="mx-auto col-12"><span class="mirror-span px-2 mx-2 border-bottom-0">${eventPLTea(events[2])}</span></div>
+        <div class="mx-auto col-12"><span class="mirror-span px-2 mx-2 border-top-0">${eventPLTea(events[3])}</span></div>
+      </div>
+  `  + eventButtons(orig[0])
+}
+
+function cafe(orig) {
+  return `<div class="mx-auto col-12 pb-2">Open 24 hours a day.</div>` + eventButtons(orig[0])
+}
+
+function cares(events) {
+  return `
+    ${eventNB(events[0])}
+    <div class="mx-auto col-12 pb-2"><span class="mirror-span px-2 mx-2">${eventNB(events[1])}</span></div>
+    ${eventButtons(events[0])}`
+}
+
+function business(events) {
+  return `
+    ${eventNB(events[0])}
+    <div class="mx-auto col-12 pb-2"><span class="mirror-span px-2 mx-2">${eventNB(events[1])}</span></div>
+    ${eventButtons(events[0])}
+    
+    ${talkButton({ talk : { location: "Video", link: "prerecorded_9977.html" }})}
+    `
+}
+
+function opening(events) {
+  return `
+    ${eventNB(events[0])}
+    <div class="mx-auto col-12 pb-2"><span class="mirror-span px-2 mx-2">${eventNB(events[1])}</span></div>
+    ${eventButtons(events[0])}
+    `
+}
+
+
+
+// We need to build content of cards on the fly because
+// the dates must be adjusted to current time zone.
+document.addEventListener('DOMContentLoaded', function() {
+  const socialCals = {{ calendar | tojson }};
+  for (var key in socialCals) {
+    events = socialCals[key]
+    if (key === "pltea") {
+      html = pltea(events)
+    } else if (key === "cafe") {
+      html = cafe(events)
+    } else if (key == "cares") {
+      html = cares(events)
+    } else if (key == "business") {
+      html = business(events)
+    } else if (key == "opening") {
+      html = opening(events)
+    } else {
+      html = events.map(x => event(x)).join("<br>")  
+    }
+    const elt = document.getElementById("social_events_" + key)
+    elt.innerHTML = html
+  }
+});
+
+</script>
+{% endblock %}

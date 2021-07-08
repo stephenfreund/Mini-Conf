@@ -4,7 +4,6 @@
 {{ super() }}
 <link rel="stylesheet" href="static/css/typeahead.css" />
 <link rel="stylesheet" href="static/css/paper_vis.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/d3@5/dist/d3.min.js"></script>
 {#
   <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.3/dist/handlebars.min.js" integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
@@ -21,28 +20,34 @@
 <script src="https://cdn.jsdelivr.net/gh/tgdwyer/WebCola/WebCola/cola.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 {% endblock %}
-{% block tabs %}
-<ul class="nav nav-pills justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link text-muted" href="papers.html">Browse </a>
-  </li>
-  <li class="nav-item active" style="background-color: #bed972;">
-    <a
-      class="nav-link text-muted"
-      data-toggle="tab"
-      href="#"
-      role="tab"
-      aria-controls="nav-home"
-      aria-selected="true"
-      >Visualization
-    </a>
-  </li>
-</ul>
-{% endblock %}
 
 {% block content %}
-<div class="container-lg" id="container" style="padding-top: 20px;">
-  <div class="row py-3">
+
+{{ components.section("Papers") }}
+
+
+<div class="container mb-5 mt-0">
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link text-muted" href="papers_schedule.html">
+        Talk Schedule
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-muted " href="papers.html">
+        Browse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active text-muted " href="papers_vis.html">
+        Visualize
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="container-lg" id="container" style="padding-top: 0px;">
+  <div class="row py-0">
     <div class="col-12 col-sm-6 col-lg-4">
       <div class="input-group mb-3">
         <input
@@ -52,7 +57,7 @@
         />
         <div class="input-group-append">
           <button
-            class="btn btn-outline-secondary typeahead_all_clear"
+            class="btn btn-secondary typeahead_all_clear"
             type="button"
           >
             &times;
@@ -66,7 +71,7 @@
     >
       <div class="btn-group btn-group-toggle filter_option">
         <label
-          class="btn btn-outline-secondary"
+          class="btn btn-secondary"
           data-tippy-content="Search for papers titles"
         >
           <input
@@ -78,7 +83,7 @@
           title
         </label>
         <label
-          class="btn btn-outline-secondary active"
+          class="btn btn-secondary active"
           data-tippy-content="Search for papers from specific authors"
         >
           <input
@@ -91,7 +96,7 @@
           author
         </label>
         <label
-          class="btn btn-outline-secondary"
+          class="btn btn-secondary"
           data-tippy-content="Search for papers with specific keywords"
         >
           <input
@@ -157,7 +162,7 @@
 
 {% block footer %}
 
-<div
+<!-- <div
   class="gdpr bg-dark text-light"
   style="padding: 10pt; position: fixed; bottom: 0; display: none;"
 >
@@ -166,6 +171,6 @@
     I agree
   </div>
 </div>
-<script src="static/js/modules/gdprCookies.js"></script>
+<script src="static/js/modules/gdprCookies.js"></script> -->
 
 {% endblock %}

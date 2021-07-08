@@ -1,0 +1,216 @@
+{
+  "announcer": [],
+  "assets": [],
+  "backgroundImagePath": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/ItkHXgu3gdV6Hy9gUxczgE",
+  "collisions": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEBAQEBAQEBAQEAAAEBAQEBAQEBAQEBAQEBAQAAAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "description": "an unfurnished booths room perfectly sized for large or small booths. movable doors.",
+  "dimensions": [
+    41,
+    26
+  ],
+  "foregroundImagePath": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/FuHw2eLmdi9v3kGsA3tv7i",
+  "id": "posters-fancy-1",
+  "isPublic": false,
+  "isTemplate": false,
+  "objects": [
+    {
+      "_name": "Potted Plant (directory)",
+      "distThreshold": 100,
+      "height": 2,
+      "highlighted": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/uploads%2FQhP7jFle1OkT4QRP%2Fassets%2F304dfffd-de2b-4f33-935d-1a8eb2458bd9?alt=media&token=96ef11fc-de68-473b-9624-edec90be0f03",
+      "normal": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/internal-dashboard-upload%2FGb1j09WoypxoA4UP?alt=media&token=107ec86e-6d96-41cb-98c2-721fbde0fbd3",
+      "offsetX": 0,
+      "offsetY": 0,
+      "previewMessage": "press x to view Poster Directory",
+      "properties": {
+        "url": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/directory.html"
+      },
+      "scale": 1,
+      "type": 1,
+      "width": 1,
+      "x": 2,
+      "y": 2
+    },
+    {
+      "height": 2,
+      "highlighted": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/uploads%2FTsDD7md4ikbl4SZG%2Fassets%2F4ed3350b-d9e4-40d9-b6ac-719693b9bdc3?alt=media&token=0ea1b25f-b11d-4fe2-8c6d-526e3980fe10",
+      "normal": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/uploads%2FTsDD7md4ikbl4SZG%2Fassets%2F6ecd6181-13fa-48f4-884a-ac2452ed46d4?alt=media&token=8d29a448-5c2d-4096-adfb-aa82da6c614b",
+      "properties": {},
+      "scale": 1,
+      "type": 0,
+      "width": 4,
+      "x": 10,
+      "y": 24
+    },
+    {
+      "height": 2,
+      "highlighted": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/uploads%2FTsDD7md4ikbl4SZG%2Fassets%2F4ed3350b-d9e4-40d9-b6ac-719693b9bdc3?alt=media&token=0ea1b25f-b11d-4fe2-8c6d-526e3980fe10",
+      "normal": "https://cdn.gather.town/v0/b/gather-town.appspot.com/o/uploads%2FTsDD7md4ikbl4SZG%2Fassets%2F6ecd6181-13fa-48f4-884a-ac2452ed46d4?alt=media&token=8d29a448-5c2d-4096-adfb-aa82da6c614b",
+      "properties": {},
+      "scale": 1,
+      "type": 0,
+      "width": 4,
+      "x": 27,
+      "y": 24
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/KADsWpFKHtdvcVDlzDGcyw",
+      "id": "NK54U0GFYzhNwgOhLTcM8_e53a2203-5547-4f80-8926-587e8fcbdaa6",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/KADsWpFKHtdvcVDlzDGcyw",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 1. position 0. poster pldi.12.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.12.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.12.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 6,
+      "y": 4
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/mYfOz9KogrlI098TYwRoxa",
+      "id": "NK54U0GFYzhNwgOhLTcM8_daadb16d-9e33-40df-b3e5-18a1e6ca9dde",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/mYfOz9KogrlI098TYwRoxa",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 2. position 1. poster pldi.21.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.21.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.21.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 17,
+      "y": 4
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/eTTitfxuNWWC33i2NqK1Rf",
+      "id": "NK54U0GFYzhNwgOhLTcM8_c604819d-0fd8-4f19-86d2-e2236b280daf",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/eTTitfxuNWWC33i2NqK1Rf",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 3. position 2. poster pldi.25.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.25.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.25.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 28,
+      "y": 4
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/ybCk1EtBy2DUVDo41DfmoC",
+      "id": "NK54U0GFYzhNwgOhLTcM8_0e143b14-f293-494c-9ed8-ba37d6b47b99",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/ybCk1EtBy2DUVDo41DfmoC",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 4. position 3. poster pldi.27.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.27.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.27.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 6,
+      "y": 14
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/CRQeCRyccHG5OUVApuaBf6",
+      "id": "NK54U0GFYzhNwgOhLTcM8_d660847f-81c9-42aa-8088-c2fb6153345b",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/CRQeCRyccHG5OUVApuaBf6",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 5. position 4. poster pldi.30.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.30.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.30.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 17,
+      "y": 14
+    },
+    {
+      "_name": "poster",
+      "_tags": [
+        "Custom"
+      ],
+      "color": "default",
+      "height": 7,
+      "highlighted": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/fB7FdqWZL7fb2MsZVQAIyT",
+      "id": "NK54U0GFYzhNwgOhLTcM8_cc91caee-7878-4cf7-a7c2-a01d1a970299",
+      "normal": "https://cdn.gather.town/storage.googleapis.com/gather-town.appspot.com/uploads/rQ7RIajYzqWKIR8Epldi21/fB7FdqWZL7fb2MsZVQAIyT",
+      "orientation": 0,
+      "properties": {
+        "blurb": "poster 6. position 5. poster pldi.34.",
+        "image": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.34.png",
+        "preview": "https://gh-posters.dgzedp99wf8of.amplifyapp.com/poster_pldi.34.png"
+      },
+      "scale": 1,
+      "templateId": "NK54U0GFYzhNwgOhLTcM8",
+      "type": 1,
+      "width": 8,
+      "x": 28,
+      "y": 14
+    }
+  ],
+  "portals": [],
+  "spaces": [],
+  "spawns": [
+    {
+      "x": 11,
+      "y": 23
+    },
+    {
+      "x": 12,
+      "y": 23
+    },
+    {
+      "x": 29,
+      "y": 23
+    },
+    {
+      "x": 28,
+      "y": 23
+    }
+  ],
+  "useDrawnBG": false
+}

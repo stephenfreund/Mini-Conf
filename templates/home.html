@@ -1,0 +1,235 @@
+{% set active_page = "Home" %}
+{% set page_title = "Home" %}
+
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/css/bootstrap-select.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.10/dist/js/bootstrap-select.min.js"></script>
+
+{{ components.calendar_scripts() }}
+
+
+{% endblock %}
+
+{% block top %}
+<style>
+  .back {
+    background: url("{{config.background_image}}") no-repeat center;
+    background-size: cover;
+  }
+  
+  .back h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+  }
+</style>
+
+<div class="jumbotron jumbotron-fluid back" style="padding-bottom: 20px;">
+  <div class="row header p-6 m-5">
+    <div class="p-1 mx-auto text-center text-white col-md-9 col-sm-12">
+      <h2>
+        {{config.tagline|safe}}
+      </h2>
+      <h2 class="pt-5">
+        {{config.date|safe}}
+      </h2>
+    </div>
+  </div>
+  <h5 class="text-white mx-auto text-center text-white">Colocated Events: 
+    {% for (name, link) in colocated %}
+    {{ " and " if loop.last else "" }}
+    <a class="link-light text-light" href="{{link}}">{{name}}</a>{{ ", " if not loop.last else "" }}
+    {% endfor %}
+    </h5>
+</div>
+
+<div class="container">
+  <div class="alert alert-primary mx-4" role="alert">
+    <h3>Thanks for Attending PLDI 2021</h3>    
+    <h5>July 6, 2021</h5>    
+    The conference is now at an end.  Thanks for being part of it and making it such a success. 
+    This site is now publicly available for all to enjoy. 
+    <!-- Pardon our dust as we begin
+    post-production on the streams and website materials in advance of making them publicly available 
+    a little bit later in the summer.-->
+    Best wishes, and see you at PLDI 2022!   
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<script>
+  
+  var calendar;
+  
+  document.addEventListener('DOMContentLoaded', async function () {
+    calendar = await makeFrontPageCalendar('calendar', 'lastUpdate', {
+      height: "350px",
+      initialDate: '{{ config.calendar.start }}',
+      validRange: {
+        start: '{{ config.calendar.start }}',
+        end: '{{ config.calendar.end }}'
+      },
+    },
+    '{{ calendar | tojson }}'
+    );
+  });
+  
+</script>
+
+<div class="container">
+  <div class="row pb-4">
+    <div class="col-lg-6 col-12 pt-2">
+      <h3>Happening at <span id="lastUpdate"></span></h3>
+      <!-- <div class="pp-card-header-auto-height pl-4 px-2"> -->
+        <div class="text-muted pb-2">
+          Click on any event for details and to attend.
+        </div>        
+        <div class="row px-0 pt-0">
+          <div class="col-12">
+            <div id='calendar' class="fc-upcoming card"></div>
+          </div>
+        </div>
+        <div class="row pl-3 pb-0">
+          <div class="col-12 text-right">
+            <small><a href="javascript:void(0);" onclick="calendar.updateToCurrentTime()">Refresh</a></small>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-12 pt-2">
+      <div class = "getting-started">
+        <h3 class="text-center getting-started-big-title">Getting Started</h3>
+        {% if False and config.fake_time %}
+        <small class="text-danger">Note: The time is fixed at  <span id="gmtTime" class="text-danger"></span>.</small>
+        <script>
+          document.getElementById('gmtTime').textContent = currentTimeMomentGMT().format("llll") + " (GMT+0)";
+        </script>    
+        {% endif %}
+        
+        <ol class="pl-4">
+          <li>We recommend the latest Chrome, Firefox, or Brave for browsing. Javascript must be enabled.</li>
+          <li>Set your local timezone: 
+            <select id="time-zone-selector" class="selectpicker" data-style="btn-light bg-white border shadow-none py-1" data-live-search="true">
+              <option value="UTC">UTC</option>
+            </select>
+          </li>
+          <li class="pt-1">Join Slack & Gather via our 
+            <b><a href="help.html#tab-getting">Step-by-Step Instructions</a></b>.   
+            <br>Or TL;DR:
+            <ul class="pl-4">
+          <li class="pt-2">
+            Click <a type="button" class="btn btn-danger bt-margin btn-sm mt-n1 mr-1" style="padding: .12rem .5rem; white-space: nowrap;" href="{{ config.slack_signup }}" target="_blank">Join Slack</a>
+            and select "Sign in with PLDI 2021".  Use the same email address and password as
+            for this website, and <b>update your Slack profile's display name to be your full name and affiliation.</b>  
+          </li>
+          <li class="pt-2">
+            Click <a type="button" class="btn btn-danger bt-margin btn-sm mt-n1 mr-1" style="padding: .12rem .5rem; white-space: nowrap;" href="{{ config.gather_link }}" target="_blank">Join Gather</a>
+            and follow the instructions for generating a magic sign-on link using the same email address as
+            for this website. 
+        </ul>
+        After completing these steps, you can access Slack and Gather by clicking any <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" 
+        href="https://{{config.slack_server}}/app_redirect?channel=general" target="_blank">#Slack</a> or <a type="button" class="btn btn-success bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" 
+        href="{{ config.gather_link }}" target="_blank"><i class="fas fa-users"></i>&nbsp;Gather</a> button on our site.
+        </li>
+          <li>Watch our videos below on how to participate in and enjoy PLDI.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-2">
+    <div class="col-lg-6 col-12 mb-4 order-last order-lg-first">
+      <h3>A Message from the General Chair</h3>
+
+      <div class id="video"> 
+        <div id="presentation-embed" class="slp my-auto"></div>  
+        <script src="https://slideslive.com/embed_presentation.js"></script> <script>
+                embed = new SlidesLiveEmbed("presentation-embed", {
+                  presentationId: "38956344",
+                  autoPlay: false, // change to true to autoplay the embedded presentation
+                  verticalEnabled: true,
+                  verticalWhenWidthLte: 500,
+                  allowHiddenControlsWhenPaused: true,
+                  hideTitle: true,
+                });      
+        </script>
+      </div>
+
+      <h3 class="pt-4">How to PLDI: Website, Slack, and Gather</h3>
+
+      <div class id="video"> 
+          <div id="presentation-embed3" class="slp my-auto"></div>  
+          <script src="https://slideslive.com/embed_presentation.js"></script> <script>
+                  embed = new SlidesLiveEmbed("presentation-embed3", {
+                    presentationId: "38956345",
+                    autoPlay: false, // change to true to autoplay the embedded presentation
+                    verticalEnabled: true,
+                    verticalWhenWidthLte: 500,
+                    allowHiddenControlsWhenPaused: true,
+                    hideTitle: true,
+                  });      
+          </script>
+        </div>
+
+        <h3 class="pt-4">Pure Implementation</h3>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/77999Td20TM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="pp-card-header-auto-height mt-3" style="max-width: 400px;">
+          <a class="twitter-timeline" data-theme="light" data-height=400
+          href="https://twitter.com/PLDI?ref_src=twsrc%5Etfw">Tweets by PLDI</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+        </div>
+        </div>
+    <div class="col-lg-6 col-12 mb-4">
+      <div class="pp-card-header-auto-height">
+        {{ readme | markdown }}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row pb-4">
+    <div class="col-lg-4 col-12 px-1 pt-4 pb-0 ">
+    </div>
+  </div>
+</div>
+  
+
+
+<script>
+  const timeZoneSelectorEl = document.getElementById('time-zone-selector');
+  
+  moment.tz.names().forEach(function(timeZone) {
+    var optionEl;
+    
+    if (timeZone !== 'UTC' && timeZone != "Local" && !timeZone.startsWith("Etc/")) { // UTC is already in the list, skip confusing GMT ones, Local is bad too
+      optionEl = document.createElement('option');
+      optionEl.value = timeZone;
+      optionEl.innerText = timeZone;
+      timeZoneSelectorEl.appendChild(optionEl);
+    }
+  });
+  
+  const tz = getCurrentTimeZone()
+  timeZoneSelectorEl.value = tz;
+  
+  // when the timezone selector changes, dynamically change the calendar option
+  timeZoneSelectorEl.addEventListener('change', function() {
+    setCurrentTimeZone(this.value)
+    location.reload()
+  });
+</script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{% endblock %}

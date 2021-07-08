@@ -1,115 +1,77 @@
-# Mini-Conf - Data Description
+## Welcome to PLDI 2021!
 
-All data for Mini-Conf can be provided either as CSV, JSON, or YAML. 
-So it does not matter if you provide a `papers.csv` or a `papers.yml` as long as
-the required data fields are provided.
+We hope you will enjoy the many activities happening this week.  **Please follow the Getting Started instructions above to ensure you are able to participate in all of them.**
 
-## Global Configuration (config.yml)
+You can navigate to everything the week has to offer through the top menu bar.  We recommend beginning with the [Schedule](calendar.html) for an overview of the week.
 
-- name: `<short name>`
-- tagline: `<long name>`
-- date: `<Date of conference>`
-- proceedings_title: `<proceedings name for citation>`
-- citation_date: `<date for citation export (no HTML)>`
-- analytics: `<Google analytics ID starting with UA... >`
-- logo: 
-    - image: `<link to logo>`
-    - width: `<width of the image> or "auto"`
-    - height: `<height of the image> or "auto"`
-- site_title: `<name of the site>`
-- page_title:
-    - prefix: `<text to include in title of every page>`
-    - separator: `<characters between prefix and name of the current page>`
-- background_image: `<link to background image>`
-- organization: `<conference committee name>`
-- chat_server: `<url of rocket chat server, if used>`
-- default_presentation_id: `<default slideslive id, if used>`
-- default_poster_pdf: `<default poster pdf, if used>`
+**PLDI Technical Conference.** The main PLDI conference will occur June 23-25 and features three invited keynotes, over eighty technical paper talks, poster sessions, and AMAs.  See the [Featured](featured.html) and [Papers](papers.html) pages for details.  The [Papers](papers.html) page offers a variety of ways to browse the PLDI papers. Each paper has its own page, featuring one or more video presentations, and a Slack channel to directly engage
+with the authors.  
 
-## Detail Pages
+The PLDI technical papers sessions consist of parallel tracks of five-minute talks shown on video streams [PLDI-A](http://localhost:5000/track_pldi-A.html) and [PLDI-B](http://localhost:5000/track_pldi-B.html), followed
+by a poster session in Gather for Q&A and in-depth discussion with the authors from all the papers in the session.  Each paper's page includes the times that it will be featured in technical session video streams and poster sessions.  All other PLDI technical events will be streamed to [PLDI-A](http://localhost:5000/track_pldi-A.html).
 
-### committee [.csv | .json | .yml]
-The list of members of the orga team visible on the landing page
+PLDI's days will be mirrored twelve hours after their first occurence.  We’ll replay the talks and hold the poster sessions for a second time, providing another opportunity to enjoy post-talk discussions with the authors and other attendees. Some events, such as the AMAs, will be held live during the mirrored days.
 
-  - role: `<Chair name>` 
-  - name: `<Name>`
-  - aff: `<Affiliation>`
-  - im: `<Image URL>`
-  - tw: `<Twitter name>`
-  
- Example (.yml):
- ```yaml
-committee:
-  - role: Procrastination Chair 
-    name: Homer Simpson
-    aff: Springfield University
-    im: https://en.wikipedia.org/wiki/Homer_Simpson#/media/File:Homer_Simpson_2006.png 
-```
+**Colocated Events.** A variety of other conferences, workshops, and
+tutorials will take place June 20-22.  Our [Colocated](colocated.html) events
+page provides the full details for each event, including its video stream, dedicated Slack channel, schedule, and any pre-recorded content.
 
-<hr>
+**Community.** The week will also feature a number of [Community](socials.html)
+activities, including moderated, small-group discussions in [PL Tea](/socials.html#pltea), a self-serve [mentoring channel](https://pldi21.slack.com/app_redirect?channel=mentoring)
+for matching mentors and mentees during the
+conference, a CARES-led discussion on [inclusivity](/socials.html#cares), various other social events. 
+Our Gather virtual conference center will open 24 hours a day for meetups and socializing.
 
-### papers [.csv | .json | .yml]
-The list of papers.
+**Sponsors.** Finally, make sure to visit the [Sponsors](sponsors.html) section for information
+about our sponsors. 
 
-- UID: `<Unique ID>`
-- title: `<paper title>`
-- authors: `<list of authors>` -- (seperated by `|` in CSV)
-- abstract: `<abstract text>`
-- keywords: `<list of keywords>` -- (seperated by `|` in CSV)  
-- sessions: `<list of session IDs>` --  (seperated by `|` in CSV) 
+**Engagement.**  We have designed our virtual platform and program to provide many different types of opportunities for participation, be it attending events in our live streams, or replaying them afterwards, chatting asynchronously in Slack, or attending poster sessions and meeting others in Gather.   Best wishes for a week of learning new ideas, connecting with old colleagues and new, and engaging with the entire PLDI community. 
 
-Example (.csv):
-```csv
-UID,title,authors,abstract,keywords,sessions
-B1xSperKvH,Donuts Holes are the Best,Homer Simpson|Bart Simpson,"Donuts are the cause for a lot of taste.",donuts|food|joy,S1|S3
-```
+##### Getting Help
 
-<hr>
+* For technical difficulties, please contact <a type="button" class="btn btn-warning bt-margin btn-sm mb-1" style="padding: .05rem .5rem;" href="https://pldi21.slack.com/app_redirect?channel=helpdesk" target="_blank">#helpdesk</a> in Slack.  
+* If you cannot access Slack, [send email](https://pldi21.sigplan.org/contact). Use Slack if possible, as email may not be answered as quickly.
+* If you encounter or witness inappropriate conduct, please see our [Code of Conduct](help.html#tab-conduct) page for steps to take.
 
-### speakers [.csv | .json | .yml]
-The list of keynote talks.
+<!--
+        How to PLDI...
+        How to the Website...
+        How to Slack...
+        How to Gather...
 
-- UID: `<Unique ID>`
-- title: `<talk title>`
-- institution: `<affiliation>`
-- speaker: `<speaker name>`
-- abstract: `<talk abstract>`
-- bio: `<short bio>`
-- session: `<session ID>`
+        To Be Written...
 
-Example (.csv):
-```csv
-UID,title,institution,speaker,abstract,bio,session
-1,"AI + Africa = Global Innovation","IBM Research Africa, Nairobi",Dr. Aisha Walcott-Bryant,"Artificial Intelligence (AI) has for some time stoked the creative fires of computer scientists and researchers world-wide -- even before the so-called AI winter. After emerging from the winter, with much improved compute, vast amounts of data, and new techniques, AI has ignited our collective imaginations. We have been captivated by its promise while wary of its possible misuse in applications. AI has certainly demonstrated its enormous potential especially in fields such as healthcare. There, it has been used to support radiologists and to further precision medicine; conversely it has been used to generate photorealistic videos which distort our concept of what is real.  Hence, we must thoughtfully harness AI to address the myriad of scientific and societal challenges; and open pathways to opportunities in governance, policy, and management. In this talk, I will share innovative solutions which leverage AI for global health with a focus on Africa. I will present a vision for the collaborations in hopes to inspire our community to join on this journey to transform Africa and impact the world.","Dr. Aisha Walcott-Bryant is a research scientist and manager of the AI Science and Engineering team at IBM Research, Africa. She is passionate about healthcare, interactive systems, and on addressing Africa's diverse challenges.In addition, Dr. Walcott-Bryant leads a team of researchers and engineers who are working on transformational innovations in global health and development while advancing the state of the art in AI, Blockchain, and other technologies.She and her team are engaged in projects in Maternal Newborn Child Health (MNCH), Family Planning (FP), disease intervention planning, and water access and management.  Her team's recent healthcare work on “Enabling Care Continuity Using a Digital Health Wallet” was awarded Honorable Mention at the International Conference on Health Informatics, ICHI2019.Prior to her career at IBM Research Africa, Dr. Walcott-Bryant worked in Spain. There, she took on projects in the area of Smarter Cities at Barcelona Digital and Telefonica with a focus on physical systems for social media engagement, and multi-modal trip planning and recommending. Dr. Walcott-Bryant earned her PhD in Electrical Engineering and Computer Science at MIT where she conducted research on mobile robot navigation in dynamic environments at their Computer Science and Artificial Intelligence Lab (CSAIL).",S2
-```
+        1. Watch the `How To PLDI` video.  Read the Docs...
+        1. Sign on to PLDI's Slack workspace, on the web or in the Slack app.
+        2. Sign on to Gather and explore...
+        3. Browse the calendar and event schedules.
 
-<hr>
+        Here is how to use this website to find live events (at fixed times) plus pre-recorded talks you can watch anytime. 
 
-### workshops [.csv | .json | .yml]
-The list of workshops or socials.
+        ##### Schedule
+        Use the [Schedule](schedule.html) to find all of the events for the week and set your timezone.  
 
-- UID: `<Unique ID>`
-- title: `<workshop title>`
-- authors: `<organizer names>`
-- abstract: `<abstract text>`
-- [TBD] url: `<external link>`
+        ##### Main Conference Papers
 
-<hr>
+        All [PLDI Papers](papers.html) have a pre-recorded five-minute Lightning Talks and longer Full Talks.  The Lightning Talk will be showed during one of our Technical Talk Sessions on the [Main Stage](track_pldi-A.html), and the authors will take part in the poster session following their talk.  Each paper also has a Slack channel for chatting with the authors. 
 
-### faq [.json | .yml]
-The list of FAQ questions partitioned into sections.
+        ##### Plenary Sessions
 
- - Section: `<Section Name>`
- - QA:
-      - Question: `<Question>`
-      - Answer: `<Answer>`
+        [Plenary Sessions](plenary.html) include Invited Talks, the PLDI Business Meeting, Student Research Competition Talks.  Use the Livestream to watch live sessions in real time on the [Main Stage](track_pldi-A.html). 
 
-Example (.yml):
-```yaml
-FAQ:
-  - Section: Test Section
-    QA:
-      - Question: What is a good question?
-        Answer: "Here are the answers"
-```
+        ##### Mirroring
 
+        Plenary and main conference sessions will be mirrored 12 hours after their first occurence.  Some events, including Poster Sessions, will be held live a second time.
+
+        ##### Colocated Events, Workshops, and Tutorials
+        All [colocated events, workshops, and tutorials](workshops.html) are included with conference registration.
+
+        ##### Sponsors
+        Meet our [sponsors](sponsors.html).
+
+        #####  Help
+        Look under Help for FAQs and technical support.
+
+        #####  Social Media
+        Use the hashtag [#pldi2021](https://twitter.com/search?q=%23pldi2021).
+ -->

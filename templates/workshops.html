@@ -1,14 +1,22 @@
-{% set active_page = "Workshops" %}
-{% set page_title = "Workshops" %}
+{% set active_page = "Colocated" %}
+{% set page_title = "Colocated Events" %}
 {% extends "base.html" %}
 
 {% block content %}
 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
   <div id="day">
     <!-- Workshops -->
+    {{ components.section("Colocated Conferences") }}
+    <div class="speakers">
+      {{ components.workshopgroup(workshops, "conf") }}
+    </div>
     {{ components.section("Workshops") }}
     <div class="speakers">
-      {{ components.workshopgroup(workshops) }}
+      {{ components.workshopgroup(workshops, "workshop") }}
+    </div>
+    {{ components.section("Tutorials") }}
+    <div class="speakers" id="tutorials">
+      {{ components.workshopgroup(workshops, "tutorial") }}
     </div>
   </div>
 </div>

@@ -1,0 +1,13 @@
+title,start,end,category,trackUID,gather,zoom,info
+"Tutorial Session",2021-06-21 09:00:00-04:00,2021-06-21 11:45:00-04:00,paper,imop,,,
+
+#09:00	Introduction to IMOP	10 min
+#09:10	Representations and Traversals	35 min
+#09:45	Scopes, Symbols, Types, and Environments	20 min
+#10:05	Code Construction and Transformations	10 min
+#10:15	Break	30 min
+#10:45	Advanced Transformations	10 min
+#10:55	Data-flow Analyses	15 min
+#11:10	Concurrency Representations	15 min
+#11:25	Self-stabilization and Z3-integration	15 min
+#11:40	Discussions and Q&A	5 min

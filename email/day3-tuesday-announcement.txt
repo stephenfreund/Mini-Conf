@@ -1,0 +1,27 @@
+Welcome to the third day of PLDI!
+
+Today we will continue with:
+
+- Day 3 of HOPL IV: History of Programming Languages
+- Day 2 of The Programming Language Mentoring Workshop (PLMW)
+
+We will hold several co-located workshops and symposia:
+
+- International Symposium on Memory Management (ISMM)
+- Programming Languages for Quantum Computing (PlanQC)
+- State of the Art in Program Analysis (SOAP)
+- Languages, Compilers, Tools and Theory of Embedded Systems (LCTES)
+
+We will hold our final tutorial:
+
+- Implementing smart contract security analyses using the MadMax/Gigahorse
+  framework
+
+Finally, we will hold a poster session:
+
+- The Student Research Competition (SRC) Poster Session
+
+You can find all events on our conference site:
+
+https://www.pldi21.org/
+

@@ -1,0 +1,24 @@
+website: http://www.google.com
+
+description: At Google, we pride ourselves on our ability to develop and launch new products and features at a very fast pace. This is made possible in part by our world-class engineers, but our approach to software development enables us to balance speed and quality, and is integral to our success. Our obsession for speed and scale is evident in our developer infrastructure and tools. Developers across the world continually write, build, test and release code in multiple programming languages like C++, Java, Python, Javascript and others, and the Engineering Tools team, for example, is challenged to keep this development ecosystem running smoothly. Our engineers leverage these tools and infrastructure to produce clean code and keep software development running at an ever-increasing scale. 
+
+youtube: https://www.youtube.com/embed/m28x6OsTPAk
+
+#contacts:
+
+resources:
+  - label: https://careers.google.com/ 
+    website: https://careers.google.com/ 
+  - label:   Software Engineering and Programming Languages 
+    website: https://research.google/teams/software-engineering-and-programming-languages/
+  - label: https://careersonair.withgoogle.com/ 
+    website: https://careersonair.withgoogle.com/ 
+  - label: Life of PhD Technical Intern  
+    website: https://research.google/teams/software-engineering-and-programming-languages/
+
+# zoom_link:
+
+schedule:
+  - start: 2021-06-24T11:30:00-04:00
+    duration: 1
+    label: "Join us for a Q&A session"

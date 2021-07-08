@@ -4,36 +4,47 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
 
 <script src="static/js/modules/icons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
+{{ components.calendar_scripts() }}
+
+<script src="static/js/modules/pldiEvents.js"></script>
+
+
+
 {% endblock %}
 
 {% block tabs %}
-<ul class="nav nav-pills justify-content-center">
-  <li class="nav-item active">
-    <a
-      class="nav-link text-muted active"
-      data-toggle="tab"
-      href="#tab-browse"
-      role="tab"
-      aria-controls="nav-home"
-      aria-selected="true"
-      >Browse
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-muted" href="paper_vis.html">Visualization</a>
-  </li>
-</ul>
 
 {% endblock %}
 
 {% block content %}
-<div class="row p-3"></div>
+
+<!-- <div class="gdpr alert alert-dark bg-dark text-white" role="alert" style="padding: 10pt; width: fit-content; display: none;">
+  We use cookies to store your timezone and which papers have been bookmarked.
+  <div class="gdpr-btn btn btn-sm btn-info" style="margin-left: 15pt;">
+    I agree
+  </div>
+</div>  
+
+<script src="static/js/modules/gdprCookies.js"></script>  -->
+
+
+
+  {{ components.section("Papers") }}
+
+  <style>
+    .fc .fc-list-event:hover td {
+    background-color: #fFFFFF;
+  }
+
+</style>
 
 <!-- Session -->
 <div class="row d-none session_notice">
@@ -43,6 +54,8 @@
   >
     Showing papers for
     <span id="session_name" style="font-weight: bold;"></span>.
+    <!-- That session can be watched <a id="session_track" class="alert-link" style="font-weight: bold;">here</a>. -->
+    <!-- See full paper schedule <a id="session_link" class=" alert-link" style="font-weight: bold;">here</a>. -->
     <button
       type="button"
       class="close remove_session"
@@ -54,127 +67,157 @@
   </div>
 </div>
 
+<div class="container mb-3 mt-0">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link text-muted" href="papers_schedule.html">
+          Talk Schedule
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active text-muted" href="papers.html">
+          Browse
+        </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link text-muted " href="papers_vis.html">
+          Visualize
+        </a>
+      </li> -->
+    </ul>
+</div>
+
+<div class="text-muted pb-4 text-center">
+  Click any paper for more details.  Each paper shows it talk and poster session times.  <br>Click a paper's live stream button to view its
+  talk at the scheduled time
+  (eg: <span class="badge pldi-pill badge-info text-white mr-0 fake-pill-button">PLDI-A</span>). <br>
+  Click a paper's Gather button to visit its poster in Gather (eg: <span class="badge pldi-pill badge-success text-white mr-0 fake-pill-button"><i class="fas fa-users"></i>&nbsp;&nbsp;Poster 99</span>).
+</div>        
+
 <!-- Buttons -->
 <div class="row">
-  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-    <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control typeahead_all"
-        placeholder="Search"
-      />
-      <div class="input-group-append">
-        <button
-          class="btn btn-outline-secondary typeahead_all_clear"
-          type="button"
-        >
-          &times;
-        </button>
+  <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+    <div class="row">
+      <div class="col-6">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control typeahead_all"
+            placeholder="Search"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-secondary typeahead_all_clear"
+              type="button"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 align-items-center">
+        <div class="btn-group btn-group-toggle filter_option">
+          <label
+            class="btn btn-secondary"
+            data-tippy-content="Search for papers by title"
+          >
+            <input
+              type="radio"
+              name="options"
+              value="titles"
+              autocomplete="off"
+              checked
+            />
+            title
+          </label>
+          <label
+            class="btn btn-secondary"
+            data-tippy-content="Search for papers with specific keywords"
+          >
+            <input
+              type="radio"
+              name="options"
+              value="keywords"
+              autocomplete="off"
+            />
+            keyword
+          </label>
+          <label
+            class="btn btn-secondary active"
+            data-tippy-content="Search for papers from specific authors"
+          >
+            <input type="radio" name="options" value="authors" autocomplete="off" />
+            author
+          </label>
+        </div>
       </div>
     </div>
   </div>
-  <div
-    class="col-12 col-sm-6 col-md-6 col-lg-4 text-center"
-    style="margin-bottom: 10px;"
-  >
-    <div class="btn-group btn-group-toggle filter_option">
-      <label
-        class="btn btn-outline-secondary"
-        data-tippy-content="Search for papers titles"
-      >
-        <input
-          type="radio"
-          name="options"
-          value="titles"
-          autocomplete="off"
-          checked
-        />
-        title
-      </label>
-      <label
-        class="btn btn-outline-secondary"
-        data-tippy-content="Search for papers with specific keywords"
-      >
-        <input
-          type="radio"
-          name="options"
-          value="keywords"
-          autocomplete="off"
-        />
-        keyword
-      </label>
-      <label
-        class="btn btn-outline-secondary active"
-        data-tippy-content="Search for papers from specific authors"
-      >
-        <input type="radio" name="options" value="authors" autocomplete="off" />
-        author
-      </label>
-    </div>
-  </div>
-  <div class="col-12 col-lg-4">
-    <button class="btn btn-outline-secondary reshuffle">shuffle</button>
-    <div class="float-right">
-      <div
-        class="btn-group btn-group-toggle render_option"
-        data-toggle="buttons"
-      >
-        <label class="btn btn-outline-secondary active">
-          <input type="radio" name="options" value="mini" autocomplete="off" />
-          mini
-        </label>
-        <label class="btn btn-outline-secondary active">
-          <input
-            type="radio"
-            name="options"
-            value="compact"
-            autocomplete="off"
-            checked
-          />
-          compact
-        </label>
-        <label class="btn btn-outline-secondary">
-          <input
-            type="radio"
-            name="options"
-            value="detail"
-            autocomplete="off"
-          />
-          detail
-        </label>
+  <div class="col-12 col-lg-5">
+    <div class="row">
+      <div class="col-6 align-items-center">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary bookmarked px-2"
+                 data-tippy-content="Move bookmarked papers to the top">
+            <input type="radio" name="options" value="mini" autocomplete="off" />
+            marked
+          </label>
+          <label class="btn btn-secondary reshuffle px-2"
+                 data-tippy-content="Randomize the paper order">
+            <input type="radio" name="options" value="mini" autocomplete="off">
+            shuffled
+          </label>
+        </div>
+      </div>
+      <div class="col-6 pl-0">
+        <div class=" float-right">
+          <div
+            class="btn-group btn-group-toggle render_option"
+            data-toggle="buttons"
+          >
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" value="mini" autocomplete="off" />
+              mini
+            </label>
+            <label class="btn btn-secondary active">
+              <input
+                type="radio"
+                name="options"
+                value="compact"
+                autocomplete="off"
+                checked
+              />
+              compact
+            </label>
+            <label class="btn btn-secondary">
+              <input
+                type="radio"
+                name="options"
+                value="detail"
+                autocomplete="off"
+              />
+              detail
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Cards -->
-<div class="cards row"></div>
-<script src="static/js/modules/urlParams.js"></script>
-<script src="static/js/modules/typeaheadSetup.js"></script>
-<script src="static/js/modules/lazyLoad.js"></script>
-<script src="static/js/data/persistor.js"></script>
-<script src="static/js/data/wrangle.js"></script>
-<script src="static/js/views/papers.js"></script>
-<script>
-  $(document).ready(function () {
-    tippy("[data-tippy-content]", { trigger: "mouseenter focus" });
-    start();
-  });
-</script>
-
-{% endblock %}
-
-{% block footer %}
-
-<div
-  class="gdpr bg-dark text-light"
-  style="padding: 10pt; position: fixed; bottom: 0; display: none;"
->
-  We use cookies to store which papers have been visited.
-  <div class="gdpr-btn btn btn-sm btn-info" style="margin-left: 15pt;">
-    I agree
-  </div>
-</div>
-<script src="static/js/modules/gdprCookies.js"></script>
+  <!-- Cards -->
+  <div class="cards row"></div>
+  <script src="static/js/modules/urlParams.js"></script>
+  <script src="static/js/modules/typeaheadSetup.js"></script>
+  <script src="static/js/modules/lazyLoad.js"></script>
+  <script src="static/js/data/persistor.js"></script>
+  <script src="static/js/data/wrangle.js"></script>
+  <script src="static/js/views/papers.js"></script>
+  <script>
+    $(document).ready(function () {
+      tippy("[data-tippy-content]", { trigger: "mouseenter focus", delay:500 });
+      start();
+    });
+  </script>
 
 {% endblock %}

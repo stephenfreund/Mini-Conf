@@ -1,0 +1,24 @@
+website: https://www.oracle.com/
+
+description: |
+  Oracle offers suites of integrated applications plus secure, 
+  autonomous infrastructure in the Oracle Cloud. For more information about
+  Oracle (NYSE: ORCL), please visit us at [oracle.com](https://www.oracle.com/index.html).
+
+# youtube:
+
+# contacts:
+
+resources:
+  - label: https://labs.oracle.com/
+    website: https://labs.oracle.com/
+
+# zoom_link:
+
+schedule:
+  - start: 2021-06-24T12:00:00-04:00
+    duration: 0.5
+    label: "Chat with Guy Steele"
+  - start: 2021-06-25T12:00:00-04:00
+    duration: 0.5
+    label: "Chat with Guy Steele"

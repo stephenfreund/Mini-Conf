@@ -1,0 +1,16 @@
+Welcome to the fifth day of PLDI!
+
+Today we will continue with the technical program of the PLDI conference. In
+addition, we will have:
+
+- PLTea: A popular social event for the PL community
+- An invited talk by Alex Aiken
+- SRC Finalist Talks
+- The PLDI Business Meeting
+
+PLDI days will be mirrored twelve hours after their first occurrence.
+
+You can find all events on our conference site:
+
+https://www.pldi21.org/
+

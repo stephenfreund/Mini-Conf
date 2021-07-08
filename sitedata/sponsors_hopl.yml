@@ -1,0 +1,15 @@
+- UID: oracle
+  level: Diamond
+  name: Oracle
+
+- UID: ibm
+  level: Gold
+  name: IBM
+  
+- UID: facebook
+  level: Silver
+  name: Facebook
+  
+- UID: google
+  level: Bronze
+  name: Google

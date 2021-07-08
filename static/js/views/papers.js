@@ -22,7 +22,7 @@ const MODE = {
 
 let render_mode = MODE.compact;
 
-const updateCards = (papers) => {
+const updateCards = (papers, config) => {
   Promise.all([
     API.markGetAll(API.storeIDs.visited),
     API.markGetAll(API.storeIDs.bookmarked)
@@ -49,8 +49,26 @@ const updateCards = (papers) => {
         .selectAll(".myCard", (paper) => paper.UID)
         .data(papers, (d) => d.number)
         .join("div")
-        .attr("class", "myCard col-xs-6 col-md-4")
+        .attr("class", "myCard col-12 col-md-6 col-xl-4")
         .html(card_html);
+
+      $('[data-toggle="tooltip"]').tooltip({'delay': { show: 1000, hide: 100 }});   
+
+      $('[data-toggle="thumb"]').popover({
+        html: true,
+        trigger: 'hover',
+        placement: 'auto',
+        container: 'body',
+        boundary:'window',
+        delay: { show: 1000, hide: 10 },
+        content: function () { return '<img width="450" src="' + $(this).data('src') + '" />'; }
+      });
+      $("[data-toggle='thumb']").click(function(){
+        $(this).popover('hide');
+      });
+  
+  
+  
 
       all_mounted_cards.select(".card-title").on("click", function (d) {
         const iid = d.UID;
@@ -77,9 +95,7 @@ const updateCards = (papers) => {
         d3.select(this).classed("selected", new_value);
       });
 
-
       lazyLoader();
-
 
     }
   )
@@ -94,6 +110,20 @@ function shuffleArray(array) {
     array[j] = temp;
   }
 }
+
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function bookmarksFirst(array) {
+  var cursor = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].bookmarked) {
+      const temp = array[i];
+      array[i] = array[cursor];
+      array[cursor] = temp;
+      cursor++;
+    }
+  }
+}
+
 
 const render = () => {
   const f_test = [];
@@ -125,7 +155,7 @@ const render = () => {
       return pass_test;
     });
     // console.log(fList, "--- fList");
-    updateCards(fList);
+    updateCards(fList);        
   }
 };
 
@@ -141,6 +171,8 @@ const updateSession = () => {
   if (urlSession) {
     filters.session = urlSession;
     d3.select("#session_name").text(urlSession);
+    d3.select("#session_link").attr("href", "papers_schedule.html#pldi_talks" + urlSession)
+    d3.select("#session_track").attr("href", "track_pldi-" + urlSession[urlSession.length -1] + ".html")
     d3.select(".session_notice").classed("d-none", null);
     return true;
   }
@@ -152,22 +184,16 @@ const updateSession = () => {
  * START here and load JSON.
  */
 const start = () => {
-  const urlFilter = getUrlParameter("filter") || "keywords";
+  const urlFilter = getUrlParameter("filter") || "titles";
   setQueryStringParameter("filter", urlFilter);
   updateFilterSelectionBtn(urlFilter);
 
   Promise.all([API.getPapers(), API.getConfig()])
     .then(([papers, config]) => {
-      console.log(papers, "--- papers");
-
-      // persistor = new Persistor("miniconf-" + config.name);
-
-      shuffleArray(papers);
-
       allPapers = papers;
       calcAllKeys(allPapers, allKeys);
       setTypeAhead(urlFilter, allKeys, filters, render);
-      updateCards(allPapers);
+      updateCards(allPapers, config);
 
       const urlSearch = getUrlParameter("search");
       if (urlSearch !== "" || updateSession()) {
@@ -175,6 +201,11 @@ const start = () => {
         $(".typeahead_all").val(urlSearch);
         render();
       }
+      
+
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip({'delay': { show: 1000, hide: 100 }});   
+      })
     })
     .catch((e) => console.error(e));
 };
@@ -203,13 +234,16 @@ d3.selectAll(".remove_session").on("click", () => {
 d3.selectAll(".render_option input").on("click", function () {
   const me = d3.select(this);
   render_mode = me.property("value");
-
   render();
 });
 
 d3.select(".reshuffle").on("click", () => {
   shuffleArray(allPapers);
+  render();
+});
 
+d3.select(".bookmarked").on("click", () => {
+  bookmarksFirst(allPapers);
   render();
 });
 
@@ -222,7 +256,9 @@ const keyword = (kw) => `<a href="papers.html?filter=keywords&search=${kw}"
 
 const card_image = (paper, show) => {
   if (show)
-    return ` <center><img class="lazy-load-img cards_img" data-src="${API.thumbnailPath(paper)}" width="80%"/></center>`;
+    return ` <center><img class="lazy-load-img cards_img mt-2" 
+                     data-toggle="thumb" 
+                     data-src="${API.thumbnailPath(paper)}" width="80%" style="max-height:110px;"/></center>`;
   return "";
 };
 
@@ -234,7 +270,7 @@ const card_detail = (paper, show) => {
         <p class="card-text"><span class="font-weight-bold">Keywords:</span>
             ${paper.keywords.map(keyword).join(", ")}
         </p>
-        <p class="card-text"> ${paper.TLDR}</p>
+        <p class="card-text"> ${paper.abstract}</p>
         </div>
     </div>
 `;
@@ -245,7 +281,6 @@ const card_time_small = (paper, show) => {
   const cnt = paper;
   return show
     ? `
-<!--    <div class="pp-card-footer">-->
     <div class="text-center" style="margin-top: 10px;">
     ${cnt.sessions
       .filter((s) => s.match(/.*[0-9]/g))
@@ -259,7 +294,6 @@ const card_time_small = (paper, show) => {
       )
       .join(", ")}
     </div>
-<!--    </div>-->
     `
     : "";
 };
@@ -272,42 +306,64 @@ const card_live = (link) =>
 const card_cal = (paper, i) =>
   `<a class="text-muted" href="${API.posterICS(paper,i)}">${card_icon_cal}</a>`;
 
-const card_time_detail = (paper, show) => {
-  return show ? `
-<!--    <div class="pp-card-footer">-->
-    <div class="text-center text-monospace small" style="margin-top: 10px;">
-    ${paper.sessions.filter(s => s.match(/.*[0-9]/g))
-    .map((s, i) => `${s} ${paper.session_times[i]} ${card_live(
-      paper.session_links[i])}   `)
-    .join('<br>')}
-    </div>
-<!--    </div>-->
-    ` : '';
+function card_time_row(utcs) {
+  const tz = getCurrentTimeZone();
+  var gmtSuffix = ""
+  if (utcs.length > 0) {
+    const times = utcs.map(utc => {
+      const t = moment(utc).tz(tz)
+      gmtSuffix = gmtSuffixForMoment(t)
+      prefix = dayAbbrev(t.format('ddd'))
+      const start = t.format('HH:mm'); 
+      return `${prefix} ${start}`
+    }).join(" & ")
+    return `${times} ${gmtSuffix} &nbsp;`
+  } else {
+    return ''
+  }
 }
+
+const card_time_detail = (paper, show) => {
+  const sessions = paper.talk_sessions;
+  if (sessions.length > 0) {
+    const session = `${sessions.join(" & ")}` 
+    const poster_session = `${paper.poster_sessions.join(" & ")}` 
+    const eventForButtons = {
+      "track": { "location" : paper.talk_location, "link" : paper.talk_link },
+      "gather": { "location": paper.poster_location, "link": paper.poster_link }
+    };
+    const talkButton = streamButton(eventForButtons)
+    const talks = `<div class="card-subtitle text-muted mt-0" style="font-family: Lato, sans-serif";>${card_time_row(paper.talk_times)}${talkButton}</div>`
+    const gather = gatherButton(eventForButtons)
+    const posters = `<div class="card-subtitle text-muted mt-0" style="font-family: Lato, sans-serif";>${card_time_row(paper.poster_times)}${gather}</div>`
+
+    // const rows = zoned_events.map(x => card_time_row(x)).join(" ")
+    return show ? `<div class=" mt-4 text-muted text-center card-subtitle" style="font-family: Lato, sans-serif";>${session} and ${poster_session}</div>${talks} 
+                   ${posters}` : '';
+  } else {
+    return '';
+  }
+}
+
 
 // language=HTML
 const card_html = (paper) =>
   `
-        <div class="pp-card pp-mode-${render_mode} ">
-            <div class="pp-card-header" style="">
-            <div class="checkbox-paper fas ${paper.read ? "selected" : ""}" 
-            style="display: block;position: absolute; bottom:${render_mode === MODE.detail ? 375 : 35}px;left: 35px;">&#xf00c;</div>
-            <div class="checkbox-bookmark fas  ${paper.bookmarked ? "selected" : ""}" 
-            style="display: block;position: absolute; top:-5px;right: 25px;">&#xf02e;</div>
-            
-<!--                ✓-->
-                <a href="${API.posterLink(paper)}"
-                target="_blank"
-                   class="text-muted">
-                   <h5 class="card-title" align="center"> ${
-    paper.title
-  } </h5></a>
-                <h6 class="card-subtitle text-muted" align="center">
-                        ${paper.authors.join(", ")}
-                </h6>
-                ${card_image(paper, render_mode !== MODE.mini)}
-                
-            </div>
-               
-                ${card_detail(paper, render_mode === MODE.detail)}
-        </div>`;
+  <div class="pp-card pp-mode-${render_mode} ">
+      <div class="pp-card-header" style=""> 
+          
+          <div class="checkbox-bookmark fas  ${paper.bookmarked ? "selected" : ""}" 
+          title="Bookmark papers for later" data-toggle="tooltip" 
+          style="display: block;position: absolute; top:0px;right: 25px;">&#xf02e;</div>
+
+          <a href="${API.posterLink(paper)}" target="_blank" class="text-muted">
+              <h5 class="card-title" align="center"> ${paper.title} </h5>
+          <h6 class="card-subtitle text-muted" align="center"> ${paper.authors.join(", ")} </h6>
+          ${card_image(paper, render_mode !== MODE.mini)}
+          </a>
+          ${card_time_detail(paper, render_mode !== MODE.mini)}
+      </div>
+      ${card_detail(paper, render_mode === MODE.detail)}
+  </div>`;
+
+

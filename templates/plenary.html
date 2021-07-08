@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% set active_page = "Featured" %}
+{% set page_title = "Featured PLDI Events" %}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+{% endblock %}
+
+
+
+{% block tabs %}
+{{ components.section("Featured PLDI Events") }}
+{{ components.tabs(
+  [("invited", "Invited Talks", "active"),
+  ("amas", "AMAs", ""),
+  ("src", "SRC", "")
+  ]) }}
+  
+  {% endblock %}
+  
+  
+  
+  {% block content %}
+  
+  <div class="text-muted text-center pt-2">
+    Events occuring during the mirrored PLDI days are <mark class="text-muted" style="background-color: #f0f0f8; border: 1px solid #dddddd;">shaded</mark>.
+    Events labeled <span class="badge badge-light rounded-0">Q&A</span> feature live Q&A.
+  </div>
+  
+  
+  <!-- Speakers -->
+  
+  <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+  
+  <div
+    class="tab-pane active"
+    id="tab-invited"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+    >
+    {{ components.speakergroup(config,speakers,"invited", True) }}
+  </div>
+  
+  <div
+    class="tab-pane"
+    id="tab-amas"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab"
+    >
+    {{ components.speakergroup(config,speakers, "amas", False) }}
+
+    {% if prerecorded_amas | length > 0 %}
+    <div id="prerecorded"></div>
+    {{ components.subsection("Videos") }} 
+    <div class="text-muted pb-2 text-center mt-n4" style="">
+      Click on any talk to watch the video.
+    </div>        
+    <div class="speakers mx-3 my-0 pt-n5">
+      <div class="cards row">
+        {% for talk in prerecorded_amas %}
+        <div class="col-lg-4 col-12" style="box-sizing: border-box;">
+          <a class="pp-card text-muted" style="display: block; width: 100%;" target="_blank" href="prerecorded_{{talk.UID}}.html">
+            <div class="pp-card-header text-center p-3" style="height: auto; max-height:280px; max-width: 100%;">
+              <h6 class="text-center card-title mt-0"> {{ talk.title  }} </h6>
+              <h6 class="text-center card-subtitle pt-2"> {{ talk.authors }} </h6>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+
+  </div>
+  
+
+<div
+class="tab-pane "
+id="tab-src"
+role="tabpanel"
+aria-labelledby="nav-profile-tab"
+>
+{{ components.speakergroup(config,speakers, "src", False) }}
+</div>
+</div>
+
+<!-- Code for hash tags: expand the details for the tag -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    if (window.location.hash !== "") {
+      $(`${window.location.hash}_details`).collapse("show");
+    }    
+  });
+</script>
+
+{% endblock %}

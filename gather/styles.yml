@@ -1,0 +1,19 @@
+big:
+  font: Chalkduster
+  size: 26
+  color: LightSteelBlue1
+  extras: -gravity Center
+medium:
+  font: fonts/AmaticSC-Bold.ttf
+  size: 32
+  color: LightSteelBlue1
+medium-centered:
+  font: fonts/AmaticSC-Bold.ttf
+  size: 32
+  color: LightSteelBlue1
+  extras: -gravity Center
+small:
+  font: Lato-Bold
+  size: 16
+  color: LightSteelBlue1
+  

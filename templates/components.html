@@ -1,19 +1,22 @@
 {# Components:
-tabs -- Navigation tabs
-section, subsection -- bootstrap sections
-speakergroup
-organizergroup
-faqgroup
-highlightgroup
-workshopgroup
-
-#}
-
-{% macro tabs(tab_group) -%}
-<ul class="nav nav-pills justify-content-center">
-  {% for tab in tab_group %}
-  <li class="nav-item">
-    <a
+  tabs -- Navigation tabs
+  section, subsection -- bootstrap sections
+  speakergroup
+  organizergroup
+  faqgroup
+  highlightgroup
+  workshopgroup
+  sponsorgroup
+  socialgroup
+  subcalendar
+  
+  #}
+  
+  {% macro tabs(tab_group) -%}
+  <ul class="nav nav-pills justify-content-center">
+    {% for tab in tab_group %}
+    <li class="nav-item">
+      <a
       class="nav-link {{tab[2]}} text-muted "
       data-toggle="tab"
       href="#tab-{{tab[0]}}"
@@ -28,13 +31,60 @@ workshopgroup
 {%- endmacro %}
 
 {% macro section(name) -%}
-<div class="border-top my-3"></div>
-<div class="row p-4" id="faq">
+<div class=""></div>
+<div class="row pt-2 pb-3">
   <div class="col-12 bd-content">
     <h2 class="text-center">{{name}}</h2>
   </div>
 </div>
 {%- endmacro %}
+
+
+{% macro zoomLink(url) -%}
+<a href="{{url}}" 
+   target="_blank" 
+   class=" badge-primary text-white btn btn-small m-0 px-1 py-0" 
+   data-toggle="tooltip" data-placement="top" 
+   title="Join this event in Zoom">
+   <i class="fas fa-video"></i>&nbsp;&nbsp;Zoom</a>
+{%- endmacro %}
+
+{% macro streamHelp(abbrev) -%}
+<span class="badge pldi-pill badge-info text-white mr-0" style="opacity:0.8;"><i class="fas fa-angle-double-right"></i>&nbsp; {{ abbrev }} </span>
+{%- endmacro %}
+
+{% macro zoomHelp() -%}
+<span class="badge pldi-pill badge-primary text-white mr-0" style="opacity:0.8;"><i class="fas fa-video"></i>&nbsp; Zoom </span>
+{%- endmacro %}
+
+{% macro gatherHelp() -%}
+<span class="badge pldi-pill badge-success text-white mr-0" style="opacity:0.8;"><i class="fas fa-users"></i>&nbsp; Gather </span>
+{%- endmacro %}
+
+{% macro videoHelp() -%}
+<span class="badge pldi-pill badge-secondary text-white mr-0" style="opacity:0.8;">Video</span>
+{%- endmacro %}
+
+
+{% macro preLink() -%}
+<a href="#prerecorded" 
+class="card-link slack-link btn btn-small btn-warning m-0 px-1 py-0" 
+data-toggle="tooltip" data-placement="top" title="Watch prerecorded videos">
+  Videos
+</a>
+{%- endmacro %}
+
+
+<!-- style="filter: opacity(90%);" -->
+{% macro slack(config, channel) -%}
+<a href="https://{{config.slack_server}}/app_redirect?channel={{channel}}" 
+target="_blank" 
+class="card-link slack-link btn btn-small btn-warning m-0 px-1 py-0" 
+data-toggle="tooltip" data-placement="top" title="Go to Slack channel">
+  #{{channel}}
+</a>
+{%- endmacro %}
+
 
 {% macro subsection(name) -%}
 <div class="row p-3">
@@ -44,38 +94,111 @@ workshopgroup
 </div>
 {%- endmacro %}
 
-{% macro speakergroup(speakers) -%}
+{% macro speakergroup(config,speakers,kind,detailed) -%}
 {% for speaker in speakers %}
-<div class="row p-4">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <div class="row">
-          <div class="col-md-2 col-sm-5">
-            <img src="{{speaker.image}}" width="100%" class="img-thumbnail" />
-          </div>
-          <div class="col-md-10 col-sm-6">
-            <div class="m-3 text-muted">
-              <h3>
-                <a href="speaker_{{speaker.UID}}.html" class="main-title">
-                  {{speaker.title}}
-                </a>
-              </h3>
+  {% if speaker.kind == kind %}
+    <div class="row p-4" id="{{speaker.UID}}">
+      <div class="col-md-12">
+        <div class="pp-card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-md-2 col-sm-6">
+                <div><img src="{{speaker.image}}" width="100%" class="img-thumbnail" /></div>
+              </div>
+              <div class="col-md-10 col-sm-6">
+                <div class="m-3 text-muted">
+                  <h3 class="main-title">
+                    {{speaker.title}}
+                  </h3>
+                </div>
+                <div class="m-3 text-muted">
+                  <span class="card-title h4">
+                    {% if speaker.speaker %}
+                    {{speaker.speaker}}  ({{speaker.institution}})
+                    {% endif %}
+                  </span>
+                </div>
+                <!-- <div class="px-3 py-0">
+                  {{speaker.summary|safe}}
+                </div> -->
+                {% if detailed %}
+                <div class=" px-3 p-0">
+                  <a class="card-link h5" data-toggle="collapse" role="button" href="#{{speaker.UID}}_details">
+                    Full Details
+                  </a>
+                </div>
+                {% endif %}
+              </div>
             </div>
-            <div class="m-3 text-muted">
-              <span class="card-title h3">
-                {{speaker.speaker}}  /  {{speaker.institution}}
-              </span>
-            </div>
-            <div class="m-3">
-              {{speaker.abstract|safe}}
+            <div class = "row mt-2">
+              <div class="col-12 p-0 m-0 my-auto">
+                <div class="mt-0 mx-3">
+                  {% if detailed %}
+                  <div id="{{speaker.UID}}_details" class="collapse"> 
+                  {% else %}
+                  <div id="{{speaker.UID}}_details" class=""> 
+                  {% endif %}
+                    <div id="abstractExample">
+                      <div class="m-3">
+                        <span class="font-weight-bold">Abstract:</span>
+                        {{speaker.abstract|markdown}}
+                        
+                        {% if speaker.bio %}
+                        <span class="font-weight-bold">Bio:</span>
+                        {{speaker.bio|markdown}}
+                        {% endif %}
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                    {% if speaker.calendar != [] %}
+                    <!-- Schedule -->
+                    <!-- {{ subsection("Talk Times")}} -->
+                    <div class="text-muted pt-1 pb-0 text-center">
+                      Click the button to the right of each event to participate at the scheduled time.
+                    </div>
+                    <div class="col p-2">
+                      <div id='calendar-{{speaker.UID}}'></div>
+                    </div>
+                    
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function() {
+                        const calendar = makeCompactListCalendar('calendar-{{speaker.UID}}', {
+                          initialDate: '{{ config.calendar.start }}',
+                          validRange: {
+                            start: '{{ config.calendar.start }}',
+                            end: '{{ config.calendar.end }}'
+                          }
+                        },
+                        '{{ speaker.calendar | tojson }}');
+                      });
+                    </script>
+                    {% endif %}                              
+
+                    {% if speaker.presentation_id %}
+                    <div class="h4 px-2 pt-3 card-title">Talk</div>
+                    <div class="mt-n2 pb-3">
+                    <div id="presentation-embed-{{speaker.UID}}" class="border shadow-none"></div>
+                    <script src='https://slideslive.com/embed_presentation.js'></script>
+                    <script>
+                        embed = new SlidesLiveEmbed('presentation-embed-{{speaker.UID}}', {
+                            presentationId: '{{speaker.presentation_id}}',
+                            autoPlay: false, // change to true to autoplay the embedded presentation
+                            verticalEnabled: true
+                        });
+                    </script>
+                    </div>
+                    {% endif %}
+  
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  {% endif %}
 {% endfor %}
 {%- endmacro %}
 
@@ -95,7 +218,7 @@ workshopgroup
           <h6 class="card-subtitle text-muted m-1" align="center">
             {{org.aff}}{% if org.tw %} /
             <a class="text-muted" href="http://twitter.com/{{org.tw}}"
-              >@{{org.tw}}</a
+            >@{{org.tw}}</a
             >{% endif %}
           </h6>
         </div>
@@ -118,30 +241,54 @@ workshopgroup
 <div class="row">
   <div class="col-12" id="accordionExample">
     <div class="card m-2">
-      <div class="card-header">
+      {% if qa.gettingStarted %}
+      <div class="card-header card-getting-started">
         <a
-          class=""
-          href="#"
-          data-toggle="collapse"
-          data-target="#collapse{{rowloop}}-{{loop.index}}"
-          aria-expanded="true"
-          aria-controls="collapse{{rowloop}}-{{loop.index}}"
+        class="getting-started-title"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapse{{rowloop}}-{{loop.index}}"
+        aria-expanded="true"
+        aria-controls="collapse{{rowloop}}-{{loop.index}}"
         >
-          {{qa.Question}}
-        </a>
-      </div>
-      <div
-        id="collapse{{rowloop}}-{{loop.index}}"
-        class="collapse"
-        aria-labelledby="headingOne"
-        data-parent="#accordionExample"
-      >
-        <div class="card-body">
-          {{qa.Answer}}
-        </div>
-      </div>
+        {{qa.Question}}
+      </a>
     </div>
+    <div
+    id="collapse{{rowloop}}-{{loop.index}}"
+    class="collapse"
+    aria-labelledby="headingOne"
+    data-parent="#accordionExample"
+    >
+    <div class="card-body card-text card-getting-started">
+      {{qa.Answer | markdown}}
+    </div>
+    {% else %}
+    <div class="card-header faq-title">
+      <a
+      class=""
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse{{rowloop}}-{{loop.index}}"
+      aria-expanded="true"
+      aria-controls="collapse{{rowloop}}-{{loop.index}}"
+      >
+      {{qa.Question}}
+    </a>
   </div>
+  <div
+  id="collapse{{rowloop}}-{{loop.index}}"
+  class="collapse"
+  aria-labelledby="headingOne"
+  data-parent="#accordionExample"
+  >
+  <div class="card-body card-text">
+    {{qa.Answer | markdown}}
+  </div>
+  {% endif %}
+  </div>
+</div>
+</div>
 </div>
 {% endfor %}
 {% endfor %}
@@ -150,88 +297,193 @@ workshopgroup
 {% macro highlightgroup(papers, id) -%}
 <div class="row my-auto mx-auto">
   <div
-    id="carouselExample{{id}}"
-    class="carousel slide d-none d-md-block"
-    data-interval="false"
+  id="carouselExample{{id}}"
+  class="carousel slide d-none d-md-block"
+  data-interval="false"
   >
-    <div class="carousel-inner cards" role="listbox">
-      {% for openreview in papers %}
-      {% if loop.index % 3 == 1 %}
-      <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
-        {% endif %}
-        <div class="col-md-4 col-xs-6 fluid">
-          <div class="pp-card">
-            <div class="pp-card-header">
-              <a href="poster_{{openreview.UID}}.html" class="text-muted">
-                <h5 class="card-title" align="center">
-                  {{openreview.title}}
-                </h5>
-              </a>
-              <h6 class="card-subtitle text-muted" align="center">
-                {% for a in openreview.authors %}
-                {{a}},
-                {% endfor %}
-              </h6>
-              <center>
-                <img
-                  class="cards_img lazy-load-img"
-                  data-src="https://iclr.github.io/iclr-images/{{openreview.UID}}.png"
-                  width="80%"
-                />
-              </center>
-            </div>
+  <div class="carousel-inner cards" role="listbox">
+    {% for openreview in papers %}
+    {% if loop.index % 3 == 1 %}
+    <div class="carousel-item {% if loop.index == 1%} active{% endif %}">
+      {% endif %}
+      <div class="col-md-4 col-xs-6 fluid">
+        <div class="pp-card">
+          <div class="pp-card-header">
+            <a href="poster_{{openreview.UID}}.html" class="text-muted">
+              <h5 class="card-title" align="center">
+                {{openreview.title}}
+              </h5>
+            </a>
+            <h6 class="card-subtitle text-muted" align="center">
+              {% for a in openreview.authors %}
+              {{a}},
+              {% endfor %}
+            </h6>
+            <center>
+              <img
+              class="cards_img lazy-load-img"
+              data-src="https://iclr.github.io/iclr-images/{{openreview.UID}}.png"
+              width="80%"
+              />
+            </center>
           </div>
         </div>
-        {% if loop.index % 3 == 0 or loop.index == loop.length %}
       </div>
-      {% endif %}
-      {% endfor %}
+      {% if loop.index % 3 == 0 or loop.index == loop.length %}
     </div>
-    <a
-      class="carousel-control-prev"
-      href="#carouselExample{{id}}"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselExample{{id}}"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    {% endif %}
+    {% endfor %}
   </div>
+  <a
+  class="carousel-control-prev"
+  href="#carouselExample{{id}}"
+  role="button"
+  data-slide="prev"
+  >
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a
+class="carousel-control-next"
+href="#carouselExample{{id}}"
+role="button"
+data-slide="next"
+>
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
 </div>
 {%- endmacro %}
 
-{% macro workshopgroup(workshops) -%}
+{% macro workshopgroup(workshops, tag) -%}
 <div class="cards row">
   {% for workshop in workshops %}
+  {% if workshop.type == tag %}
   <div class="col-md-6 col-sm-12 p-3" style="box-sizing: border-box;">
-    <div class="card" style="display: block; overflow: hidden; width: 100%;">
+    <div class="pp-card" style="display: block; overflow: hidden; width: 100%;">
       <div
-        class="card-header text-center"
-        style="min-height: 200px; width: 100%;"
+      class="card-header text-center"
+      style="min-height: 150px; width: 100%;"
       >
-        <a class="text-muted" href="workshop_{{workshop.id}}.html">
-          <h3 class="card-title main-title">
-            {{workshop.title}}
-          </h3>
+      <a class="text-muted" href="track_{{workshop.UID}}.html">
+        <h3 class="card-title main-title">
+          {{workshop.title}}
+        </h3>
+      </a>
+      <div class="card-subtitle text-muted">
+        {{ workshop.organizers | join(", ") }}
+      </div>
+      <div class="pt-2 card-title text-muted">
+        <span class="format-date-span-full">{{workshop.day|safe}}</span>
+      </div>
+      <div class="pt-0">
+        <a class="card-link" data-toggle="collapse" role="button" href="#details-{{workshop.UID}}">
+          Description
         </a>
-        <div class="card-subtitle text-muted">
-          {{ workshop.organizers | join(", ") }}
-        </div>
-        <div class="m-3 text-left card-subtitle font-italic">
+      </div>
+      <div id="details-{{workshop.UID}}" class="collapse hide">
+        <div class="m-3 text-left text-dark overflow-auto">
           {{workshop.abstract|safe}}
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro sponsorgroup(sponsors) -%}
+<div class="cards row">
+  {% for sponsor in sponsors %}
+  <div class="col-lg-4 col-12 p-3" style="box-sizing: border-box;">
+    <div class="pp-card" style="display: block; overflow: hidden; width: 100%;">
+      <div
+      class="card-header text-center"
+      style="height: 150px; max-width: 100%;"
+      >
+        <div class="row" style="height: 70px;">
+          {% if sponsor.alt_UID %}
+          <a class="text-muted mx-auto my-auto" href="sponsor_{{sponsor.alt_UID}}.html">
+          {% else %}
+          <a class="text-muted mx-auto my-auto" href="sponsor_{{sponsor.UID}}.html">
+          {% endif %}
+            {% if sponsor.logo %}
+            <img style="max-height: 70px; max-width: 80%;" src="{{ sponsor.logo }}">
+            {% else %}
+            <img style="max-height: 70px; max-width: 80%;" src="static/sponsor_images/{{sponsor.UID}}.png">
+            {% endif %}
+          </a>
+        </div>
+        <h6 class="m-3 mt-4 text-center card-title">
+          {{sponsor.level}} Supporter  
+        </h6>
       </div>
     </div>
   </div>
   {% endfor %}
 </div>
 {%- endmacro %}
+
+{% macro socialgroup(config, socials) -%}
+<div class="cards row">
+  {% for social in socials %}
+  <div class="col-lg-6 col-12 p-3" style="box-sizing: border-box;">
+    <div class="pp-card" id="{{social.UID}}" style="display: block; overflow: hidden; width: 100%;">
+      <div
+      class="card-header text-center"
+      style="min-height: 220px;"
+      >
+      <h3 class="card-title main-title">
+        {{social.title}}
+      </h3> 
+      
+      <div class="card-subtitle text-muted">
+        {{ social.organizers | join(", ") }}
+      </div>
+      
+      
+      <div style="max-height: 220px;" class="m-3 text-left text-dark overflow-auto">
+        {{social.description|safe}}
+      </div>
+            
+      <h6 id="social_events_{{social.UID}}" class="card-text text-muted text-center" style="font-family: Lato, sans-serif;" >
+        <!-- filled in later -->
+      </h6>
+
+      {% if social.slack_channel %}
+      <p class="text-center text text-muted">
+        {{ slack(config, social.slack_channel) }}
+      </p>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>
+{%- endmacro %}
+
+
+{% macro calendar_scripts() -%}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.css" integrity="sha256-LOn2s1oZo044zPt6G3x2mGJnhtfXp6ZE1skHztfqnA8=" crossorigin="anonymous">
+<link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.1/main.min.js" integrity="sha256-9puLsDK3mkUV8FSsGLlSRT+uJogUINfaCq56mzSUP/w=" crossorigin="anonymous"></script>
+<script src="static/js/modules/pldiEvents.js"></script>
+<script src="static/js/views/full-calendar.js"></script>
+
+<link href="static/css/cf-list.css" rel='stylesheet'>
+
+{%- endmacro %}
+
+
+{% macro toggle(config,category,title) -%}
+<label class="btn btn-secondary active btn-small ml-1" >
+  <input type="checkbox" name="options" id="{{category}}" autocomplete="off" checked> {{title}}
+</label>
+{%- endmacro %}
+

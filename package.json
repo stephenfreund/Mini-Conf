@@ -27,5 +27,11 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fs": "^0.0.1-security",
+    "request": "^2.88.2",
+    "requests": "^0.3.0"
   }
 }

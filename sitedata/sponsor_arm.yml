@@ -1,0 +1,21 @@
+website: http://www.arm.com
+
+description:   We bring brilliant people together in a global ecosystem that is sparking the world’s potential. Through a combination of in-house research and collaborations with academic and industrial partners, Arm Research analyzes and navigates the ever-changing technology landscape, identifying future disruptions and creating advanced solutions, many years ahead of deployment. We support educators and researchers around the world with access to Arm and partner technologies, to provide new opportunities and enhance the future of computing.  
+
+youtube: https://www.youtube.com/embed/X8MvjbsyalQ
+
+# contacts:
+
+resources:
+  - label: Visit our website
+    website: https://www.arm.com/research
+  - label: Read our 2021 Impact report
+    website: https://www.arm.com/resources/research/impact-report
+  - label: Discover our blog
+    website: https://community.arm.com/developer/research/
+  - label: Find out how Arm could support your research
+    website: https://www.arm.com/resources/research/rce
+
+# zoom_link:
+
+# schedule:

@@ -2,5 +2,12 @@
   font-family: "Exo";
   font-style: normal;
   font-weight: 400;
-  src: url(4UaZrEtFpBI4f1ZSIK9d4LjJ4lM3OwRmPg.ttf) format("truetype");
+  src: url(Exo2-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  src: url(Exo2-SemiBold.ttf) format("truetype");
 }

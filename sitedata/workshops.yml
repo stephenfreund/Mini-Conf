@@ -1,0 +1,291 @@
+- UID: hopl
+  type: conf
+  title: 'HOPL IV: History of Programming Languages'
+  abstract: |
+    The History of Programming Languages conference series produces accurate historical records and descriptions
+     of programming language design, development, and philosophy. It is infrequently held: the first three were 
+     in 1978, 1993, and 2007. It’s now time for HOPL IV.
+  day: '2021-06-20T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://hopl4.sigplan.org/
+  organizers:
+    - Richard P. Gabriel
+    - Guy L. Steele Jr.
+  channel: hopl
+  instructions: " "
+  proc: https://dl.acm.org/toc/pacmpl/2020/4/HOPL
+
+- UID: ismm
+  type: conf
+  title: 'ISMM: International Symposium on Memory Management'
+  abstract: >
+    Welcome to the 2021 ACM SIGPLAN International Symposium on Memory Management (ISMM). ISMM is a premier forum for research in memory management and solicits papers from areas including but not limited to:
+
+      <ul>
+      <li>Memory system design and analysis
+      <li>Hardware support for memory management
+      <li>Memory management for large-scale data-intensive systems
+      <li>Novel memory architectures
+      <li>Memory management at datacenter and cloud scales
+      <li>Garbage Collection algorithms and implementations
+      <li>Formal analysis and verification of memory management algorithms
+      <li>Compiler analyses to aid memory management
+      <li>Tools to analyze memory usage of programs
+      <li>Memory allocation and de-allocation
+      <li>Empirical analysis of memory intensive programs
+      <li>Formal analysis and verification of memory intensive programs
+      <li>Memory management for machine learning systems
+      <li>Programming and management of emerging or persistent memories
+      </ul>
+  day: '2021-06-22T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://conf.researchr.org/home/ismm-2021
+  organizers:
+    - Zhenlin Wang
+    - Tobias Wrigstad
+  channel: ismm
+  instructions: " "
+#  proc: static/pldi21/pldiws21ismm/index.html
+  proc: https://dl.acm.org/doi/proceedings/10.1145/3459898
+
+- UID: lctes
+  type: conf
+  title: 'LCTES: Languages, Compilers, Tools and Theory of Embedded Systems'
+  abstract: |
+    Welcome to the 2021 edition of the International Conference on Languages Compilers, 
+    Tools and Theory of Embedded Systems. LCTES provides a link between the programming languages and the 
+    embedded systems communities. Researchers and developers in these areas are addressing many similar problems, 
+    but with different backgrounds and approaches. LCTES is intended to expose researchers and developers from either 
+    area to relevant work and interesting problems in the other area and provide a forum where they can interact.
+
+  day: '2021-06-22T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/LCTES-2021
+  organizers:
+    - Jörg Henkel
+    - Xu Liu
+    - Jiajia Li
+    - Amro Awad
+    - Yueming Hao
+  channel: lctes
+  instructions: " " 
+#  proc: static/pldi21/pldiws21lctes/index.html
+  proc: https://dl.acm.org/doi/proceedings/10.1145/3461648
+
+
+- UID: array
+  type: workshop
+  title: 'ARRAY 2021'
+  abstract: >
+    Array-oriented programming unites two uncommon properties. As an abstraction, it directly mirrors high-level mathematical abstractions commonly used in many fields from natural sciences over engineering to financial modeling. As a language feature, it exposes regular control flow, exhibits structured data dependencies, and lends itself to many types of program analysis. Furthermore, many modern computer architectures, particularly highly parallel architectures such as GPUs and FPGAs, lend themselves to efficiently executing array operations.
+    <p>
+    The ARRAY series of workshops explores:
+    <ul>
+    <li>formal semantics and design issues of array-oriented languages and libraries;
+
+    <li>productivity and performance in compute-intensive application areas of array programming;
+
+    <li>systematic notation for array programming, including axis- and index-based approaches;
+
+    <li>intermediate languages, virtual machines, and program-transformation techniques for array programs;
+
+    <li>representation of and automated reasoning about mathematical structure, such as static and dynamic sparsity, low-rank patterns, and hierarchies of these, with connections to applications such as graph processing, HPC, tensor computation and deep learning;
+
+    <li>interfaces between array- and non-array code, including approaches for embedding array programs in general-purpose programming languages; and
+
+    <li>efficient mapping of array programs, through compilers, libraries, and code generators, onto execution platforms, targeting multi-cores, SIMD devices, GPUs, distributed systems, and FPGA hardware, by fully automatic and user-assisted means.
+    </ul>
+    Array programming is at home in many communities, including language design, library development, optimization, scientific computing, and across many existing language communities. ARRAY is intended as a forum where these communities can exchange ideas on the construction of computational tools for manipulating arrays.
+  day: '2021-06-21T09:00-04:00 - 2021-06-21T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/ARRAY-2021
+  organizers:
+    - Jeremy Gibbons
+    - Tze Meng Low
+  channel: array
+  instructions: " " 
+  # proc: static/pldi21/pldiws21array/index.html
+  proc: https://dl.acm.org/doi/proceedings/10.1145/3460944
+
+- UID: infer
+  type: workshop
+  title: 'Infer Practitioners'
+  abstract: >
+    This second edition of the Infer Practitioners Workshop gathers together developers and researchers working with the Infer static analysis platform. Infer enables anyone to write their own scalable inter-procedural static analysis for C, C++, Objective-C, and Java source code in only a few lines of code. Infer is deployed at several companies where it helps developers write better code. Inside Facebook, thousands of code changes are analysed every month by Infer, leading to thousands of bugs being found and fixed before they reach the codebase. Infer is also being used in academia, both as a research tool and a teaching medium.
+    <p>
+    The goal of the workshop is to share knowledge about how to use and modify Infer in industrial and academic contexts.
+
+  day: '2021-06-21T09:00-04:00 - 2021-06-21T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/infer2021
+  organizers:
+    - Jules Villard
+  channel: infer
+
+- UID: maps
+  type: workshop
+  title: 'MAPS: The 5th Annual Symposium on Machine Programming'
+  abstract: >
+    Due to recent algorithmic and computational advances, machine learning has seen a surge of interest in both research and practice. From natural language processing to self-driving cars, machine learning is creating new possibilities that are changing the way we live and interact with computers. However, the impact of these advances on programming languages remains mostly untapped. Yet, incredible research opportunities exist when combining machine learning and programming languages in novel ways.
+    <p>
+    This symposium seeks to bring together programming language and machine learning communities to encourage collaboration and exploration in the areas of mutual benefit. The symposium will include a combination of rigorous peer-reviewed papers and invited events. The symposium will seek papers on a diverse range of topics related to programming languages and machine learning including (and not limited to):
+
+    <ul>
+    <li>Application of machine learning to compilation and run-time scheduling
+    <li>Collaborative human / computer programming (i.e., conversational programming)
+    <li>Deterministic and stochastic program synthesis
+    <li>Infrastructure and techniques for mining and analyzing large code bases
+    <li>Interoperability between machine learning frameworks and existing code bases
+    <li>Probabilistic and differentiable programming
+    <li>Programming language and compiler support for machine learning applications
+    <li>Programming language support and implementation of machine learning frameworks
+    <li>Neurosymbolic and intentional programming
+    </ul>
+
+  day: '2021-06-21T09:00-04:00 - 2021-06-21T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/maps-2021
+  organizers:
+    - Aws Albarghouthi
+    - Isil Dillig
+    - Justin Gottschlich
+    - Roopsha Samanta
+    - Jesmin Jahan Tithi
+  channel: maps
+  instructions: " " 
+#  proc: static/pldi21/pldiws21maps/index.html
+  proc: https://dl.acm.org/doi/proceedings/10.1145/3460945
+
+
+- UID: planqc
+  type: workshop
+  title: 'PLanQC: Programming Languages for Quantum Computing'
+  abstract: >
+    The Second International Workshop on Programming Languages for Quantum Computing (PLanQC 2021) aims to bring together researchers from the fields of programming languages and quantum information, exposing the programming languages community to the unique challenges of programming quantum computers. It will promote the development of tools to assist in the process of programming quantum computers, both those that exist today and those likely to exist in the near to far future.
+    <p>
+    Workshop topics include (but are not limited to):
+    <ul>
+    <li> High-level quantum programming languages
+    <li> Verification tools for quantum programs
+    <li> Novel quantum programming abstractions
+    <li> Quantum circuit and program optimization
+    <li> Hardware-aware circuit compilation and routing
+    <li> Error handling, mitigation, and correction
+    <li> Instruction sets for quantum hardware
+    <li> Other techniques from traditional programming languages (e.g., types, compilation/optimization, foreign function interfaces) applied to the domain of quantum computation.
+    </ul>
+
+  day: '2021-06-22T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/planqc-2021
+  organizers:
+    - Matthew Amy
+    - Ross Duncan
+    - Robert Rand
+  channel: planqc
+  instructions: " " 
+
+- UID: plmw
+  type: workshop
+  title: 'PLMW@PLDI: Programming Language Mentoring Workshop'
+  abstract: >
+    The Programming Language Mentoring Workshop is designed to broaden the exposure of late-stage undergraduate students and early-stage graduate students to research and career opportunities in programming languages. The workshop program will include technical sessions that cover both the history and current practice of core subfields within programming languages, mentoring sessions that cover effective habits for navigating the research landscape, and social sessions that create opportunities for students to interact with researchers in the field.
+
+  day: '2021-06-21T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/PLMW-PLDI-2021
+  organizers:
+    - Stephen Chong
+    - Hila Peleg
+    - Nadia Polikarpova
+    - Tamara Rezk
+  channel: plmw
+  private: True
+
+
+
+- UID: soap
+  type: workshop
+  title: 'SOAP: State of the Art in Program Analysis'
+  abstract: >
+    <p>
+    Static and dynamic analysis techniques and tools for Java, and other programming languages, have received widespread attention for a long time. The application domains of these analyses range from core libraries to modern technologies such as web services and Android applications. Over time, various analysis frameworks have been developed to provide techniques for optimizing programs, ensuring code quality, and assessing security and compliance.
+    </p><p>
+    SOAP 2021 aims to bring together the members of the program analysis community to share new developments and shape new innovations in program analysis. For SOAP 2021, we invite contributions and inspirations from researchers and practitioners working with program analysis. We are particularly interested in exciting analysis framework ideas, innovative designs, and analysis techniques, including preliminary results of work in progress. We will also focus on the state of the practice for program analysis by encouraging submissions by industrial participants, including tool demonstration submissions. The workshop agenda will continue its tradition of lively discussions on extensions of existing frameworks, development of new analyses and tools, and how program analysis is used in real-world scenarios.
+    </p>
+
+  day: '2021-06-22T09:00-04:00 - 2021-06-22T21:00-04:00'
+  website: https://pldi21.sigplan.org/home/SOAP-2021
+  organizers:
+    - Lisa Nguyen Quang Do
+    - Caterina Urban
+  channel: soap
+#  proc: static/pldi21/pldiws21soap/index.html
+  proc: https://dl.acm.org/doi/proceedings/10.1145/3460946
+  # instructions: |
+  #   <b>SOAP Attendees</b>: Join our invited speakers in Zoom for Q&A after their talks by clicking the Zoom buttons below.
+
+
+- UID: persist
+  type: tutorial
+  title: 'Beyond Weak Memory Consistency: The Challenges of Memory Persistency'
+  abstract: >
+    <p>
+    Emerging non-volatile memory (NVM) technologies provide fast access to persistent data (guaranteed to endure power failures/crashes) at a performance comparable to volatile memory (RAM). NVM (a.k.a. persistent memory) is believed to supplant RAM in the near future, leading to substantial changes in software and its engineering.
+    </p><p>
+    However, the performance gains of NVM are difficult to exploit correctly. A key challenge lies in ensuring correct recovery after a crash by maintaining the consistency of the data in persistent memory. This requires an understanding of the underlying (weak) persistency model, describing the order in which stores are propagated to NVM. The problem is that CPUs are not directly connected to memory; instead there are multiple non-persistent caches in between. Consequently, memory stores are not propagated to NVM at the time and in the order issued by the processor, but rather at a later time and in the order decided by cache coherence protocols.
+    </p><p>
+    In this tutorial, we demonstrate three facets of persistency research:
+
+    <ul>
+    <li> We present the formal persistency semantics of the ubiquitous Intel-x86 and ARMv8 CPU architectures.
+    <li>  We describe common programming patterns for implementing higher-level persistent libraries (e.g. transactions).
+    <li>  We present persistent linearisability as a correctness condition for verifying persistent algorithms.
+    </ul>
+    </p>
+  day: '2021-06-22T13:30-04:00 - 2021-06-22T16:15-04:00'
+  website: https://pldi21.sigplan.org/details/pldi-2021-tutorials/2/Beyond-Weak-Memory-Consistency-The-Challenges-of-Memory-Persistency
+  abstract: >
+      <p>Emerging non-volatile memory (NVM) technologies provide fast access to persistent data (guaranteed to endure power failures/crashes) at a performance comparable to volatile memory (RAM). NVM (a.k.a. persistent memory) is believed to supplant RAM in the near future, leading to substantial changes in software and its engineering.</p> 
+      <p>However, the performance gains of NVM are difficult to exploit correctly. A key challenge lies in ensuring correct recovery after a crash by maintaining the consistency of the data in persistent memory. This requires an understanding of the underlying (weak) <em>persistency</em> model, describing the order in which stores are propagated to NVM. The problem is that CPUs are not directly connected to memory; instead there are multiple non-persistent caches in between. Consequently, memory stores are not propagated to NVM at the time and in the order issued by the processor, but rather at a later time and in the order decided by cache coherence protocols.</p> 
+      <p>In this tutorial, we demonstrate three facets of persistency research:</p> 
+      <ul> 
+      <li> <p>We present the formal persistency semantics of the ubiquitous Intel-x86 and ARMv8 CPU architectures.</p> </li> 
+      <li> <p>We describe common programming patterns for implementing higher-level persistent libraries (e.g. transactions).</p> </li> 
+      <li> <p>We present persistent linearisability as a correctness condition for verifying persistent algorithms.</p> </li> 
+      </ul>
+  organizers:
+    - Viktor Vafeiadis
+    - Azalea Raad
+  channel: tutorial-weak-memory
+  instructions: " " 
+
+- UID: imop
+  type: tutorial
+  title: 'IMOP: A Self-Stabilizing Source-to-Source Compiler Framework for OpenMP C'
+  abstract: >
+    <p>OpenMP is an industry-standard API for writing portable shared-memory parallel programs in C/C++/Fortran. Almost every mainstream compiler of these languages now supports compilation of OpenMP programs. However, we are not aware of any compiler framework which was designed from the ground up taking OpenMP semantics into account. Consequently, not all components of such frameworks are generally applicable (or conforming) to OpenMP parallel semantics. This half-day tutorial presents a new <a href="https://bit.ly/imop-compiler" rel="nofollow">open-source</a> source-to-source compiler framework called <a href="https://bit.ly/imop-iitm" rel="nofollow">IMOP</a> (IIT Madras OpenMP compiler), which addresses such limitations.</p> 
+    <p>Each component in IMOP has been designed and implemented by taking OpenMP syntax and semantics into account. IMOP comprises of more than 154 kLOC in Java, and works on OpenMP C programs as its input. With its numerous <strong>unique features</strong> such as OpenMP-aware compilation, automatic generation of parallel variants of the serial data-flow passes, <em>self-stabilization of program abstractions under program modifications</em>, integration with the Z3 SMT solver, and so on, IMOP can significantly <strong>simplify the task of writing tools for program analysis, profiling, and optimizations</strong>. In this <em>hands-on</em> tutorial, we will teach the fundamentals and certain advanced concepts of IMOP to the participants, which can help them in the faster development of their research prototypes.</p> 
+  day: '2021-06-21T09:00-04:00 - 2021-06-21T11:45-04:00'
+  website: https://pldi21.sigplan.org/details/pldi-2021-tutorials/4/IMOP-A-Self-Stabilizing-Source-to-Source-Compiler-Framework-for-OpenMP-C
+  organizers:
+    - Aman Nougrahiya
+    - V Krishna Nandivada
+  channel: tutorial-imop
+  instructions: " " 
+
+
+- UID: contracts
+  type: tutorial
+  title: 'Implementing smart contract security analyses using the MadMax/Gigahorse framework'
+  abstract: >
+      <p>The tutorial will briefly cover the following:</p> 
+      <ul> 
+      <li> <p>Setting up the Gigahorse framework development environment and related toolchains</p> </li> 
+      <li> <p>Specifying simple program analyses</p> </li> 
+      <li> <p>Implement analyses for known vulnerabilities such as reentrancy</p> </li> 
+      <li> <p>Run these analyses at scale, and compare their results</p> </li> 
+      <li> <p>Introduce basic analysis design considerations and their effect on precision, completeness and scalability</p> </li> 
+      </ul> 
+      <p>Necessary background: the tutorial will make as few assumptions as possible regarding the background of participants, especially relative to the blockchain and smart contracts. Necessary concepts of smart contract execution will be introduced in the tutorial, although the emphasis will be on static analysis. Participants should have some background in intermediate languages and simple program analysis, at the level of a Compilers course.</p> 
+      <p>Medium: There will be an initial presentation of tutorial material (slides + screen sharing for command line and setup). Afterwards, the tutorial is expected to be interactive, with extensive screen sharing among participants to jointly examine code.</p> 
+      <p>Platform: Participants should have machines with a Unix-like OS (Linux preferred, MacOS should be ok). The Souffle language will be ideally installed and tested before the tutorial.</p>
+  day: '2021-06-22T09:00-04:00 - 2021-06-22T11:45-04:00'
+  website: https://pldi21.sigplan.org/details/pldi-2021-tutorials/3/Implementing-smart-contract-security-analyses-using-the-MadMax-Gigahorse-framework
+  organizers:
+    - Yannis Smaragdakis
+    - Neville Grech
+  channel: tutorial-smart-contracts
+  instructions: " " 

@@ -1,0 +1,22 @@
+website: http://www.uber.com
+
+description: |
+  The mission of the Programming Systems team is to build
+  program analysis tools to improve developer velocity, code
+  quality, app efficiency, & cost-of-capacity across Uber.
+  Since its inception in 2017, the team has designed and
+  implemented static analysis checkers, dynamic tracing
+  tools, refactoring engines, & compiler advancements.
+  These tools have been adopted widely.
+
+# youtube:
+
+image: uber-blurb.png
+
+resources:
+  - label: Programming Systems at Uber
+    website: https://www.uber.com/about/science/
+
+# zoom_link:
+
+# schedule:

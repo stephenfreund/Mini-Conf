@@ -1,3 +1,15 @@
+# PLDI port of MiniConf
+
+The original README.md is below.
+
+Notes:
+
+* You must use Python 3.9.
+* All keys, email addresses, and various data files have been redacted since this repo will be public.
+* You will be able to run locally, but you won't be able to rebuild the sitedata from scratch, etc.
+
+
+
 ## MiniConf
 
 <a href="https://mini-conf.github.io/index.html">MiniConf</a> is a virtual conference in a box. It manages the papers, schedules, and speakers for an academic conference run virtually. It can be easily integrated with interactive tools such as video, chat, and QA.
@@ -97,5 +109,4 @@ Feel free to cite MiniConf:
     primaryClass={cs.HC}
 }
 ```
-
 

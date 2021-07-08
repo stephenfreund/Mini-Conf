@@ -1,0 +1,36 @@
+{% set active_page = "Sponsors" %}
+{% set page_title = "Sponsors" %}
+{% extends "base.html" %}
+
+{% block content %}
+<script src="static/js/modules/pldiEvents.js"></script>
+
+<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+  <div id="day">
+    {{ components.section("Sponsors") }}
+
+    <h5 class="card-title text-muted text-center pt-2 pb-4">
+      
+      Join our sponsors at the Industrial Reception on <span id="rec_time">{{ reception }}</span>
+      <br><br>Click any sponsor for more details.
+    </h5>
+    
+    <div class="speakers">
+      {{ components.sponsorgroup(sponsors) }}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Printable form of time in current time zone:
+  function timeForPrinting(t) {
+    const tz = getCurrentTimeZone();
+    const start = moment(t).tz(tz)
+    const suffix = gmtSuffixForMoment(start)
+    return `${start.format("ddd, MMMM DD")}, at ${start.format("H:mm")} (${suffix})`
+  }
+  r = {{ reception | tojson }}
+  document.getElementById("rec_time").innerHTML = timeForPrinting(r['start']) + " <br> in the Gather Sponsor Hall: " + gatherButton(r)
+</script>
+
+  {% endblock %}

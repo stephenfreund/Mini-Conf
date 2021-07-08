@@ -1,0 +1,31 @@
+
+#
+# Credentials For Auth0's API.
+#
+auth0_domain: "https://aaaaaaaaaaaa.us.auth0.com"
+auth0_connection: "aaaaaaaaaaaa"
+auth0_client_id: "aaaaaaaaaaaa"
+auth0_client_secret: "aaaaaaaaaaaa"
+
+#
+# Credentials For Gather's API.
+#
+gather_api_key: "aaaaaaaaaaaa"
+gather_space_id: "aaaaaaaaaaaa\\pldi21"
+
+#
+# Credentials For RegMaster
+#
+regmaster_endpoint: aaaaaaaaaaaa
+regmaster_password: "aaaaaaaaaaaa"
+
+#
+# The AWS server for our posters
+# 
+amplify_domain: "https://gh-posters.aaaaaaaaaaaa.amplifyapp.com"
+
+#
+# Dropbox files
+#
+whitelist: https://www.dropbox.com/s/aaaaaaaaaaaa/email-addresses.csv?dl=1
+blacklist: https://www.dropbox.com/s/aaaaaaaaaaaa/blacklist.yml?dl=1

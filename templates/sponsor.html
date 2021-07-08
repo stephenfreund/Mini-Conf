@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% set page_title = sponsor.name %}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="pp-card mt-5">
+  <div class="tab-content pt-3 pb-3 px-3 px-sm-0 border-0" id="nav-tabContent">
+    {% if True or sponsor.logoontop %}
+    <div class="row justify-content-md-center pt-2"> 
+      {% if sponsor.logo %}
+      <img class="card-img-top text-center" src="{{ sponsor.logo }}"
+      alt="{{ sponsor.name }}" style="max-height: 100px; width: auto;" />
+      {% else %}
+      <img class="card-img-top text-center" src="static/sponsor_images/{{sponsor.UID}}.png"
+      alt="{{ sponsor.name }}" style="max-height: 100px; width: auto;" />
+      {% endif %}
+    </div>
+    {% else %}
+    {{ components.section(sponsor.name) }}
+    {% endif %}
+  </div>
+  
+  <!-- <h3 class="m-3 mt-2 mb-4 text-center card-subtitle text-muted">
+    PLDI {{sponsor.pldi_level}} Supporter  
+    {% if 'hopl_level' in sponsor %}
+      &bull;
+      HOPL {{sponsor.hopl_level}} Supporter    
+    {% endif %}
+  </h3> -->
+
+  {% if sponsor.level != "Bronze" %}
+  <h4 class="card-subtitle mb-2 text-muted text-center">
+    <span class="mr-2">Chat with {{ sponsor.name }}:</span>  {{ components.slack(config, sponsor.slack_channel) }}
+  </h4>
+  {% endif %}
+  
+  {% if sponsor.website is defined %}
+  <div class="row justify-content-md-center mt-3 pb-3">
+    <div class="col-6 text-center lead">
+      <a id="website" href="{{sponsor.website}}" target="_blank">Visit Website</a>
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if sponsor.description is defined %}
+  <!-- Description -->
+  <div class="row justify-content-md-center">
+    <div class="col-12 px-5">
+        <div class="card-text">
+          <span  class="lead">
+            {{ sponsor.description|markdown }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  
+  <!-- Youtube -->
+  {% if sponsor.youtube is defined %}
+  <div class="row justify-content-md-center pt-3">
+    <iframe width="525" height="301" src="{{ sponsor.youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+
+  <!-- Video -->
+  {% if sponsor.video is defined %}
+  <div class="row justify-content-md-center pt-3">
+    <video width="525" controls preload="none">
+      <source src="{{ sponsor.video }}" type="video/mp4">
+    </video>
+  </div>
+  {% endif %}
+
+  <!-- image -->
+  {% if sponsor.image is defined %}
+  <div class="row justify-content-md-center pt-3">
+    <img class="w-100 p-3" src="static/sponsor_content/{{sponsor.image}}"</a>
+  </div>
+  {% endif %}
+    
+
+    <div class="row justify-content-md-center py-3"></div>
+    
+    <!-- Schedule -->
+    {% if calendar != [] %}
+    {{components.subsection("Calendar")}}
+    
+    <div class="text-muted pb-2 text-center" style="font-size:14px;">
+      Click the buttons to the right of each event to join via
+      Zoom (eg: <span class="badge pldi-pill badge-primary text-white mr-0">Zoom</span>), or
+      Gather (eg: <span class="badge pldi-pill badge-success text-white mr-0">Gather</span>).
+    </div>            
+
+    <div class="col">
+      <div id='calendar'></div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendar = makeCompactListCalendar('calendar', {
+          initialDate: '{{ config.calendar.start }}',
+          validRange: {
+            start: '{{ config.calendar.start }}',
+            end: '{{ config.calendar.end }}'
+          }
+        },
+        '{{ calendar | tojson }}');
+      });
+    </script>
+    {% endif %}
+    
+    <!-- Resources -->
+    {% if sponsor.resources is defined %}
+    {{components.subsection("Resources")}}
+    <ul>  
+      {% for resource in sponsor.resources %}
+      <li class="lead"><a href="{{ resource.website }}" target="_blank">{{ resource.label }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <!-- Downloads -->
+    {% if sponsor.downloads is defined %}
+    {{components.subsection("Downloads")}}
+    <ul>
+      {% for resource in sponsor.downloads%}
+      <li class="lead"><a href="{{ resource.website }}" target="_blank">{{ resource.label }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <!-- Contact -->
+    {% if sponsor.contacts is defined %}
+    {{components.subsection("Contact")}}
+    <ul class="lead list-unstyled px-4">
+      {% for contact in sponsor.contacts %}
+      <li>{{ contact.name }} &lt;<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>&gt;</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    
+  </div>
+</div>
+
+{% endblock %}

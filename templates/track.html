@@ -1,0 +1,210 @@
+{% set page_title = track.title %}
+{% extends "base.html" %}
+{{ super() }}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      {{track.title}}
+    </h2>
+    
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      {{ track.organizers | join(", ") }}
+    </h3>
+    
+    <div class="text-center p-3">
+      <a class="card-link px-2" data-toggle="collapse" role="button" href="#details">
+        Description
+      </a>
+      
+      <a href="{{track.website}}" target="_blank"  class="card-link px-2">
+        External Website
+      </a>      
+
+      {% if track.proc %}
+      <a href="{{track.proc}}" target="_blank"  class="card-link px-2">
+        Proceedings
+      </a>      
+      {% endif %}
+
+      {% if prerecorded|length > 0 %}
+      <span class="card-link px-2 ba" role="button" onclick="scrollVideos()">
+        Recorded Talks
+      </span>
+      <script type="text/javascript">
+        function scrollVideos() {
+          $("#prerecorded")[0].scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+          return false;
+        }
+      </script>
+      <!-- <h4 class="card-subtitle mb-2 text-muted text-center">
+        <span class="mr-2">Watch pre-recorded talks for this event:</span>  {{ components.preLink() }}
+      </h4> -->
+      {% endif %}
+  
+
+    </div>
+    
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      <span class="mr-2">Chat with others about this event:</span>  {{ components.slack(config, track.slack_channel) }}
+    </h3>
+    
+    {% if prerecorded|length > 0 %}
+    <!-- <h4 class="card-subtitle mb-2 text-muted text-center">
+      <span class="mr-2">Watch pre-recorded talks for this event:</span>  {{ components.preLink() }}
+    </h4> -->
+    {% endif %}
+
+  </div>
+</div>
+
+<div id="details" class="pp-card m-3 collapse hide">
+  <div class="card-body">
+    <div class="card-text">
+      <div id="abstractExample">
+        {{ track.abstract | safe }}
+      </div>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+
+
+
+<!-- Presentation Embed -->
+   
+<div class="col-12 bd-content pt-3 mb-n3">
+  <h3>Video Stream</h3>
+</div>
+<div class="pb-3 mx-3 px-3 px-sm-0" id="tab-presentation">
+  <div class="row pt-n4">
+    {% if presentation_id %}
+    {% if not track.private %}
+    <div class="col-12">
+      <h6 class="text-muted text-center  float-right">
+        Join via Zoom: {{ components.zoomLink(zoom)}}
+      </h6>
+    </div>
+    {% endif %}
+    <div class="col-12">
+      <div id="outer">
+        <div id="presentation" class="slp my-auto"></div>
+        <script src='https://slideslive.com/embed_presentation.js'></script>
+        <script>
+          embed = new SlidesLiveEmbed("presentation", {
+            presentationId:
+            "{{ presentation_id | default(config.default_presentation_id)}}",
+            autoPlay: false, // change to true to autoplay the embedded presentation
+            verticalEnabled: true,
+            verticalWhenWidthLte: 500,
+            allowHiddenControlsWhenPaused: true,
+            hideTitle: true,
+          });
+        </script>
+      </div>
+    </div>
+
+    {% else %}
+    <div class="col-12 mt-3 mb-2 h5">
+      The full video streams are not available for replay, but you can find recordings of all talks below.
+    </div>
+    {% endif %}
+    
+  </div>
+</div>
+    
+    {{ components.subsection("Full Schedule") }}
+    
+    <div class="text-muted pb-2 text-center" style="">
+      {% if prerecorded|length > 0 and track.UID != "persist" %}
+      Watch a talk's video by clicking its {{ components.videoHelp() }} button.<br>
+      {% endif %}
+      {% if track.instructions %}
+        {{ track.instructions | safe }}
+      {% else %}
+      Participate in an event occuring in Zoom or Gather by clicking the
+      Zoom/Gather button next to the event below.
+      {% endif %}
+    </div>        
+    
+    
+    <div class="form-group col track-schedule">
+      <div id='calendar'></div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendar = makeCompactListCalendar('calendar', {
+          initialDate: '{{ config.calendar.start }}',
+          validRange: {
+            start: '{{ config.calendar.start }}',
+            end: '{{ config.calendar.end }}'
+          }
+        },
+        '{{ calendar | tojson }}');
+      });
+    </script>
+    
+    
+    {% if prerecorded|length > 0 %}
+    <div id="prerecorded"></div>
+    {{ components.subsection("Talks") }} 
+    <div class="text-muted pb-2 text-center mt-n4" style="">
+      Click on any talk to watch the prerecorded video.
+    </div>        
+    <div class="speakers mx-3 my-0 pt-n5">
+      <div class="cards row">
+        {% for talk in prerecorded %}
+        <div class="col-lg-4 col-12" style="box-sizing: border-box;">
+          <a class="pp-card text-muted" style="display: block; width: 100%;" target="_blank" href="prerecorded_{{talk.UID}}.html">
+            <div class="pp-card-header text-center p-3" style="height: auto; max-height:280px; max-width: 100%;">
+              <h6 class="text-center card-title mt-0"> {{ talk.title  }} </h6>
+              <h6 class="text-center card-subtitle pt-2"> {{ talk.authors }} </h6>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    
+    
+    {% if sponsors|length > 0 %}
+    {{ components.subsection(track.UID.upper() + " Sponsors") }}
+    <div class="speakers mx-3 my-0 pt-n5 mt-n4">
+      <div class="cards row">
+        {% for sponsor in sponsors %}
+        <div class="col-lg-4 col-12 p-3" style="box-sizing: border-box;">
+          <div class="pp-card" style="display: block; overflow: hidden; width: 100%;">
+            <div
+            class="card-header text-center"
+            style="height: 150px; max-width: 100%;"
+            >
+            <div class="row" style="height: 70px;">
+              <a class="text-muted mx-auto my-auto" href="sponsor_{{sponsor.UID}}.html">
+                <img style="max-height: 70px; max-width: 80%;" src="static/sponsor_images/{{sponsor.UID}}.png">
+              </a>
+            </div>
+            <h6 class="m-3 mt-4 text-center card-title">
+              {{sponsor.level}} Supporter  
+            </h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% endblock %}
+  

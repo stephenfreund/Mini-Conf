@@ -1,25 +1,67 @@
+:root {
+  --primary-font-family: "Lato", sans-serif;
+  --secondary-font-family: "Exo", sans-serif;
+}
+
+/* for buttons, etc. to not look like native on any platform. */
+a.btn {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
 body a {
   color: #2294e0;
 }
 
 body a:hover {
+  color: #1284d0;
+  text-decoration: none;
+}
+
+.ba {
   color: #2294e0;
+}
+
+.ba:hover {
+  color: #1284d0;
   text-decoration: none;
 }
 
 h2,
 h3 {
-  font-family: "Lato";
+  font-family: var(--primary-font-family);
 }
 
 label:text-muted,
 .nav-link {
-  font-family: "Lato";
+  font-family: var(--primary-font-family);
 }
 
+.tabs .nav-link {
+  display: inline;
+}
+
+/* 2/17 -- make background for nav / footer slightly darker than bg-light */
+.navbar {
+  /* background-color: #f2f3fa !important; */
+  background-color: #f0f2f4 !important;
+}
+
+.footer {
+  background-color: #f0f1f4 !important;
+}
+
+/* 2/17 -- blurbs are all white bg */
+.blurb {
+  background-color: white;
+}
+
+/* 2/17 -- add very light blue bg to pages */
 body {
-  font-family: "Lato", sans-serif;
-  background-color: rgba(236, 241, 246, 1);
+  font-family: var(--primary-font-family);
+  /* background-color: rgba(236, 241, 246, 1);  */
+  background-color: #f8fafc;
 }
 
 .container a:hover {
@@ -27,7 +69,7 @@ body {
 }
 
 .jumbotron {
-  font-family: "Lato", sans-serif;
+  font-family: var(--primary-font-family);
   background-color: rgba(236, 241, 246, 1);
 }
 
@@ -35,9 +77,9 @@ body {
   background-color: white;
 }
 
-.btn {
+/* .btn {
   background-color: white;
-}
+} */
 
 #main-nav {
   padding-top: 10px;
@@ -49,20 +91,67 @@ body {
 }
 
 .pp-card {
-  font-family: "Exo";
-  box-shadow: 0 0 14px 0 rgba(204, 204, 204, 1);
+  font-family: var(--secondary-font-family);
+  /* 2/17 -- drop shadow, add border */
+  /* box-shadow: 0 0 14px 0 rgba(204, 204, 204, 1); */
+  border: 2px solid #eee;
   margin-bottom: 1em;
   display: block;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
-.pp-card-header {
-  border: 4px solid #eee;
-  font-family: "Exo";
-  height: 340px;
+.faq-title {
+  font-size: 18px;
+}
+
+.getting-started-title {
+  color: #382811;
+  font-size: 18px;
+}
+
+.getting-started-big-title {
+  color: #382811;
+}
+
+.getting-started {
+  color: #4b3516;
+  border: 2px solid #ebe4dc;
+  box-shadow: 0 0 8px 0 #ebe4dc;
+  font-family: var(--primary-font-family);
   padding-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #fbf4ec;
+}
+
+.card-getting-started-header {
+  color: #382811 !important;
+}
+
+.card-getting-started {
+  color: #4b3516 !important;
+  font-family: var(--primary-font-family) !important;
+  background-color: #fbf4ec !important;
+}
+
+.pp-card-header {
+  border: 1px solid #eee;
+  font-family: var(--secondary-font-family);
+  height: 380px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+}
+
+.pp-card-header-auto-height {
+  border: 1px solid #eee;
+  font-family: var(--primary-font-family);
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
 }
 
 .pp-mode-mini .pp-card-header {
@@ -87,8 +176,21 @@ body {
   object-fit: scale-down;
 }
 
+body .pldi-track .nav-pills .nav-link.active {
+  /* background-color: #bed972; */
+  color: var(--info);
+}
+
 body .nav-pills .nav-link.active {
-  background-color: #bed972;
+  /* background-color: #bed972; */
+  background-color: var(--secondary);
+  color: #ffffff !important;
+}
+
+body .pldi-track .nav-pills .nav-link.active {
+  /* background-color: #bed972; */
+  background-color: var(--info);
+  color: #ffffff !important;
 }
 
 .container {
@@ -96,15 +198,24 @@ body .nav-pills .nav-link.active {
 }
 
 .card {
-  font-family: "Exo";
+  font-family: var(--secondary-font-family);
 }
 
 .card-header {
-  font-family: "Exo";
+  font-family: var(--secondary-font-family);
+  background-color: #ffffff;
 }
 
 .card-header .card-title {
-  font-family: "Exo";
+  font-family: var(--primary-font-family);
+}
+
+.card-link {
+  font-family: var(--primary-font-family);
+}
+
+.card-text {
+  font-family: var(--primary-font-family);
 }
 
 .cards.myCard {
@@ -118,9 +229,16 @@ body .nav-pills .nav-link.active {
   margin-top: 10px;
 }
 
-.card-title {
+h6.card-title {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: var(--primary-font-family);
+}
+
+h5.card-title {
   margin-top: 10px;
   font-size: 20px;
+  font-family: var(--primary-font-family);
 }
 
 h2.card-title {
@@ -128,9 +246,19 @@ h2.card-title {
   font-size: 30px;
 }
 
+h3.card-title {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
 h3.card-subtitle.text-muted {
   margin-top: 10px;
   font-size: 20px;
+}
+
+h4.card-subtitle.text-muted {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .card-subtitle.text-muted {
@@ -139,9 +267,11 @@ h3.card-subtitle.text-muted {
 }
 
 .main-title {
-  font-weight: 700;
-  color: #2294e0;
-  font-family: "Exo";
+  /* font-weight: 700; */
+  /* color: #2294e0; */
+  /* color: var(--dark); */
+  color: #22346a;
+  font-family: var(--primary-font-family);
 }
 
 .myAccordion {
@@ -177,30 +307,6 @@ h3.card-subtitle.text-muted {
   display: flex;
 }
 
-/* .carousel-inner .carousel-item-right.active, */
-
-/* .carousel-inner .carousel-item-next { */
-
-/*   transform: translateX(25%); */
-
-/* } */
-
-/* .carousel-inner .carousel-item-left.active, */
-
-/* .carousel-inner .carousel-item-prev { */
-
-/*   transform: translateX(-25%); */
-
-/* } */
-
-/* .carousel-inner .carousel-item-right, */
-
-/* .carousel-inner .carousel-item-left{ */
-
-/*   transform: translateX(0); */
-
-/* } */
-
 .carousel-control-prev-icon {
   filter: invert(1);
   transform: translateX(-200%);
@@ -230,7 +336,7 @@ tr.fc-list-item {
 }
 
 .details {
-  font-family: "Lato", sans-serif;
+  font-family: var(--primary-font-family);
 }
 
 #abstractExample.collapse:not(.show) {
@@ -270,7 +376,7 @@ body .carousel-control-prev {
 
 .checkbox-paper {
   /*opacity: 0.2;*/
-  color: #fcfcfc;
+  color: #ddd;
   font-size: 14pt;
   font-weight: bold;
   cursor: pointer;
@@ -292,18 +398,90 @@ body .carousel-control-prev {
 
 .checkbox-bookmark.selected {
   opacity: 1;
-  color: #bed972;
+  /* color: #bed972; */
+  color: var(--yellow);
 }
 
-/*@supports (-webkit-text-stroke: 1px gray) {*/
-/*  .checkbox-paper {*/
-/*    opacity: 0.2;*/
-/*    -webkit-text-stroke: 1px gray;*/
-/*    -webkit-text-fill-color: white;*/
-/*  }*/
+.hidden {
+  display: none;
+}
 
-/*  .checkbox-paper.selected {*/
-/*    opacity: 1;*/
-/*    -webkit-text-fill-color: #bed972;*/
-/*  }*/
-/*}*/
+.sponsor-card {
+  border-style: none;
+}
+
+/* .sponsor-card .card-header {
+  border-style: none;
+  text-align: center;
+} */
+
+.slack-link {
+  font-family: var(--primary-font-family);
+}
+
+.pldi-pill {
+  font-family: var(--primary-font-family);
+
+  font-size: 85%;
+  font-weight: 500;
+  /* margin: 0 0.5em 0 0; 
+  padding: .35em .4em; */
+  margin: 0.15em 0.5em 0 0;
+  padding: 0.35em 0.5em;
+  text-decoration: none !important;
+}
+
+/* .btn-slack {
+  background-color: #3F0F40;
+} */
+
+.twitter-timeline {
+  max-width: 100%;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.badge-track {
+  background-color: #22346a;
+}
+
+.full-calendar-prefix {
+  background-color: #dde7ef;
+  /* // #e9d2d2 // dde7ef */
+  /* : #e2e6ea; */
+  border-color: #dae0e5;
+  border-radius: 2px;
+  /* color: #212529; */
+}
+
+.nav-link.text-muted:hover {
+  color: var(--dark) !important;
+}
+
+.fake-pill-button {
+  opacity: 70%;
+}
+
+.pill-mirror-bg {
+  background-color: #f0f0f8;
+  border: 1px solid #dddddd;
+}
+
+.nav-pills .pill-mirror .nav-link:not(.active) {
+  background-color: #f0f0f8;
+  border: 1px solid #dddddd;
+}
+
+.mirror-span {
+  background-color: #f0f0f8;
+  border: 1px solid #dddddd;
+}
+
+.popover {
+  max-width: 700px;
+}
+
+.cards_img .popover {
+  pointer-events: none;
+}

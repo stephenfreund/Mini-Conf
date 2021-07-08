@@ -1,0 +1,142 @@
+{% set page_title = track.title %}
+{% extends "base.html" %}
+{{ super() }}
+{% block head %}
+{{ super() }}
+{{ components.calendar_scripts() }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="pp-card m-3" style="">
+  <div class="card-header">
+    <h2 class="card-title main-title text-center" style="">
+      {{track.title}}
+    </h2>
+    
+    <h3 class="card-subtitle mb-2 text-muted text-center">
+      {{ track.organizers | join(", ") }}
+    </h3>
+    
+    <div class="text-center p-3">
+      <a class="card-link" data-toggle="collapse" role="button" href="#details">
+        Description
+      </a>
+      
+      <a href="{{track.website}}" target="_blank"  class="card-link">
+        External Website
+      </a>      
+    </div>
+    
+    <!-- <h3 class="card-subtitle mb-2 text-muted text-center">
+        <span class="mr-2">Participate via Zoom: {{ components.zoomLink(zoom)}}
+      </h3> -->
+
+    <h3 class="card-subtitle mt-4 mb-2 text-muted text-center">
+        <span class="mr-2">Chat with others about this event:</span>  {{ components.slack(config, track.slack_channel) }}
+      </h3>
+        
+  </div>
+</div>
+
+<div id="details" class="pp-card m-3 collapse hide">
+  <div class="card-body">
+    <div class="card-text">
+      <div id="abstractExample">
+        {{ track.abstract | safe }}
+      </div>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+
+   
+<div class="col-12 bd-content pt-3 mb-n3">
+  <h3>Video Stream</h3>
+  <h3 class="card-subtitle mt-4 mb-2 text-muted text-center">
+    <span class="mr-2">Unavailable for this tutorial.  Participate via Zoom: {{ components.zoomLink(zoom)}}
+  </h3>
+</div>
+  
+
+
+    {{ components.subsection("Full Schedule") }}
+    
+    <div class="text-muted pb-2 text-center" style="">
+      {% if track.instructions %}
+        {{ track.instructions | safe }}
+      {% else %}
+      Participate in an event occuring in Zoom or Gather by clicking the
+      Zoom/Gather button next to the event below.
+      {% endif %}
+    </div>        
+    
+    
+    <div class="form-group col track-schedule">
+      <div id='calendar'></div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendar = makeCompactListCalendar('calendar', {
+          initialDate: '{{ config.calendar.start }}',
+          validRange: {
+            start: '{{ config.calendar.start }}',
+            end: '{{ config.calendar.end }}'
+          }
+        },
+        '{{ calendar | tojson }}');
+      });
+    </script>
+    
+    
+    {% if prerecorded|length > 0 %}
+    {{ components.subsection("Recorded Talks") }}
+    <div class="speakers mx-3 my-0 pt-n5 mt-n4">
+      <div class="cards row">
+        {% for talk in prerecorded %}
+        <div class="col-lg-4 col-12" style="box-sizing: border-box;">
+          <a class="pp-card text-muted" style="display: block; width: 100%;" href="prerecorded_{{talk.UID}}.html">
+            <div class="pp-card-header text-center p-3" style="height: auto; max-height:280px; max-width: 100%;">
+              <h6 class="text-center card-title mt-0"> {{ talk.title  }} </h6>
+              <h6 class="text-center card-subtitle pt-2"> {{ talk.authors }} </h6>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    
+    
+    {% if sponsors|length > 0 %}
+    {{ components.subsection(track.UID.upper() + " Sponsors") }}
+    <div class="speakers mx-3 my-0 pt-n5 mt-n4">
+      <div class="cards row">
+        {% for sponsor in sponsors %}
+        <div class="col-lg-4 col-12 p-3" style="box-sizing: border-box;">
+          <div class="pp-card" style="display: block; overflow: hidden; width: 100%;">
+            <div
+            class="card-header text-center"
+            style="height: 150px; max-width: 100%;"
+            >
+            <div class="row" style="height: 70px;">
+              <a class="text-muted mx-auto my-auto" href="sponsor_{{sponsor.UID}}.html">
+                <img style="max-height: 70px; max-width: 80%;" src="static/sponsor_images/{{sponsor.UID}}.png">
+              </a>
+            </div>
+            <h6 class="m-3 mt-4 text-center card-title">
+              {{sponsor.level}} Supporter  
+            </h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% endblock %}
+  

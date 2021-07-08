@@ -1,0 +1,35 @@
+- UID: fancy-1
+  template: templates/fancy-1.json
+  
+  # key in auto/assets.yml
+  background: fancy-background
+  foreground: fancy-foreground
+  
+  start: 1
+  sessions: 
+    - pldi_posters1
+    - pldi_posters2
+
+- UID: fancy-2
+  template: templates/fancy-2.json
+  
+  # key in auto/assets.yml
+  background: fancy-background-green
+  foreground: fancy-foreground
+  
+  start: 33
+  sessions: 
+    - pldi_posters3
+    - pldi_posters4
+
+- UID: fancy-3
+  template: templates/fancy-3.json
+  
+  # key in auto/assets.yml
+  background: fancy-background-purple
+  foreground: fancy-foreground
+  
+  start: 65
+  sessions: 
+    - pldi_posters5
+    - pldi_posters6
