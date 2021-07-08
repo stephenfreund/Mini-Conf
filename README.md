@@ -7,7 +7,7 @@ Notes:
 * You must use Python 3.9.
 * All keys, email addresses, and various data files have been redacted since this repo will be public.
 * You will be able to run locally, but you won't be able to rebuild the sitedata from scratch, etc.
-
+* This project will not be maintained or supported.
 
 
 ## MiniConf
